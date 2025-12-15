@@ -46,7 +46,6 @@ export default function Education() {
       text: "Solved 250+ DSA problems on platforms like LeetCode (210+), CodeChef, CodeForces, and GeeksforGeeks.",
       icon: <FaCode />,
     },
-    ,
     {
       text: "Mentored peers in Digital Logic Design as a Teaching Assistant (3+ sessions).",
       icon: <FaChalkboardTeacher />,

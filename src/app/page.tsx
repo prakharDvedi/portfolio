@@ -36,7 +36,7 @@ export default function Home() {
       "Node.js",
       "Fastify",
       "PostgreSQL",
-      "FramerMotion",
+      "Framer Motion",
       "Docker",
       "REST APIs",
       "Generative AI",
@@ -280,7 +280,7 @@ export default function Home() {
               </div>
             </div>
             <Link href="/experience" className={styles.smallContactBtn}>
-              Details
+              What I'm Doing
             </Link>
           </motion.div>
         </div>
@@ -292,6 +292,7 @@ export default function Home() {
         animate={{ opacity: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
+        <h3 className={styles.toolsHeading}>TOOLS I USE</h3>
         <div className={styles.marqueeTrack}>
           {marqueeIcons.map((tech) => (
             <div key={tech.uniqueKey} className={styles.techIcon}>

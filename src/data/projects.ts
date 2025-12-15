@@ -20,18 +20,6 @@ export const projects = [
     },
   },
   {
-    name: "Cold Email Generator (GenAI)",
-    description:
-      "Automated tool capable of scraping websites and generating personalized cold emails using LLMs and vector databases.",
-    date: "2025",
-    tags: ["Python", "LangChain", "ChromaDB", "Groq", "WebBaseLoader"],
-    slug: "cold-email-generator",
-    links: {
-      source: "https://github.com/prakharDvedi/ColdMailer",
-      demo: "https://coldmailer-dmxhvfxfcnfntsz4iepede.streamlit.app/",
-    },
-  },
-  {
     name: "Document Intelligence System",
     description:
       "Advanced system for extracting and querying information from documents using OCR and vector search algorithms.",
@@ -41,6 +29,37 @@ export const projects = [
     links: {
       source: "https://github.com/prakharDvedi/document-intelligence-system",
       demo: "https://prakhardvedi-document-intelligence-system-app-yk88k8.streamlit.app/",
+    },
+  },
+  {
+    name: "DSA Tracker",
+    description:
+      "Full-stack web application to track Data Structures and Algorithms (DSA) practice, featuring interactive dashboards, search/filter, and data visualization.",
+    date: "2025",
+    tags: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Recharts",
+      "Prisma",
+      "SQLite",
+      "Full-stack",
+    ],
+    slug: "dsa-tracker",
+    links: {
+      source: "https://github.com/prakharDvedi/dsa_tracker",
+    },
+  },
+  {
+    name: "Cold Email Generator (GenAI)",
+    description:
+      "Automated tool capable of scraping websites and generating personalized cold emails using LLMs and vector databases.",
+    date: "2025",
+    tags: ["Python", "LangChain", "ChromaDB", "Groq", "WebBaseLoader"],
+    slug: "cold-email-generator",
+    links: {
+      source: "https://github.com/prakharDvedi/ColdMailer",
+      demo: "https://coldmailer-dmxhvfxfcnfntsz4iepede.streamlit.app/",
     },
   },
   {
@@ -65,6 +84,17 @@ export const projects = [
     slug: "authentica",
     links: {
       source: "https://github.com/prakharDvedi/Authentica",
+    },
+  },
+  {
+    name: "Chatify",
+    description:
+      "A real-time chat application built with Next.js, Socket.io, React, Tailwind CSS, and Framer Motion.",
+    date: "2024",
+    tags: ["Next.js", "Socket.io", "React", "Tailwind CSS", "Framer Motion"],
+    slug: "chatify",
+    links: {
+      source: "https://github.com/prakharDvedi/ChatApp",
     },
   },
 ];

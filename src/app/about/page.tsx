@@ -9,26 +9,28 @@ export default function About() {
       <div className={styles.content}>
         <div className={styles.textSection}>
           <p className={styles.paragraph}>
-            I’m <span className={styles.highlight}>Prakhar</span>, a third-year
-            computer science student focused on building full-stack web
-            applications that are practical, scalable, and understandable.
+            Hey there! I'm{" "}
+            <a href="/" className={styles.highlight}>
+              Prakhar
+            </a>
+            , a third-year ECE student who's super into building web apps that
+            actually do cool stuff.
           </p>
 
           <p className={styles.paragraph}>
-            I work primarily with JavaScript-based stacks, building both
-            frontend and backend systems. My current focus is on React for
-            frontend development and Node.js with Express for backend APIs,
-            backed by relational and NoSQL databases like PostgreSQL and
-            MongoDB. I care less about frameworks as buzzwords and more about
-            why each piece exists and what problem it solves.
+            I mostly mess around with JavaScript stuff, putting together both
+            the front and back ends of applications. Right now, I'm really
+            digging React for the frontend and Node.js with Express for APIs,
+            all hooked up to databases like PostgreSQL and MongoDB.
           </p>
 
           <p className={styles.paragraph}>
-            Alongside development, I consistently practice data structures and
-            algorithms. Not because I enjoy grinding problems endlessly, but
-            because it sharpens my thinking around edge cases, performance, and
-            tradeoffs. I prefer clear, readable solutions over clever ones that
-            are hard to maintain.
+            Besides coding, I also keep my data structures and algorithms skills
+            sharp. Not because I love grinding LeetCode all day, but because it
+            really helps me think through tricky situations, performance, and
+            making smart trade-offs. I always go for solutions that are easy to
+            read and understand, rather than super clever ones that become a
+            nightmare to maintain later.
           </p>
         </div>
 

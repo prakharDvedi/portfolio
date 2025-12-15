@@ -215,6 +215,17 @@
   margin-bottom: 4rem;
 }
 
+.toolsHeading {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  text-align: center;
+  margin-bottom: 2rem;
+  display: block;
+  width: 100%;
+}
+
 /* Marquee Styles */
 .techStack {
   width: 100%;
