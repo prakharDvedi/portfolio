@@ -9,6 +9,8 @@
   padding: 2rem;
   min-height: 100vh;
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 @media (max-width: 1000px) {
