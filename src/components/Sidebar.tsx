@@ -18,7 +18,7 @@ const Sidebar = () => {
   const navItems = [
     { name: "PROJECTS", path: "/projects" },
     { name: "ABOUT ME", path: "/about" },
-    { name: "EXPERIENCE", path: "/experience" },
+    { name: "WHAT I'M BUILDING", path: "/experience" },
     { name: "EDUCATION", path: "/education" },
     { name: "CONTACT ME", path: "/contact" },
   ];
