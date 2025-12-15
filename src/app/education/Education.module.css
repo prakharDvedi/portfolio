@@ -14,10 +14,22 @@
 }
 
 .splitLayout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
-  align-items: start;
+  align-items: flex-start;
+}
+
+.column {
+  flex: 1 1 450px; /* Grow, shrink, min-width 450px */
+  min-width: 0; /* Prevent flex overflow */
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .column {
+    flex-basis: 100%;
+  }
 }
 
 /* --- Left Column: Timeline (Education) --- */
@@ -166,9 +178,3 @@
 }
 
 /* Mobile Responsive */
-@media (max-width: 1024px) {
-  .splitLayout {
-    grid-template-columns: 1fr;
-    gap: 4rem;
-  }
-}
