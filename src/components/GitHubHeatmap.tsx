@@ -21,11 +21,11 @@ const GitHubHeatmap = () => {
             blockMargin={4}
             theme={{
               dark: [
-                "rgba(255, 255, 255, 0.03)", // Empty
-                "#4c1d95", // Level 1
-                "#6d28d9", // Level 2
-                "#8b5cf6", // Level 3
-                "#c4b5fd", // Level 4
+                "rgba(255, 255, 255, 0.03)",
+                "#4c1d95",
+                "#6d28d9",
+                "#8b5cf6",
+                "#c4b5fd",
               ],
             }}
             style={{

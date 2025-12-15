@@ -4,11 +4,11 @@ import { FiExternalLink } from "react-icons/fi";
 
 interface ExperienceCardProps {
   title: string;
-  summary?: string; // The "summary line" or subtitle
+  summary?: string;
   description: React.ReactNode;
   link?: string;
   linkText?: string;
-  icon?: React.ReactNode; // For the top right icon link if needed, or we can just use the main link
+  icon?: React.ReactNode;
 }
 
 const ExperienceCard: React.FC<ExperienceCardProps> = ({

@@ -40,7 +40,7 @@ export default function Contact() {
       if (response.ok) {
         setStatus("success");
         setFormData({ name: "", email: "", message: "" });
-        setTimeout(() => setStatus("idle"), 5000); // Reset after 5s
+        setTimeout(() => setStatus("idle"), 5000);
       } else {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");
@@ -63,7 +63,6 @@ export default function Contact() {
       <h1 className={styles.header}>Get In Touch</h1>
 
       <div className={styles.content}>
-        {/* Contact Info Section */}
         <div className={styles.infoSection}>
           <h2 className={styles.subtitle}>Let's Chat!</h2>
           <p className={styles.text}>
@@ -106,7 +105,6 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* Contact Form Section */}
         <div className={styles.formSection}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.formGroup}>

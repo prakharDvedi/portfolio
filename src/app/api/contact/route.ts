@@ -5,7 +5,6 @@ export async function POST(req: Request) {
   try {
     const { name, email, message } = await req.json();
 
-    // Validate input
     if (!name || !email || !message) {
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -33,9 +32,9 @@ export async function POST(req: Request) {
     });
 
     const mailOptions = {
-      from: process.env.EMAIL_USER, // Sender must be authenticated user
-      to: process.env.EMAIL_USER, // Send to yourself
-      replyTo: email, // Reply to the user's email
+      from: process.env.EMAIL_USER,
+      to: process.env.EMAIL_USER,
+      replyTo: email,
       subject: `Portfolio Contact: ${name}`,
       text: `
 Name: ${name}

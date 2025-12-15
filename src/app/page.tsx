@@ -46,7 +46,7 @@ export default function Home() {
       "System Design",
     ],
     []
-  ); // Memoize words as it's a constant array
+  );
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -74,7 +74,7 @@ export default function Home() {
       clearInterval(timeInterval);
       clearInterval(wordInterval);
     };
-  }, [words]); // Depend on 'words' array itself, though it's memoized to be stable
+  }, [words]);
 
   const techStack = useMemo(
     () => [
@@ -95,9 +95,8 @@ export default function Home() {
       { icon: <SiGithub />, name: "GitHub" },
     ],
     []
-  ); // Memoize techStack as it's a constant array
+  );
 
-  // Generate unique keys for marquee icons by combining name and index
   const marqueeIcons = useMemo(
     () =>
       [...techStack, ...techStack].map((tech, i) => ({
@@ -138,7 +137,7 @@ export default function Home() {
             <span className={styles.techRotator}>
               <AnimatePresence mode="wait">
                 <motion.span
-                  key={words[index]} // Key based on word content for animation
+                  key={words[index]}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -20 }}
@@ -178,7 +177,6 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Currently Working On Section */}
         <div className={styles.rightColumn}>
           <motion.div
             className={styles.socialLinks}

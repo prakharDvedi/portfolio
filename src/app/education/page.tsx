@@ -65,7 +65,6 @@ export default function Education() {
       <h1 className={styles.mainHeader}>Education & Achievements</h1>
 
       <div className={styles.splitLayout}>
-        {/* LEFT COLUMN: EDUCATION */}
         <div className={styles.column}>
           <h2 className={styles.sectionTitle}>Education</h2>
           <div className={styles.timeline}>
@@ -99,7 +98,6 @@ export default function Education() {
           </div>
         </div>
 
-        {/* RIGHT COLUMN: ACHIEVEMENTS */}
         <div className={styles.column}>
           <h2 className={styles.sectionTitle}>Key Achievements</h2>
           <div className={styles.achievementsList}>

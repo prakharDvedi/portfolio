@@ -39,7 +39,7 @@ const Sidebar = () => {
     <aside className={styles.sidebar}>
       <div className={styles.header}>
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
-          prakhar.dev
+          prakhar.dwivedi
         </Link>
       </div>
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
                 className={`${styles.navLink} ${
                   pathname === item.path ? styles.active : ""
                 }`}
-                onClick={() => setIsOpen(false)} // Close menu on click
+                onClick={() => setIsOpen(false)}
               >
                 <span className={styles.navIcon}>{item.icon}</span>
                 {item.name}
