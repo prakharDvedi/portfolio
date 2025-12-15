@@ -1,13 +1,19 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import { FiMenu, FiX } from "react-icons/fi";
 import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   const navItems = [
     { name: "PROJECTS", path: "/projects" },
@@ -20,10 +26,19 @@ const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
       <div className={styles.header}>
-        <Link href="/" className={styles.logo}>
+        <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           prakhar.dev
         </Link>
       </div>
+
+      {/* Hamburger Button for Mobile */}
+      <button
+        className={styles.menuBtn}
+        onClick={toggleMenu}
+        aria-label="Toggle menu"
+      >
+        {isOpen ? <FiX /> : <FiMenu />}
+      </button>
 
       <div className={styles.profile}>
         <div className={styles.avatarContainer}>
@@ -37,7 +52,7 @@ const Sidebar = () => {
 
       <hr className={styles.separator} />
 
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
         <ul className={styles.navList}>
           {navItems.map((item) => (
             <li key={item.path} className={styles.navItem}>
@@ -46,6 +61,7 @@ const Sidebar = () => {
                 className={`${styles.navLink} ${
                   pathname === item.path ? styles.active : ""
                 }`}
+                onClick={() => setIsOpen(false)} // Close menu on click
               >
                 {item.name}
               </Link>
