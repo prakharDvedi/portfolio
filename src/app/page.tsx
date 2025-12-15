@@ -115,7 +115,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <span className={styles.eyebrow}>Hi, my name is</span>
+            <span className={styles.eyebrow}>Hi, I go by</span>
           </motion.div>
 
           <motion.h1

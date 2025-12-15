@@ -23,7 +23,7 @@ export const projects = [
     name: "Cold Email Generator (GenAI)",
     description:
       "Automated tool capable of scraping websites and generating personalized cold emails using LLMs and vector databases.",
-    date: "2024",
+    date: "2025",
     tags: ["Python", "LangChain", "ChromaDB", "Groq", "WebBaseLoader"],
     slug: "cold-email-generator",
     links: {
@@ -47,13 +47,24 @@ export const projects = [
     name: "Mental Health Anomaly Detector",
     description:
       "Machine learning application designed to detect anomalies in mental health data, visualizing trends and potential risks.",
-    date: "2024",
+    date: "2025",
     tags: ["Python", "Streamlit", "ML", "Scikit-Learn", "CSS", "HealthTech"],
     slug: "mental-health-detector",
     links: {
       source:
         "https://github.com/prakharDvedi/SupraThon/tree/master/Mental_health_ML-main",
       demo: "https://mentalhealthanamoly.streamlit.app/",
+    },
+  },
+  {
+    name: "Authentica – Verifiable Generative AI Framework",
+    description:
+      "Built a blockchain-based system to verify authorship and integrity of AI-generated content using cryptographic hashing, IPFS, and Ethereum smart contracts. Implemented Web3 authentication, tamper detection, and verifiable proof certificates for public authenticity checks.",
+    date: "2025",
+    tags: ["Blockchain", "Generative AI", "Next.js", "Solidity", "IPFS"],
+    slug: "authentica",
+    links: {
+      source: "https://github.com/prakharDvedi/Authentica",
     },
   },
 ];

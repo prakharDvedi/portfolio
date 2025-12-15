@@ -35,24 +35,29 @@ export default function Education() {
 
   const achievements = [
     {
-      text: "Secured Top Rank (1st) within ECE cohort demonstrating exceptional academic performance with a 9.32 SGPA in Semester 3.",
-      icon: <FaTrophy />,
-    },
-    {
-      text: "Demonstrated strong algorithmic problem-solving skills by solving 250+ DSA problems across scalable platforms like LeetCode (210+), CodeChef, CodeForces, and GeeksforGeeks.",
-      icon: <FaCode />,
-    },
-    {
-      text: "Attained competitive programming excellence with ratings of 1614 on CodeChef (3-Star) and 1799 on LeetCode, showcasing consistent performance in high-pressure contests.",
+      text: "Achieved competitive programming ratings: 1614 on CodeChef (3-Star) and 1799 on LeetCode.",
       icon: <FaChartLine />,
     },
     {
-      text: "Mentored peers in Digital Logic Design fundamentals as a Teaching Assistant, facilitating over 3 specialized peer learning sessions.",
+      text: "Achieved 1st rank in ECE cohort with a 9.32 SGPA in Semester 3.",
+      icon: <FaTrophy />,
+    },
+    {
+      text: "Solved 250+ DSA problems on platforms like LeetCode (210+), CodeChef, CodeForces, and GeeksforGeeks.",
+      icon: <FaCode />,
+    },
+    ,
+    {
+      text: "Mentored peers in Digital Logic Design as a Teaching Assistant (3+ sessions).",
       icon: <FaChalkboardTeacher />,
     },
     {
-      text: "Qualified among the top ~4.5% (Top 12000 of 262000+) participants in the highly competitive Adobe India Hackathon 2025, validating full-stack engineering aptitude.",
+      text: "Qualified in the top ~4.5% (Top 12000) of Adobe India Hackathon 2025.",
       icon: <FaTrophy />,
+    },
+    {
+      text: "Participated in 6+ hackathons, gaining experience in rapid prototyping and teamwork.",
+      icon: <FaCode />,
     },
   ];
 

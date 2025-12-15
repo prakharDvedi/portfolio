@@ -8,6 +8,8 @@ import {
   FiGithub,
   FiTwitter,
   FiSend,
+  FiCheck,
+  FiAlertCircle,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -17,15 +19,37 @@ export default function Contact() {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Construct mailto link
-    const subject = `Portfolio Contact from ${formData.name}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
-    window.location.href = `mailto:prakhar.dwivedi.3782@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    setStatus("loading");
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => setStatus("idle"), 5000); // Reset after 5s
+      } else {
+        const data = await response.json();
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (error: any) {
+      setStatus("error");
+      setErrorMessage(error.message);
+      setTimeout(() => setStatus("idle"), 5000);
+    }
   };
 
   const handleChange = (
@@ -98,6 +122,7 @@ export default function Contact() {
                 placeholder="John Doe"
                 value={formData.name}
                 onChange={handleChange}
+                disabled={status === "loading"}
               />
             </div>
 
@@ -114,6 +139,7 @@ export default function Contact() {
                 placeholder="john@example.com"
                 value={formData.email}
                 onChange={handleChange}
+                disabled={status === "loading"}
               />
             </div>
 
@@ -129,12 +155,59 @@ export default function Contact() {
                 placeholder="What's on your mind?"
                 value={formData.message}
                 onChange={handleChange}
+                disabled={status === "loading"}
               />
             </div>
 
-            <button type="submit" className={styles.submitBtn}>
-              Send Message <FiSend />
+            <button
+              type="submit"
+              className={styles.submitBtn}
+              disabled={status === "loading" || status === "success"}
+              style={{
+                opacity: status === "loading" ? 0.7 : 1,
+                cursor: status === "loading" ? "not-allowed" : "pointer",
+              }}
+            >
+              {status === "loading" ? (
+                "Sending..."
+              ) : status === "success" ? (
+                <>
+                  Sent <FiCheck />
+                </>
+              ) : (
+                <>
+                  Send Message <FiSend />
+                </>
+              )}
             </button>
+            {status === "error" && (
+              <p
+                style={{
+                  color: "#ef4444",
+                  marginTop: "0.5rem",
+                  fontSize: "0.9rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                }}
+              >
+                <FiAlertCircle /> {errorMessage}
+              </p>
+            )}
+            {status === "success" && (
+              <p
+                style={{
+                  color: "#22c55e",
+                  marginTop: "0.5rem",
+                  fontSize: "0.9rem",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                }}
+              >
+                <FiCheck /> Message sent successfully!
+              </p>
+            )}
           </form>
         </div>
       </div>
