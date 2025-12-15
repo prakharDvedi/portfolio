@@ -50,7 +50,7 @@ export default function About() {
               {
                 platform: "GitHub",
                 href: "https://github.com/prakharDvedi",
-                imgSrc: "/nav-github.png",
+                imgSrc: "/git.png",
               },
               {
                 platform: "Instagram",

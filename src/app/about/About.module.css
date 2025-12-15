@@ -1,14 +1,14 @@
 .container {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   max-width: 900px;
 }
 
 .header {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
   color: var(--text-primary);
 }
 
@@ -48,18 +48,6 @@
   object-fit: cover;
 }
 
-@media (max-width: 1024px) {
-  .content {
-    flex-direction: column-reverse;
-    gap: 2rem;
-  }
-
-  .imageSection {
-    width: 100%;
-    max-width: 400px;
-  }
-}
-
 .socialLinks {
   display: flex;
   gap: 1.5rem;
@@ -74,7 +62,6 @@
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  group: hover;
 }
 
 .socialBtn {
@@ -117,4 +104,41 @@
 
 .socialItem:hover .socialLabel {
   color: var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column-reverse;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .imageSection {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1030px) {
+  .image {
+    display: none;
+  }
+  .socialLinks {
+    justify-content: flex-start;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .imageSection {
+    max-width: 100%;
+    width: 100%;
+  }
+  .container {
+    gap: 0.5rem;
+  }
+  .header {
+    margin-bottom: 0.5rem;
+  }
 }
