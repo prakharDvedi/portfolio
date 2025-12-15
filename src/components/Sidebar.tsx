@@ -1,0 +1,60 @@
+"use client";
+
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { usePathname } from "next/navigation";
+import styles from "./Sidebar.module.css";
+
+const Sidebar = () => {
+  const pathname = usePathname();
+
+  const navItems = [
+    { name: "PROJECTS", path: "/projects" },
+    { name: "ABOUT ME", path: "/about" },
+    { name: "EXPERIENCE", path: "/experience" },
+    { name: "EDUCATION", path: "/education" },
+    { name: "CONTACT ME", path: "/contact" },
+  ];
+
+  return (
+    <aside className={styles.sidebar}>
+      <div className={styles.header}>
+        <Link href="/" className={styles.logo}>
+          prakhar.dev
+        </Link>
+      </div>
+
+      <div className={styles.profile}>
+        <div className={styles.avatarContainer}>
+          <img src="/me.png" alt="Profile" className={styles.avatar} />
+        </div>
+        <p className={styles.summary}>
+          Software engineer focused on full-stack development, backend APIs, and
+          applied Generative AI
+        </p>
+      </div>
+
+      <hr className={styles.separator} />
+
+      <nav className={styles.nav}>
+        <ul className={styles.navList}>
+          {navItems.map((item) => (
+            <li key={item.path} className={styles.navItem}>
+              <Link
+                href={item.path}
+                className={`${styles.navLink} ${
+                  pathname === item.path ? styles.active : ""
+                }`}
+              >
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </aside>
+  );
+};
+
+export default Sidebar;

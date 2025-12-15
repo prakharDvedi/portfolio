@@ -1,0 +1,48 @@
+:root {
+  --background: #1a1a1a;
+  --sidebar-bg: rgba(30, 30, 30, 0.7);
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --accent-primary: #8b5cf6; /* Purple 500 */
+  --accent-secondary: #a855f7; /* Purple 400 */
+  --accent-hover: #7c3aed;
+  --border-color: #333333;
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  height: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
