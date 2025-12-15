@@ -19,7 +19,7 @@ const Sidebar = () => {
     { name: "PROJECTS", path: "/projects" },
     { name: "ABOUT ME", path: "/about" },
     { name: "WHAT I'M BUILDING", path: "/experience" },
-    { name: "EDUCATION", path: "/education" },
+    { name: "EDUCATION & ACHIEVEMENTS", path: "/education" },
     { name: "CONTACT ME", path: "/contact" },
   ];
 

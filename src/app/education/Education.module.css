@@ -1,81 +1,66 @@
-.container {
-  max-width: 1000px;
-  position: relative;
-  padding: 2rem 0;
+.pageWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
 }
 
-.header {
+.mainHeader {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
   color: var(--text-primary);
   text-align: center;
 }
 
-/* Vertical Line */
+.splitLayout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+/* --- Left Column: Timeline (Education) --- */
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--accent-primary);
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
 .timeline {
   position: relative;
-  padding: 1rem 0;
+  border-left: 2px solid var(--border-color);
+  padding-left: 2rem;
+  margin-left: 1rem;
 }
 
-.timeline::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  width: 2px;
-  background: var(--border-color);
-  transform: translateX(-50%);
-}
-
-.item {
+.timelineItem {
   position: relative;
-  min-height: 150px;
-  margin-bottom: 2rem;
-  width: 50%;
+  margin-bottom: 3rem;
 }
 
-.item:nth-child(odd) {
-  left: 0;
-  padding-right: 3rem;
-  text-align: right;
-}
-
-.item:nth-child(even) {
-  left: 50%;
-  padding-left: 3rem;
-  text-align: left;
-}
-
-/* Checkpoint Dot */
 .dot {
   position: absolute;
-  top: 20px;
+  top: 0;
+  left: -2.6rem; /* Adjust based on padding-left of timeline */
   width: 16px;
   height: 16px;
   background: var(--accent-primary);
   border-radius: 50%;
   border: 4px solid var(--background);
   box-shadow: 0 0 0 1px var(--accent-primary);
-  z-index: 2;
   transition: all 0.3s ease;
 }
 
-.item:nth-child(odd) .dot {
-  right: -8px;
-}
-
-.item:nth-child(even) .dot {
-  left: -8px;
-}
-
-.item:hover .dot {
+.timelineItem:hover .dot {
   background: #fff;
   transform: scale(1.2);
 }
 
-/* Content Card */
 .content {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid var(--border-color);
@@ -91,15 +76,14 @@
 }
 
 .school {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.25rem;
-  display: block;
 }
 
 .degree {
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--accent-primary);
   font-weight: 500;
   margin-bottom: 0.5rem;
@@ -131,11 +115,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  justify-content: flex-end; /* Align right for odd items */
-}
-
-.item:nth-child(even) .courseworkList {
-  justify-content: flex-start; /* Align left for even items */
 }
 
 .courseTag {
@@ -148,37 +127,48 @@
   white-space: nowrap;
 }
 
+/* --- Right Column: Achievements --- */
+.achievementsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.achievementCard {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-left: 3px solid var(--accent-primary);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.achievementCard:hover {
+  transform: translateX(5px);
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.icon {
+  font-size: 1.5rem;
+  color: var(--accent-primary);
+  margin-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.achievementText {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
 /* Mobile Responsive */
-@media (max-width: 768px) {
-  .timeline::before {
-    left: 20px;
-  }
-
-  .item {
-    width: 100%;
-    margin-bottom: 2rem;
-  }
-
-  .item:nth-child(odd),
-  .item:nth-child(even) {
-    left: 0;
-    padding-right: 0;
-    padding-left: 3rem;
-    text-align: left;
-  }
-
-  .item:nth-child(odd) .dot,
-  .item:nth-child(even) .dot {
-    left: 12px;
-    right: auto;
-  }
-
-  .content {
-    margin-left: 1.5rem;
-  }
-
-  .courseworkList,
-  .item:nth-child(even) .courseworkList {
-    justify-content: flex-start;
+@media (max-width: 1024px) {
+  .splitLayout {
+    grid-template-columns: 1fr;
+    gap: 4rem;
   }
 }

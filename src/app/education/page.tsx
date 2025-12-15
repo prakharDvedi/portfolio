@@ -1,4 +1,10 @@
 import styles from "./Education.module.css";
+import {
+  FaTrophy,
+  FaCode,
+  FaChartLine,
+  FaChalkboardTeacher,
+} from "react-icons/fa";
 
 export default function Education() {
   const educationData = [
@@ -27,36 +33,80 @@ export default function Education() {
     },
   ];
 
-  return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>Education</h1>
+  const achievements = [
+    {
+      text: "Secured Top Rank (1st) within ECE cohort demonstrating exceptional academic performance with a 9.32 SGPA in Semester 3.",
+      icon: <FaTrophy />,
+    },
+    {
+      text: "Demonstrated strong algorithmic problem-solving skills by solving 250+ DSA problems across scalable platforms like LeetCode (210+), CodeChef, CodeForces, and GeeksforGeeks.",
+      icon: <FaCode />,
+    },
+    {
+      text: "Attained competitive programming excellence with ratings of 1614 on CodeChef (3-Star) and 1799 on LeetCode, showcasing consistent performance in high-pressure contests.",
+      icon: <FaChartLine />,
+    },
+    {
+      text: "Mentored peers in Digital Logic Design fundamentals as a Teaching Assistant, facilitating over 3 specialized peer learning sessions.",
+      icon: <FaChalkboardTeacher />,
+    },
+    {
+      text: "Qualified among the top ~4.5% (Top 12000 of 262000+) participants in the highly competitive Adobe India Hackathon 2025, validating full-stack engineering aptitude.",
+      icon: <FaTrophy />,
+    },
+  ];
 
-      <div className={styles.timeline}>
-        {educationData.map((edu, index) => (
-          <div key={index} className={styles.item}>
-            <span className={styles.dot}></span>
-            <div className={styles.content}>
-              <span className={styles.date}>{edu.date}</span>
-              <h3 className={styles.school}>{edu.school}</h3>
-              <p className={styles.degree}>{edu.degree}</p>
-              <div className={styles.details}>
-                {edu.grade}
-                {edu.coursework && (
-                  <>
-                    <span className={styles.label}>Relevant Coursework:</span>
-                    <div className={styles.courseworkList}>
-                      {edu.coursework.split(",").map((subject, i) => (
-                        <span key={i} className={styles.courseTag}>
-                          {subject.trim()}
+  return (
+    <div className={styles.pageWrapper}>
+      <h1 className={styles.mainHeader}>Education & Achievements</h1>
+
+      <div className={styles.splitLayout}>
+        {/* LEFT COLUMN: EDUCATION */}
+        <div className={styles.column}>
+          <h2 className={styles.sectionTitle}>Education</h2>
+          <div className={styles.timeline}>
+            {educationData.map((edu, index) => (
+              <div key={index} className={styles.timelineItem}>
+                <span className={styles.dot}></span>
+                <div className={styles.content}>
+                  <span className={styles.date}>{edu.date}</span>
+                  <h3 className={styles.school}>{edu.school}</h3>
+                  <p className={styles.degree}>{edu.degree}</p>
+                  <div className={styles.details}>
+                    {edu.grade}
+                    {edu.coursework && (
+                      <>
+                        <span className={styles.label}>
+                          Relevant Coursework:
                         </span>
-                      ))}
-                    </div>
-                  </>
-                )}
+                        <div className={styles.courseworkList}>
+                          {edu.coursework.split(",").map((subject, i) => (
+                            <span key={i} className={styles.courseTag}>
+                              {subject.trim()}
+                            </span>
+                          ))}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
+
+        {/* RIGHT COLUMN: ACHIEVEMENTS */}
+        <div className={styles.column}>
+          <h2 className={styles.sectionTitle}>Key Achievements</h2>
+          <div className={styles.achievementsList}>
+            {achievements.map((achievement, index) => (
+              <div key={index} className={styles.achievementCard}>
+                <div className={styles.icon}>{achievement.icon}</div>
+                <p className={styles.achievementText}>{achievement.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -36,7 +36,7 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .avatar {
@@ -52,7 +52,7 @@
   font-size: 0.9rem;
   color: var(--text-secondary);
   line-height: 1.5;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .separator {
@@ -60,7 +60,7 @@
   height: 1px;
   background-color: var(--border-color);
   border: none;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .nav {
