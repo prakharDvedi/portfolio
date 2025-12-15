@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import styles from "./home.module.css";
+import GitHubHeatmap from "@/components/GitHubHeatmap";
 import {
   SiCplusplus,
   SiPython,
@@ -301,6 +302,15 @@ export default function Home() {
             </div>
           ))}
         </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.45 }}
+        style={{ width: "100%", maxWidth: "1200px", marginBottom: "3rem" }}
+      >
+        <GitHubHeatmap />
       </motion.div>
     </div>
   );
