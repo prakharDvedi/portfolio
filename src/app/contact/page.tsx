@@ -117,7 +117,7 @@ export default function Contact() {
                 name="name"
                 required
                 className={styles.input}
-                placeholder="John Doe"
+                placeholder="Aapka Name"
                 value={formData.name}
                 onChange={handleChange}
                 disabled={status === "loading"}
@@ -134,7 +134,7 @@ export default function Contact() {
                 name="email"
                 required
                 className={styles.input}
-                placeholder="john@example.com"
+                placeholder="Aapka Email"
                 value={formData.email}
                 onChange={handleChange}
                 disabled={status === "loading"}
