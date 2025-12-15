@@ -56,10 +56,6 @@ const Sidebar = () => {
         <div className={styles.avatarContainer}>
           <img src="/me.png" alt="Profile" className={styles.avatar} />
         </div>
-        <p className={styles.summary}>
-          Software engineer focused on full-stack development, backend APIs, and
-          applied Generative AI
-        </p>
       </div>
 
       <hr className={styles.separator} />
