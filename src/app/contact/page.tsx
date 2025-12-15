@@ -72,7 +72,7 @@ export default function Contact() {
               <span>GitHub</span>
             </Link>
             <Link
-              href="https://twitter.com/prakhardvedi"
+              href="https://twitter.com/PrakharDwi64417"
               target="_blank"
               className={styles.linkItem}
             >

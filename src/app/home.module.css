@@ -441,3 +441,18 @@
     text-align: center;
   }
 }
+
+.socialIconImg {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: all 0.3s ease;
+  filter: grayscale(100%) invert(1); /* Start white-ish */
+  opacity: 0.8;
+}
+
+.socialLink:hover .socialIconImg {
+  filter: none; /* Show original colors on hover */
+  transform: scale(1.1);
+  opacity: 1;
+}

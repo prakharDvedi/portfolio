@@ -36,15 +36,15 @@
 
 .imageSection {
   flex-shrink: 0;
-  width: 300px;
+  width: 250px;
 }
 
 .image {
   width: 100%;
-  height: auto;
-  border-radius: 12px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
-  border: 1px solid var(--border-color);
+  border: 3px solid var(--accent-primary);
   object-fit: cover;
 }
 

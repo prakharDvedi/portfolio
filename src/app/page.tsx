@@ -24,6 +24,7 @@ import {
   SiInstagram,
   SiLeetcode,
   SiCodechef,
+  SiGeeksforgeeks,
   SiGmail,
 } from "react-icons/si";
 
@@ -218,6 +219,13 @@ export default function Home() {
               className={styles.socialLink}
             >
               <SiCodechef />
+            </Link>
+            <Link
+              href="https://www.geeksforgeeks.org/profile/prakhardwivedi12"
+              target="_blank"
+              className={styles.socialLink}
+            >
+              <SiGeeksforgeeks />
             </Link>
             <Link
               href="mailto:prakh.dwivedi.3782@gmail.com"

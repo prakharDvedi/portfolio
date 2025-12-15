@@ -52,12 +52,6 @@ const Sidebar = () => {
         {isOpen ? <FiX /> : <FiMenu />}
       </button>
 
-      <div className={styles.profile}>
-        <div className={styles.avatarContainer}>
-          <img src="/me.png" alt="Profile" className={styles.avatar} />
-        </div>
-      </div>
-
       <hr className={styles.separator} />
 
       <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
