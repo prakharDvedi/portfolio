@@ -2,7 +2,8 @@
   min-height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 10vh;
   max-width: 1200px;
   width: 100%;
 }
@@ -13,7 +14,7 @@
   justify-content: center; /* Centers items horizontally */
   width: 100%;
   gap: 4rem;
-  margin-bottom: 4rem;
+  margin-bottom: 0rem;
 }
 
 .heroContent {

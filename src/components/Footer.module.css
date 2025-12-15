@@ -1,12 +1,13 @@
 .footer {
   width: 100%;
-  padding: 2rem 0;
+  padding: 0.8rem 0;
   margin-top: auto;
   border-top: 1px solid var(--border-color);
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1.5rem;
   color: var(--text-secondary);
   font-size: 0.85rem;
   background: rgba(var(--background-rgb), 0.5);
@@ -25,7 +26,6 @@
 .socials {
   display: flex;
   gap: 1rem;
-  margin-top: 0.25rem;
 }
 
 .iconLink {
@@ -47,5 +47,7 @@
   .footer {
     padding: 1.5rem;
     text-align: center;
+    flex-direction: column;
+    gap: 1rem;
   }
 }
