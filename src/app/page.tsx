@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import styles from "./home.module.css";
 import {
   SiCplusplus,
@@ -22,6 +23,27 @@ import {
 } from "react-icons/si";
 
 export default function Home() {
+  const [time, setTime] = useState<string>("");
+
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      setTime(
+        now.toLocaleTimeString("en-US", {
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+          timeZone: "Asia/Kolkata",
+        })
+      );
+    };
+
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
+
   const techStack = [
     { icon: <SiCplusplus />, name: "C++" },
     { icon: <SiPython />, name: "Python" },
@@ -40,55 +62,117 @@ export default function Home() {
     { icon: <SiGithub />, name: "GitHub" },
   ];
 
-  // Duplicate list for seamless infinite scroll
   const marqueeIcons = [...techStack, ...techStack];
 
   return (
     <div className={styles.container}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        <span className={styles.eyebrow}>Hi, my name is</span>
-      </motion.div>
+      <div className={styles.mainSection}>
+        <div className={styles.heroContent}>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <span className={styles.eyebrow}>Hi, my name is</span>
+          </motion.div>
 
-      <motion.h1
-        className={styles.heading}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.1 }}
-      >
-        <span className={styles.name}>Prakhar Dwivedi.</span>
-        <br />I build things for the web.
-      </motion.h1>
+          <motion.h1
+            className={styles.heading}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <span className={styles.name}>Prakhar Dwivedi.</span>
+            <br />I build things for the web.
+          </motion.h1>
 
-      <motion.p
-        className={styles.subtitle}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.2 }}
-      >
-        I’m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building accessible, human-centered products.
-      </motion.p>
+          <motion.p
+            className={styles.subtitle}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            Web developer building scalable applications with room for AI and
+            generative features.
+          </motion.p>
 
-      <motion.div
-        className={styles.ctaGroup}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: 0.3 }}
-      >
-        <Link href="/projects" className={styles.primaryBtn}>
-          Check out my work
-        </Link>
-        <Link href="/contact" className={styles.secondaryBtn}>
-          Contact Me
-        </Link>
-      </motion.div>
+          <motion.div
+            className={styles.location}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            <span>Based in India 🇮🇳</span>
+            <span>|</span>
+            <span>{time}</span>
+          </motion.div>
 
-      {/* Infinite Scroll Tech Stack */}
+          <motion.div
+            className={styles.ctaGroup}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.3 }}
+          >
+            <Link href="/projects" className={styles.contactBtn}>
+              Check out my work
+            </Link>
+            <Link href="/contact" className={styles.contactBtn}>
+              Contact Me
+            </Link>
+          </motion.div>
+        </div>
+
+        {/* Currently Working On Section */}
+        <motion.div
+          className={styles.currentWorkSection}
+          initial={{ opacity: 0, x: 20 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+        >
+          <div className={styles.workLabel}>
+            <span className={styles.pulsingDot}></span>
+            CURRENTLY WORKING ON
+          </div>
+          <div className={styles.workList}>
+            <Link
+              href="https://github.com/prakharDvedi/rently"
+              target="_blank"
+              className={styles.workItemLink}
+            >
+              <span className={styles.workIcon}>▹</span>
+              Building <strong>Rently</strong>
+            </Link>
+            <Link
+              href="https://unstop.com/competitions/nest-20-nurturing-excellence-strengthening-talent-novartis-1591009"
+              target="_blank"
+              className={styles.workItemLink}
+            >
+              <span className={styles.workIcon}>▹</span>
+              NEST Hackathon 2.0
+            </Link>
+            <Link
+              href="https://imaginecup.microsoft.com/en-us/category/33"
+              target="_blank"
+              className={styles.workItemLink}
+            >
+              <span className={styles.workIcon}>▹</span>
+              Microsoft Imagine Cup
+            </Link>
+            <div className={styles.workItem}>
+              <span className={styles.workIcon}>▹</span>
+              Contributing to Open Source
+            </div>
+            <div className={styles.workItem}>
+              <span className={styles.workIcon}>▹</span>
+              Learning CI/CD & Docker
+            </div>
+          </div>
+          <Link href="/experience" className={styles.smallContactBtn}>
+            Details
+          </Link>
+        </motion.div>
+      </div>
+
       <motion.div
         className={styles.techStack}
         initial={{ opacity: 0 }}

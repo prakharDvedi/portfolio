@@ -4,7 +4,15 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { FiMenu, FiX } from "react-icons/fi";
+import {
+  FiMenu,
+  FiX,
+  FiLayers,
+  FiUser,
+  FiTerminal,
+  FiBookOpen,
+  FiMail,
+} from "react-icons/fi";
 import styles from "./Sidebar.module.css";
 
 const Sidebar = () => {
@@ -16,11 +24,15 @@ const Sidebar = () => {
   };
 
   const navItems = [
-    { name: "PROJECTS", path: "/projects" },
-    { name: "ABOUT ME", path: "/about" },
-    { name: "WHAT I'M BUILDING", path: "/experience" },
-    { name: "EDUCATION & ACHIEVEMENTS", path: "/education" },
-    { name: "CONTACT ME", path: "/contact" },
+    { name: "Projects", path: "/projects", icon: <FiLayers /> },
+    { name: "About Me", path: "/about", icon: <FiUser /> },
+    { name: "Working On", path: "/experience", icon: <FiTerminal /> },
+    {
+      name: "Education & Achievements",
+      path: "/education",
+      icon: <FiBookOpen />,
+    },
+    { name: "Contact Me", path: "/contact", icon: <FiMail /> },
   ];
 
   return (
@@ -63,6 +75,7 @@ const Sidebar = () => {
                 }`}
                 onClick={() => setIsOpen(false)} // Close menu on click
               >
+                <span className={styles.navIcon}>{item.icon}</span>
                 {item.name}
               </Link>
             </li>
