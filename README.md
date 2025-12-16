@@ -1,8 +1,11 @@
 # Portfolio Website
+https://prakhardwivedi.vercel.app/
 
 ## What It Is
 
 This is a modern, personal developer portfolio website designed to showcase professional experience, projects, certifications, and programming achievements. It features a responsive design, dynamic data fetching for coding stats, and an interactive UI.
+
+<img width="1919" height="973" alt="image" src="https://github.com/user-attachments/assets/b1646155-23e1-4f59-a2ad-7d0daf5876e9" />
 
 ## Tech Stack
 
