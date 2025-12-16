@@ -24,7 +24,7 @@ import {
   SiLinkedin,
   SiInstagram,
   SiLeetcode,
-  SiCodechef,
+  SiCodeforces,
   SiGeeksforgeeks,
   SiGmail,
 } from "react-icons/si";
@@ -199,6 +199,13 @@ export default function Home() {
               <SiLinkedin />
             </Link>
             <Link
+              href="https://codolio.com/profile/prakhardvedi"
+              target="_blank"
+              className={styles.socialLink}
+            >
+              <SiCodeforces />
+            </Link>
+            <Link
               href="https://www.instagram.com/bheega.billaaa/"
               target="_blank"
               className={styles.socialLink}
@@ -212,13 +219,7 @@ export default function Home() {
             >
               <SiLeetcode />
             </Link>
-            <Link
-              href="https://www.codechef.com/users/prakhar_d_vedi"
-              target="_blank"
-              className={styles.socialLink}
-            >
-              <SiCodechef />
-            </Link>
+
             <Link
               href="https://www.geeksforgeeks.org/profile/prakhardwivedi12"
               target="_blank"
