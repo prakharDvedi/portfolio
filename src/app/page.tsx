@@ -171,6 +171,13 @@ export default function Home() {
             <Link href="/projects" className={styles.contactBtn}>
               Check out my work
             </Link>
+            <Link
+              href="https://drive.google.com/file/d/19_fqZBTyQktXTRg7cfb9HbkC0kabwa93/view?usp=sharing"
+              target="_blank"
+              className={styles.contactBtn}
+            >
+              Resume
+            </Link>
             <Link href="/contact" className={styles.contactBtn}>
               Contact Me
             </Link>
