@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   title: "Prakhar Portfolio",
   description: "Personal portfolio website",
   icons: {
-    icon: "/vercel.svg",
+    icon: "/icon.png",
   },
 };
 
