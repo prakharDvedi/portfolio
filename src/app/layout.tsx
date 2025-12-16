@@ -10,6 +10,9 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata: Metadata = {
   title: "Prakhar Portfolio",
   description: "Personal portfolio website",
+  icons: {
+    icon: "/vercel.svg",
+  },
 };
 
 export default function RootLayout({
