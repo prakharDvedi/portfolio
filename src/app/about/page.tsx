@@ -13,8 +13,16 @@ export default function About() {
             <a href="/" className={styles.highlight}>
               Prakhar
             </a>
-            , a third-year ECE student who's super into building web apps that
-            actually do cool stuff.
+            , a third-year ECE student at{" "}
+            <a
+              href="https://iiitbhopal.ac.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.highlight}
+            >
+              <strong>IIIT Bhopal</strong>
+            </a>{" "}
+            who's super into building web apps that actually do cool stuff.
           </p>
 
           <p className={styles.paragraph}>

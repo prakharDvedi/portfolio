@@ -139,7 +139,7 @@ const Programming = () => {
     },
 
     {
-      platform: "Contest Logs",
+      platform: "Experiences",
       icon: <SiNotion style={{ color: "#ffffff" }} />,
       stats: [
         { label: "Total Entries", value: "3" },
@@ -194,11 +194,7 @@ const Programming = () => {
               fontWeight: "normal",
               fontStyle: "italic",
             }}
-          >
-            built a small data aggregation layer that pulls from sites with
-            publically available APIs, caches results, and updates
-            automatically.
-          </span>
+          ></span>
         </h2>
         <div className={styles.statsGrid}>
           {stats.map((stat, index) => (
