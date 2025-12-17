@@ -317,6 +317,14 @@ export default function Home() {
             </div>
             <div className={styles.workList}>
               <Link
+                href="https://github.com/prakharDvedi/PanditAI"
+                target="_blank"
+                className={styles.workItemLink}
+              >
+                <span className={styles.workIcon}>▹</span>
+                <strong>Building Pandit AI</strong>
+              </Link>
+              <Link
                 href="https://github.com/prakharDvedi/rently"
                 target="_blank"
                 className={styles.workItemLink}
@@ -343,10 +351,6 @@ export default function Home() {
               <div className={styles.workItem}>
                 <span className={styles.workIcon}>▹</span>
                 Contributing to Open Source
-              </div>
-              <div className={styles.workItem}>
-                <span className={styles.workIcon}>▹</span>
-                Learning CI/CD & Docker
               </div>
             </div>
             <Link href="/experience" className={styles.smallContactBtn}>

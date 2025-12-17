@@ -7,6 +7,51 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 export default function Experience() {
   const items = [
     {
+      title: "Pandit AI 🕉️",
+      subtitle: "Neuro-Symbolic Vedic Astrology Application",
+      description: (
+        <>
+          <p>
+            A modern application that combines{" "}
+            <strong>ancient Vedic astrology wisdom with AI</strong> to generate
+            personalized horoscope readings.
+          </p>
+          <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
+            How it works:
+          </h4>
+          <ul style={{ paddingLeft: "1.2rem", marginBottom: "1rem" }}>
+            <li>
+              Calculates precise planetary positions using Swiss Ephemeris
+            </li>
+            <li>
+              Applies classical Vedic astrology rules from a Neo4j knowledge
+              graph
+            </li>
+            <li>
+              Synthesizes natural language insights using AI (Groq/Ollama)
+            </li>
+          </ul>
+          <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
+            Tech Stack:
+          </h4>
+          <ul style={{ paddingLeft: "1.2rem" }}>
+            <li>
+              <strong>Backend:</strong> FastAPI, Python, Swiss Ephemeris, Neo4j
+            </li>
+            <li>
+              <strong>Frontend:</strong> Next.js, TypeScript, Tailwind CSS
+            </li>
+            <li>
+              <strong>AI:</strong> Groq API with Ollama fallback
+            </li>
+          </ul>
+        </>
+      ),
+      link: "https://github.com/prakharDvedi/PanditAI",
+      linkText: "View on GitHub",
+      icon: <FiGithub />,
+    },
+    {
       title: "Rently",
       subtitle: "Chore & Expense Management for Shared Living",
       description: (
@@ -15,9 +60,6 @@ export default function Experience() {
             A web application that helps tenants living together manage{" "}
             <strong>chore rotations and shared expenses</strong> so turns aren’t
             forgotten and resentment doesn’t quietly poison the apartment.
-          </p>
-          <p style={{ marginTop: "1rem" }}>
-            <em>Not a startup pitch. A software problem statement.</em>
           </p>
           <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
             The problem it solves:
@@ -28,10 +70,6 @@ export default function Experience() {
             <li>Expenses get messy</li>
             <li>Coordination happens in unreliable chat threads</li>
           </ul>
-          <p>
-            Rently replaces chaos with <strong>structured, shared state</strong>
-            .
-          </p>
           <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
             Target users:
           </h4>
