@@ -9,18 +9,38 @@ import {
   SiCplusplus,
   SiPython,
   SiJavascript,
+  SiTypescript,
+  SiHtml5,
+  SiCss3,
   SiReact,
-  SiNodedotjs,
+  SiNextdotjs,
+  SiAngular,
   SiTailwindcss,
+  SiRedux,
+  SiBootstrap,
+  SiMui,
+  SiJquery,
+  SiNodedotjs,
+  SiExpress,
+  SiFastapi,
+  SiGraphql,
+  SiTensorflow,
+  SiPostgresql,
+  SiMongodb,
+  SiMysql,
+  SiSqlite,
+  SiRedis,
+  SiSupabase,
+  SiFirebase,
+  SiDocker,
+  SiGit,
+  SiAmazon,
+  SiVercel,
+  SiNetlify,
+  SiLinux,
   SiPandas,
   SiNumpy,
-  SiNextdotjs,
-  SiFirebase,
-  SiGit,
   SiGithub,
-  SiDocker,
-  SiPostgresql,
-  SiMysql,
   SiLinkedin,
   SiInstagram,
   SiLeetcode,
@@ -28,6 +48,8 @@ import {
   SiGeeksforgeeks,
   SiGmail,
 } from "react-icons/si";
+import { FaJava } from "react-icons/fa";
+import { TbApi } from "react-icons/tb";
 
 export default function Home() {
   const [time, setTime] = useState<string>("");
@@ -78,21 +100,62 @@ export default function Home() {
 
   const techStack = useMemo(
     () => [
-      { icon: <SiCplusplus />, name: "C++" },
-      { icon: <SiPython />, name: "Python" },
-      { icon: <SiJavascript />, name: "JavaScript" },
-      { icon: <SiReact />, name: "React" },
-      { icon: <SiNodedotjs />, name: "Node.js" },
-      { icon: <SiNextdotjs />, name: "Next.js" },
-      { icon: <SiTailwindcss />, name: "Tailwind" },
-      { icon: <SiPandas />, name: "Pandas" },
-      { icon: <SiNumpy />, name: "NumPy" },
-      { icon: <SiFirebase />, name: "Firebase" },
-      { icon: <SiPostgresql />, name: "PostgreSQL" },
-      { icon: <SiMysql />, name: "MySQL" },
-      { icon: <SiDocker />, name: "Docker" },
-      { icon: <SiGit />, name: "Git" },
-      { icon: <SiGithub />, name: "GitHub" },
+      // Languages
+      {
+        icon: <SiJavascript style={{ color: "#F7DF1E" }} />,
+        name: "JavaScript",
+      },
+      {
+        icon: <SiTypescript style={{ color: "#3178C6" }} />,
+        name: "TypeScript",
+      },
+      { icon: <SiPython style={{ color: "#3776AB" }} />, name: "Python" },
+      { icon: <FaJava style={{ color: "#007396" }} />, name: "Java" },
+      { icon: <SiHtml5 style={{ color: "#E34F26" }} />, name: "HTML5" },
+      { icon: <SiCss3 style={{ color: "#1572B6" }} />, name: "CSS3" },
+
+      // Frontend
+      { icon: <SiReact style={{ color: "#61DAFB" }} />, name: "React" },
+      { icon: <SiNextdotjs style={{ color: "#FFFFFF" }} />, name: "Next.js" },
+
+      {
+        icon: <SiTailwindcss style={{ color: "#06B6D4" }} />,
+        name: "Tailwind CSS",
+      },
+      { icon: <SiRedux style={{ color: "#764ABC" }} />, name: "Redux" },
+
+      { icon: <SiMui style={{ color: "#007FFF" }} />, name: "Material UI" },
+
+      // Backend
+      { icon: <SiNodedotjs style={{ color: "#339933" }} />, name: "Node.js" },
+      { icon: <SiExpress style={{ color: "#FFFFFF" }} />, name: "Express.js" },
+      { icon: <SiFastapi style={{ color: "#009688" }} />, name: "FastAPI" },
+      { icon: <SiGraphql style={{ color: "#E10098" }} />, name: "GraphQL" },
+      { icon: <TbApi style={{ color: "#FFFFFF" }} />, name: "REST APIs" },
+      {
+        icon: <SiTensorflow style={{ color: "#FF6F00" }} />,
+        name: "TensorFlow",
+      },
+
+      // Databases
+      {
+        icon: <SiPostgresql style={{ color: "#4169E1" }} />,
+        name: "PostgreSQL",
+      },
+      { icon: <SiMongodb style={{ color: "#47A248" }} />, name: "MongoDB" },
+      { icon: <SiMysql style={{ color: "#4479A1" }} />, name: "MySQL" },
+      { icon: <SiSqlite style={{ color: "#003B57" }} />, name: "SQLite" },
+      { icon: <SiRedis style={{ color: "#DC382D" }} />, name: "Redis" },
+      { icon: <SiSupabase style={{ color: "#3ECF8E" }} />, name: "Supabase" },
+      { icon: <SiFirebase style={{ color: "#FFCA28" }} />, name: "Firebase" },
+
+      // DevOps & Cloud
+      { icon: <SiDocker style={{ color: "#2496ED" }} />, name: "Docker" },
+      { icon: <SiGit style={{ color: "#F05032" }} />, name: "Git" },
+      { icon: <SiAmazon style={{ color: "#FF9900" }} />, name: "AWS" },
+      { icon: <SiVercel style={{ color: "#FFFFFF" }} />, name: "Vercel" },
+      { icon: <SiNetlify style={{ color: "#00C7B7" }} />, name: "Netlify" },
+      { icon: <SiLinux style={{ color: "#FCC624" }} />, name: "Linux" },
     ],
     []
   );
