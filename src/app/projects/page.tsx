@@ -17,7 +17,7 @@ export default function Projects() {
             <time className={styles.cardDate}>{project.date}</time>
 
             <Link
-              href={project.links.source || "#"}
+              href={project.links.demo || project.links.source}
               target="_blank"
               className={styles.cardTitle}
             >

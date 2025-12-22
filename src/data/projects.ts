@@ -20,15 +20,15 @@ export const projects = [
     },
   },
   {
-    name: "Document Intelligence System",
+    name: "Authentica – Verifiable Generative AI Framework",
     description:
-      "Advanced system for extracting and querying information from documents using OCR and vector search algorithms.",
+      "Built a blockchain-based system to verify authorship and integrity of AI-generated content using cryptographic hashing, IPFS, and Ethereum smart contracts. Implemented Web3 authentication, tamper detection, and verifiable proof certificates for public authenticity checks.",
     date: "2025",
-    tags: ["Streamlit", "PyMuPDF", "Tesseract OCR", "FAISS", "PyTorch"],
-    slug: "document-intelligence",
+    tags: ["Blockchain", "Generative AI", "Next.js", "Solidity", "IPFS"],
+    slug: "authentica",
     links: {
-      source: "https://github.com/prakharDvedi/document-intelligence-system",
-      demo: "https://prakhardvedi-document-intelligence-system-app-yk88k8.streamlit.app/",
+      source: "https://github.com/prakharDvedi/Authentica",
+      demo: "https://authentica-six.vercel.app/",
     },
   },
   {
@@ -47,9 +47,23 @@ export const projects = [
     ],
     slug: "dsa-tracker",
     links: {
+      demo: "https://dsa-ka-tracker.vercel.app/",
       source: "https://github.com/prakharDvedi/dsa_tracker",
     },
   },
+  {
+    name: "Document Intelligence System",
+    description:
+      "Advanced system for extracting and querying information from documents using OCR and vector search algorithms.",
+    date: "2025",
+    tags: ["Streamlit", "PyMuPDF", "Tesseract OCR", "FAISS", "PyTorch"],
+    slug: "document-intelligence",
+    links: {
+      source: "https://github.com/prakharDvedi/document-intelligence-system",
+      demo: "https://prakhardvedi-document-intelligence-system-app-yk88k8.streamlit.app/",
+    },
+  },
+
   {
     name: "Cold Email Generator (GenAI)",
     description:
@@ -75,17 +89,7 @@ export const projects = [
       demo: "https://mentalhealthanamoly.streamlit.app/",
     },
   },
-  {
-    name: "Authentica – Verifiable Generative AI Framework",
-    description:
-      "Built a blockchain-based system to verify authorship and integrity of AI-generated content using cryptographic hashing, IPFS, and Ethereum smart contracts. Implemented Web3 authentication, tamper detection, and verifiable proof certificates for public authenticity checks.",
-    date: "2025",
-    tags: ["Blockchain", "Generative AI", "Next.js", "Solidity", "IPFS"],
-    slug: "authentica",
-    links: {
-      source: "https://github.com/prakharDvedi/Authentica",
-    },
-  },
+
   {
     name: "Chatify",
     description:
