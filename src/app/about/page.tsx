@@ -26,10 +26,10 @@ export default function About() {
           </p>
 
           <p className={styles.paragraph}>
-            I mostly mess around with JavaScript stuff, putting together both
-            the front and back ends of applications. Right now, I'm really
-            digging React for the frontend and Node.js with Express for APIs,
-            all hooked up to databases like PostgreSQL and MongoDB.
+            I primarily work with JavaScript, building full-stack applications
+            from the ground up. Currently, I'm really enjoying Next.js for both
+            frontend and backend these days, integrating them with databases
+            like PostgreSQL and MongoDB.
           </p>
 
           <p className={styles.paragraph}>
@@ -43,7 +43,7 @@ export default function About() {
         </div>
 
         <div className={styles.imageSection}>
-          <img src="/me.png" alt="Prakhar" className={styles.image} />
+          <img src="/me.jpeg" alt="Prakhar" className={styles.image} />
 
           <div className={styles.socialLinks}>
             {[

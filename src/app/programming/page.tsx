@@ -152,25 +152,10 @@ const Programming = () => {
 
   const contests = [
     {
-      title: "LeetCode Weekly Contest 378",
-      date: "Dec 30, 2024",
-      result: "Rank: 4500 / 25000",
-      description:
-        "Solved 3/4 problems. The third problem involved a tricky dynamic programming approach which I managed to optimize in the last 15 minutes. Good learning experience on 2D DP patterns.",
-    },
-    {
-      title: "CodeForces Round 918 (Div. 4)",
-      date: "Dec 28, 2024",
-      result: "Rating +45",
-      description:
-        "A speed-focused round. Managed to solve A through E quickly but got stuck on F. Need to improve graph traversal implementation speed.",
-    },
-    {
-      title: "CodeChef Starters 115",
-      date: "Dec 27, 2024",
-      result: "Rank: 852",
-      description:
-        "Achieved my highest rank yet in Staters. The layout of problems suited my strengths in number theory and greedy algorithms.",
+      title: "",
+      date: "",
+      result: "",
+      description: "",
     },
   ];
 

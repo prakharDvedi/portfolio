@@ -262,7 +262,7 @@ export default function Home() {
               <SiGithub />
             </Link>
             <Link
-              href="https://linkedin.com/in/prakhar-dwivedi"
+              href="https://www.linkedin.com/in/prakhar-dwivedi-a05611292/"
               target="_blank"
               className={styles.socialLink}
             >
@@ -296,12 +296,6 @@ export default function Home() {
               className={styles.socialLink}
             >
               <SiGeeksforgeeks />
-            </Link>
-            <Link
-              href="mailto:prakh.dwivedi.3782@gmail.com"
-              className={styles.socialLink}
-            >
-              <SiGmail />
             </Link>
           </motion.div>
 
