@@ -59,24 +59,22 @@ const Programming = () => {
         const userData = await userRes.json();
         const contributionsData = await contributionsRes.json();
 
+        let maxStreak = 0;
         let currentStreak = 0;
-        const today = new Date().toISOString().split("T")[0];
 
-        const reversed = [...contributionsData.contributions].reverse();
-
-        for (const day of reversed) {
+        for (const day of contributionsData.contributions) {
           if (day.count > 0) {
             currentStreak++;
+            maxStreak = Math.max(maxStreak, currentStreak);
           } else {
-            if (day.date === today && day.count === 0) continue;
-            break;
+            currentStreak = 0;
           }
         }
 
         setGhStats({
           repos: userData.public_repos.toString(),
           contributions: (contributionsData.total?.lastYear || 0).toString(),
-          streak: `${currentStreak} Days`,
+          streak: `${maxStreak} Days`,
         });
       } catch (error) {
         console.error("Failed to fetch GitHub stats:", error);
@@ -92,7 +90,7 @@ const Programming = () => {
       icon: <SiGithub style={{ color: "#ffffff" }} />,
       stats: [
         { label: "Contributions (Year)", value: ghStats.contributions },
-        { label: "Current Streak", value: ghStats.streak },
+        { label: "Max Streak", value: ghStats.streak },
         { label: "Public Repos", value: ghStats.repos },
       ],
       link: "https://github.com/prakharDvedi",
