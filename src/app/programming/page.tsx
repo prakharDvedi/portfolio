@@ -27,8 +27,14 @@ const Programming = () => {
     streak: "Loading...",
   });
 
+  const [lcStats, setLcStats] = React.useState({
+    solved: "Loading...",
+    ranking: "Loading...",
+  });
+
   React.useEffect(() => {
     const fetchStats = async () => {
+      // Fetch Codeforces Stats
       try {
         const cfResponse = await fetch(
           "https://codeforces.com/api/user.info?handles=prakhar_d_vedi"
@@ -48,6 +54,7 @@ const Programming = () => {
         console.error("Failed to fetch Codeforces stats:", error);
       }
 
+      // Fetch GitHub Stats
       try {
         const [userRes, contributionsRes] = await Promise.all([
           fetch("https://api.github.com/users/prakharDvedi"),
@@ -62,22 +69,44 @@ const Programming = () => {
         let maxStreak = 0;
         let currentStreak = 0;
 
-        for (const day of contributionsData.contributions) {
-          if (day.count > 0) {
-            currentStreak++;
-            maxStreak = Math.max(maxStreak, currentStreak);
-          } else {
-            currentStreak = 0;
+        if (contributionsData.contributions) {
+          for (const day of contributionsData.contributions) {
+            if (day.count > 0) {
+              currentStreak++;
+              maxStreak = Math.max(maxStreak, currentStreak);
+            } else {
+              currentStreak = 0;
+            }
           }
         }
 
         setGhStats({
-          repos: userData.public_repos.toString(),
+          repos: userData.public_repos?.toString() || "0",
           contributions: (contributionsData.total?.lastYear || 0).toString(),
           streak: `${maxStreak} Days`,
         });
       } catch (error) {
         console.error("Failed to fetch GitHub stats:", error);
+      }
+
+      // Fetch LeetCode Stats using alfa-leetcode-api (avoids CORS issues)
+      try {
+        const lcResponse = await fetch(
+          "https://alfa-leetcode-api.onrender.com/prakhar_the_vedi"
+        );
+        const lcData = await lcResponse.json();
+
+        if (lcData) {
+          const totalSolved = lcData.totalSolved || 0;
+          const ranking = lcData.ranking || 0;
+
+          setLcStats({
+            solved: totalSolved.toString(),
+            ranking: ranking.toString(),
+          });
+        }
+      } catch (error) {
+        console.error("Failed to fetch LeetCode stats:", error);
       }
     };
 
@@ -109,9 +138,9 @@ const Programming = () => {
       platform: "LeetCode",
       icon: <SiLeetcode style={{ color: "#ffa116" }} />,
       stats: [
-        { label: "Problems Solved", value: "250" },
+        { label: "Problems Solved", value: lcStats.solved },
+        { label: "Global Rank", value: lcStats.ranking },
         { label: "Max Rating", value: "1799" },
-        { label: "Global Rank", value: "Top 15%" },
       ],
       link: "https://leetcode.com/u/prakhar_the_vedi/",
     },
@@ -135,7 +164,6 @@ const Programming = () => {
       ],
       link: "https://www.geeksforgeeks.org/profile/prakhardwivedi12",
     },
-
     {
       platform: "Experiences",
       icon: <SiNotion style={{ color: "#ffffff" }} />,
@@ -150,10 +178,10 @@ const Programming = () => {
 
   const contests = [
     {
-      title: "",
-      date: "",
-      result: "",
-      description: "",
+      title: "Sample Contest",
+      date: "2023-12-30",
+      result: "Rank 150",
+      description: "Participated in a global competitive programming contest.",
     },
   ];
 
@@ -169,16 +197,7 @@ const Programming = () => {
       </motion.h1>
 
       <div className={styles.section}>
-        <h2 className={styles.sectionTitle}>
-          Platform Statistics <br />
-          <span
-            style={{
-              fontSize: "0.7em",
-              fontWeight: "normal",
-              fontStyle: "italic",
-            }}
-          ></span>
-        </h2>
+        <h2 className={styles.sectionTitle}>Platform Statistics</h2>
         <div className={styles.statsGrid}>
           {stats.map((stat, index) => (
             <motion.div
