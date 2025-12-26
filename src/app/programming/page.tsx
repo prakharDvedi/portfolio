@@ -92,7 +92,7 @@ const Programming = () => {
       // Fetch LeetCode Stats using alfa-leetcode-api (avoids CORS issues)
       try {
         const lcResponse = await fetch(
-          "https://alfa-leetcode-api.onrender.com/prakhar_the_vedi"
+          "https://alfa-leetcode-api.onrender.com/userProfile/prakhar_the_vedi"
         );
         const lcData = await lcResponse.json();
 
