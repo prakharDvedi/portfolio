@@ -31,6 +31,19 @@ export const projects = [
       demo: "https://authentica-six.vercel.app/",
     },
   },
+
+  {
+    name: "Chatify",
+    description:
+      "A real-time chat application built with Next.js, Socket.io, React, Tailwind CSS, and Framer Motion.",
+    date: "2024",
+    tags: ["Next.js", "Socket.io", "React", "Tailwind CSS", "Framer Motion"],
+    slug: "chatify",
+    links: {
+      demo: "https://chatify-max.vercel.app/",
+      source: "https://github.com/prakharDvedi/ChatApp",
+    },
+  },
   {
     name: "DSA Tracker",
     description:
@@ -87,18 +100,6 @@ export const projects = [
       source:
         "https://github.com/prakharDvedi/SupraThon/tree/master/Mental_health_ML-main",
       demo: "https://mentalhealthanamoly.streamlit.app/",
-    },
-  },
-
-  {
-    name: "Chatify",
-    description:
-      "A real-time chat application built with Next.js, Socket.io, React, Tailwind CSS, and Framer Motion.",
-    date: "2024",
-    tags: ["Next.js", "Socket.io", "React", "Tailwind CSS", "Framer Motion"],
-    slug: "chatify",
-    links: {
-      source: "https://github.com/prakharDvedi/ChatApp",
     },
   },
 ];
