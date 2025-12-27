@@ -101,6 +101,17 @@ const Programming = () => {
           ),
         ]);
 
+        // Check if responses are OK before parsing JSON
+        if (!profileRes.ok || !contestRes.ok) {
+          console.warn("LeetCode API error");
+          setLcStats({
+            solved: "N/A",
+            ranking: "N/A",
+            contestRating: "N/A",
+          });
+          return;
+        }
+
         const profileData = await profileRes.json();
         const contestData = await contestRes.json();
 
@@ -119,6 +130,11 @@ const Programming = () => {
         }
       } catch (error) {
         console.error("Failed to fetch LeetCode stats:", error);
+        setLcStats({
+          solved: "N/A",
+          ranking: "N/A",
+          contestRating: "N/A",
+        });
       }
     };
 

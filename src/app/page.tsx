@@ -196,7 +196,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Web developer experienced with{" "}
+            Backend-focused web developer familiar with <br />
             <span className={styles.techRotator}>
               <AnimatePresence mode="wait">
                 <motion.span
@@ -211,7 +211,9 @@ export default function Home() {
                 </motion.span>
               </AnimatePresence>
             </span>{" "}
-            applications with room for AI and generative features.
+            <br />
+            Built production-grade systems, real-time services, and AI-assisted
+            applications.
           </motion.p>
 
           <motion.div
