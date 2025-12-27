@@ -79,7 +79,7 @@ export default function Contact() {
               <span>prakhar.dwivedi.3782@gmail.com</span>
             </Link>
             <Link
-              href="https://linkedin.com/in/prakhar-dwivedi"
+              href="https://www.linkedin.com/in/prakhar-dwivedi-a05611292/"
               target="_blank"
               className={styles.linkItem}
             >
@@ -117,7 +117,7 @@ export default function Contact() {
                 name="name"
                 required
                 className={styles.input}
-                placeholder="Aapka Name"
+                placeholder="Narendra Modi"
                 value={formData.name}
                 onChange={handleChange}
                 disabled={status === "loading"}
@@ -134,7 +134,7 @@ export default function Contact() {
                 name="email"
                 required
                 className={styles.input}
-                placeholder="Aapka Email"
+                placeholder="xyz@gmail.com"
                 value={formData.email}
                 onChange={handleChange}
                 disabled={status === "loading"}

@@ -86,7 +86,7 @@
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
-  background: rgba(139, 92, 246, 0.1); /* Low opacity purple */
+  background: rgba(59, 130, 246, 0.1); /* Low opacity blue */
   color: var(--accent-primary);
   text-decoration: none;
   font-weight: 500;

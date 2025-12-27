@@ -30,6 +30,7 @@ const Programming = () => {
   const [lcStats, setLcStats] = React.useState({
     solved: "Loading...",
     ranking: "Loading...",
+    contestRating: "Loading...",
   });
 
   React.useEffect(() => {
@@ -91,18 +92,29 @@ const Programming = () => {
 
       // Fetch LeetCode Stats using alfa-leetcode-api (avoids CORS issues)
       try {
-        const lcResponse = await fetch(
-          "https://alfa-leetcode-api.onrender.com/userProfile/prakhar_the_vedi"
-        );
-        const lcData = await lcResponse.json();
+        const [profileRes, contestRes] = await Promise.all([
+          fetch(
+            "https://alfa-leetcode-api.onrender.com/userProfile/prakhar_the_vedi"
+          ),
+          fetch(
+            "https://alfa-leetcode-api.onrender.com/userContestRankingInfo/prakhar_the_vedi"
+          ),
+        ]);
 
-        if (lcData) {
-          const totalSolved = lcData.totalSolved || 0;
-          const ranking = lcData.ranking || 0;
+        const profileData = await profileRes.json();
+        const contestData = await contestRes.json();
+
+        if (profileData) {
+          const totalSolved = profileData.totalSolved || 0;
+          const ranking = profileData.ranking || 0;
+          const contestRating = Math.round(
+            contestData.userContestRanking?.rating || 0
+          );
 
           setLcStats({
             solved: totalSolved.toString(),
             ranking: ranking.toString(),
+            contestRating: contestRating.toString(),
           });
         }
       } catch (error) {
@@ -139,8 +151,8 @@ const Programming = () => {
       icon: <SiLeetcode style={{ color: "#ffa116" }} />,
       stats: [
         { label: "Problems Solved", value: lcStats.solved },
+        { label: "Contest Rating", value: lcStats.contestRating },
         { label: "Global Rank", value: lcStats.ranking },
-        { label: "Max Rating", value: "1799" },
       ],
       link: "https://leetcode.com/u/prakhar_the_vedi/",
     },
