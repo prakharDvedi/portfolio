@@ -204,7 +204,14 @@ const Programming = () => {
     },
   ];
 
-  const contests = [{}];
+  const contests = [
+    {
+      title: "",
+      date: "",
+      result: "",
+      description: "",
+    },
+  ];
 
   return (
     <div className={styles.container}>
