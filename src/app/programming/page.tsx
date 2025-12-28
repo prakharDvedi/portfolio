@@ -204,14 +204,7 @@ const Programming = () => {
     },
   ];
 
-  const contests = [
-    {
-      title: "Sample Contest",
-      date: "2023-12-30",
-      result: "Rank 150",
-      description: "Participated in a global competitive programming contest.",
-    },
-  ];
+  const contests = [{}];
 
   return (
     <div className={styles.container}>
