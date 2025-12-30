@@ -35,7 +35,7 @@ export const projects = [
   {
     name: "Chatify",
     description:
-      "A real-time chat application built with Next.js, Socket.io, React, Tailwind CSS, and Framer Motion.",
+      "A production-ready chat application demonstrating distributed systems architecture, security best practices, and real-time communication at scale.",
     date: "2025",
     tags: [
       "Socket.io",
