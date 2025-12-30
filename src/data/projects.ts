@@ -36,12 +36,22 @@ export const projects = [
     name: "Chatify",
     description:
       "A real-time chat application built with Next.js, Socket.io, React, Tailwind CSS, and Framer Motion.",
-    date: "2024",
-    tags: ["Next.js", "Socket.io", "React", "Tailwind CSS", "Framer Motion"],
+    date: "2025",
+    tags: [
+      "Socket.io",
+      "React",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Tailwind CSS",
+      "Redis",
+      "Docker",
+      "Framer Motion",
+    ],
     slug: "chatify",
     links: {
       demo: "https://chatify-max.vercel.app/",
-      source: "https://github.com/prakharDvedi/ChatApp",
+      source: "https://github.com/prakharDvedi/Redis-chatApp",
     },
   },
   {
