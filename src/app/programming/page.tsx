@@ -33,6 +33,18 @@ const Programming = () => {
     contestRating: "Loading...",
   });
 
+  const [ccStats, setccStats] = React.useState({
+    rating: "Loading...",
+    maxRating: "Loading...",
+    stars: "Loading...",
+  });
+
+  const [gfgStats, setGfgStats] = React.useState({
+    codingScore: "Loading...",
+    problemsSolved: "Loading...",
+    instituteRank: "Loading...",
+  });
+
   React.useEffect(() => {
     const fetchStats = async () => {
       // Fetch Codeforces Stats
@@ -136,6 +148,28 @@ const Programming = () => {
           contestRating: "N/A",
         });
       }
+
+      // Fetch CodeChef Stats
+      try {
+        const ccResponse = await fetch("/api/codechef/prakhar_d_vedi");
+        if (ccResponse.ok) {
+          const ccData = await ccResponse.json();
+          setccStats(ccData);
+        } else {
+          setccStats({
+            rating: "N/A",
+            maxRating: "N/A",
+            stars: "N/A",
+          });
+        }
+      } catch (error) {
+        console.error("Failed to fetch CodeChef stats:", error);
+        setccStats({
+          rating: "N/A",
+          maxRating: "N/A",
+          stars: "N/A",
+        });
+      }
     };
 
     fetchStats();
@@ -176,9 +210,9 @@ const Programming = () => {
       platform: "CodeChef",
       icon: <SiCodechef style={{ color: "#5b4638" }} />,
       stats: [
-        { label: "Current Rating", value: "1614" },
-        { label: "Max Rating", value: "1614" },
-        { label: "Stars", value: "3★" },
+        { label: "Current Rating", value: ccStats.rating },
+        { label: "Max Rating", value: ccStats.maxRating },
+        { label: "Stars", value: ccStats.stars },
       ],
       link: "https://www.codechef.com/users/prakhar_d_vedi",
     },

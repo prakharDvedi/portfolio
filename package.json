@@ -9,6 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "cheerio": "^1.1.2",
     "framer-motion": "^12.23.26",
     "next": "16.0.10",
     "nodemailer": "^7.0.11",
