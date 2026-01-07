@@ -8,7 +8,7 @@ import { FiExternalLink, FiGithub } from "react-icons/fi";
 export default function WorkingOn() {
   const items = [
     {
-      title: "Pandit AI 🕉️",
+      title: "Pandit AI",
       subtitle: "Neuro-Symbolic Vedic Astrology Application",
       description: (
         <>

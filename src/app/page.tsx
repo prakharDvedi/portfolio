@@ -5,51 +5,13 @@ import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import styles from "./home.module.css";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
-import {
-  SiCplusplus,
-  SiPython,
-  SiJavascript,
-  SiTypescript,
-  SiHtml5,
-  SiCss3,
-  SiReact,
-  SiNextdotjs,
-  SiAngular,
-  SiTailwindcss,
-  SiRedux,
-  SiBootstrap,
-  SiMui,
-  SiJquery,
-  SiNodedotjs,
-  SiExpress,
-  SiFastapi,
-  SiGraphql,
-  SiTensorflow,
-  SiPostgresql,
-  SiMongodb,
-  SiMysql,
-  SiSqlite,
-  SiRedis,
-  SiSupabase,
-  SiFirebase,
-  SiDocker,
-  SiGit,
-  SiAmazon,
-  SiVercel,
-  SiNetlify,
-  SiLinux,
-  SiPandas,
-  SiNumpy,
   SiGithub,
   SiLinkedin,
   SiInstagram,
   SiLeetcode,
   SiCodeforces,
   SiGeeksforgeeks,
-  SiGmail,
 } from "react-icons/si";
-import { FaJava } from "react-icons/fa";
-import { TbApi } from "react-icons/tb";
 
 export default function Home() {
   const [time, setTime] = useState<string>("");
@@ -102,25 +64,49 @@ export default function Home() {
     () => [
       // Languages
       {
-        icon: <SiJavascript style={{ color: "#F7DF1E" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+            alt="JavaScript"
+            className="w-8 h-8"
+          />
+        ),
         name: "JavaScript",
         description: "Language of the web",
         bgColor: "bg-[#F7DF1E]/10",
       },
       {
-        icon: <SiTypescript style={{ color: "#3178C6" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+            alt="TypeScript"
+            className="w-8 h-8"
+          />
+        ),
         name: "TypeScript",
         description: "Typed JavaScript Superset",
         bgColor: "bg-[#3178C6]/10",
       },
       {
-        icon: <SiPython style={{ color: "#3776AB" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
+            alt="Python"
+            className="w-8 h-8"
+          />
+        ),
         name: "Python",
         description: "Versatile & Powerful",
         bgColor: "bg-[#3776AB]/10",
       },
       {
-        icon: <FaJava style={{ color: "#007396" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
+            alt="Java"
+            className="w-8 h-8"
+          />
+        ),
         name: "Java",
         description: "Object-Oriented Standard",
         bgColor: "bg-[#007396]/10",
@@ -128,19 +114,23 @@ export default function Home() {
 
       // Frontend
       {
-        icon: <SiReact style={{ color: "#61DAFB" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
+            alt="React"
+            className="w-8 h-8"
+          />
+        ),
         name: "React",
         description: "UI Library",
         bgColor: "bg-[#61DAFB]/10",
       },
       {
         icon: (
-          <SiNextdotjs
-            style={{
-              color: "#000000",
-              border: "1px solid #333",
-              borderRadius: "100%",
-            }}
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
+            alt="Next.js"
+            className="w-8 h-8 dark:invert"
           />
         ),
         name: "Next.js",
@@ -148,7 +138,13 @@ export default function Home() {
         bgColor: "bg-gray-100 dark:bg-zinc-800",
       },
       {
-        icon: <SiTailwindcss style={{ color: "#06B6D4" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
+            alt="Tailwind"
+            className="w-8 h-8"
+          />
+        ),
         name: "Tailwind",
         description: "Utility-First CSS",
         bgColor: "bg-[#06B6D4]/10",
@@ -156,31 +152,61 @@ export default function Home() {
 
       // Backend
       {
-        icon: <SiNodedotjs style={{ color: "#339933" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
+            alt="Node.js"
+            className="w-8 h-8"
+          />
+        ),
         name: "Node.js",
         description: "JS Runtime",
         bgColor: "bg-[#339933]/10",
       },
       {
-        icon: <SiPostgresql style={{ color: "#4169E1" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
+            alt="PostgreSQL"
+            className="w-8 h-8"
+          />
+        ),
         name: "PostgreSQL",
         description: "Relational Database",
         bgColor: "bg-[#4169E1]/10",
       },
       {
-        icon: <SiDocker style={{ color: "#2496ED" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+            alt="Docker"
+            className="w-8 h-8"
+          />
+        ),
         name: "Docker",
         description: "Containerization",
         bgColor: "bg-[#2496ED]/10",
       },
       {
-        icon: <SiGit style={{ color: "#F05032" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+            alt="Git"
+            className="w-8 h-8"
+          />
+        ),
         name: "Git",
         description: "Version Control",
         bgColor: "bg-[#F05032]/10",
       },
       {
-        icon: <SiSupabase style={{ color: "#3ECF8E" }} />,
+        icon: (
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
+            alt="Supabase"
+            className="w-8 h-8"
+          />
+        ),
         name: "Supabase",
         description: "Backend as a Service",
         bgColor: "bg-[#3ECF8E]/10",

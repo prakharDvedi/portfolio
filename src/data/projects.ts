@@ -107,17 +107,7 @@ export const projects = [
       source: "https://github.com/prakharDvedi/LovelyHome",
     },
   },
-  {
-    name: "LovelyHome",
-    description:
-      "A personalized browser extension for a clean, minimal home page. Features include daily quotes, AQI & temperature tracking, a clock, and a simple TODO list. Designed for immersion with gradient color themes and cozy background sounds.",
-    date: "2025",
-    tags: ["JavaScript", "HTML5", "CSS3", "Web Extension API"],
-    slug: "lovely-home",
-    links: {
-      source: "https://github.com/prakharDvedi/LovelyHome",
-    },
-  },
+
   {
     name: "Document Intelligence System",
     description:

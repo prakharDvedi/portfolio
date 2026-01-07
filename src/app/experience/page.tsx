@@ -21,7 +21,7 @@ const careerTimeline = [
       "Working on full-stack development for the healthcare platform.",
     icon: <FiBriefcase />,
     color: "blue",
-    link: "",
+    link: "https://indiapaathy.in/",
   },
   {
     title: "XPLOIT Club Offensive Security Lead",
