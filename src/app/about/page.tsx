@@ -30,19 +30,20 @@ export default function About() {
             I work primarily with JavaScript and build full-stack applications
             end to end. These days, I prefer Next.js as my core framework, using
             it across frontend and backend, backed by databases like PostgreSQL
-            and MongoDB. I care about clean architecture, sensible abstractions,
-            and systems that behave predictably in production.
+            and MongoDB. Currently, I am also learning about CI/CD pipelines,
+            Docker, and Jenkins to streamline my development and deployment
+            processes.
           </p>
 
           <p className={styles.paragraph}>
             I also take data structures and algorithms seriously, not as a
             numbers game, but as a way to think clearly about performance, edge
-            cases, and trade-offs. I deliberately avoid overly clever solutions
-            and instead aim for code that is readable, maintainable, and easy to
-            reason about months later.
-            <br></br>Outside of code, I enjoy understanding how systems fail,
-            how teams ship, and how small technical decisions compound over
-            time.
+            cases, and trade-offs. I aim for code that is readable,
+            maintainable, and easy to reason about later.
+            <br></br>Outside of code, I enjoy hacking and taking tests on
+            TryHackMe and VulnHub to understand how systems fails. I am a tech
+            enthusiast so I also like to tinker with gadgets, softwares and
+            build projects.
           </p>
         </div>
 
