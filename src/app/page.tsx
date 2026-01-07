@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import styles from "./home.module.css";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
-import TechCard from "@/components/TechCard";
 import {
   SiCplusplus,
   SiPython,
@@ -190,6 +189,14 @@ export default function Home() {
     []
   );
 
+  const marqueeIcons = useMemo(
+    () =>
+      [...techStack, ...techStack].map((tech, i) => ({
+        ...tech,
+        uniqueKey: `${tech.name}-${i}`,
+      })),
+    [techStack]
+  );
   return (
     <div className={styles.container}>
       <div className={styles.mainSection}>
@@ -377,53 +384,22 @@ export default function Home() {
         </div>
       </div>
 
-      <div
-        className="relative z-10 py-16 sm:py-24 max-w-6xl mx-auto px-4"
-        id="tech-stack"
+      <motion.div
+        className={styles.techStack}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 0.5 }}
       >
-        <div className="space-y-4 mb-10 w-full">
-          <motion.h1
-            initial={{ opacity: 0, x: -75 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200"
-          >
-            Current technologies
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, x: -90 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-            className="text-sm min-[430px]:text-base max-w-lg md:max-w-3xl text-dark-200/70 dark:text-stone-200/70"
-          >
-            I&apos;m proficient in a range of modern technologies that empower
-            me to build highly functional solutions. These are some of my main
-            technologies.
-          </motion.p>
-        </div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 75 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.25 }}
-          className="grid grid-cols-2 md:grid-cols-4 items-stretch gap-4 w-full"
-        >
-          {techStack.map((tech) => (
-            <TechCard
-              key={tech.name}
-              cardInfo={{
-                name: tech.name,
-                description: tech.description || "Tech Stack",
-                icon: tech.icon,
-                bgColor: tech.bgColor || "bg-gray-100",
-              }}
-            />
+        <h3 className={styles.toolsHeading}>TOOLS I USE</h3>
+        <div className={styles.marqueeTrack}>
+          {marqueeIcons.map((tech) => (
+            <div key={tech.uniqueKey} className={styles.techIcon}>
+              {tech.icon}
+              <span className={styles.techName}>{tech.name}</span>
+            </div>
           ))}
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import StatCard from "@/components/StatCard";
 import ContestTile from "@/components/ContestTile";
 import { SiLeetcode, SiCodeforces, SiCodechef, SiGithub } from "react-icons/si";
+import { contests } from "@/data/contests";
 
 const Programming = () => {
   const [cfStats, setCfStats] = React.useState({
@@ -211,15 +212,6 @@ const Programming = () => {
     },
   ];
 
-  const contests = [
-    {
-      title: "",
-      date: "",
-      result: "",
-      description: "",
-    },
-  ];
-
   return (
     <div className={styles.container}>
       <motion.h1
@@ -246,6 +238,29 @@ const Programming = () => {
                 icon={stat.icon}
                 stats={stat.stats}
                 link={stat.link}
+              />
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      <div className={styles.section} id="contest-experiences">
+        <h2 className={styles.sectionTitle}>Past Coding Comps</h2>
+        <div className={styles.blogGrid}>
+          {contests.map((contest, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
+            >
+              <ContestTile
+                title={contest.title}
+                date={contest.date}
+                result={contest.result}
+                description={contest.description}
+                image={contest.image}
+                link={contest.link}
               />
             </motion.div>
           ))}
