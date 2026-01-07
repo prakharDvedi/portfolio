@@ -22,23 +22,27 @@ export default function About() {
             >
               <strong>IIIT Bhopal</strong>
             </a>{" "}
-            who's super into building web apps that actually do cool stuff.
+            who focuses on building web systems that are practical, reliable,
+            and built to last.
           </p>
 
           <p className={styles.paragraph}>
-            I primarily work with JavaScript, building full-stack applications
-            from the ground up. Currently, I'm really enjoying Next.js for both
-            frontend and backend these days, integrating them with databases
-            like PostgreSQL and MongoDB.
+            I work primarily with JavaScript and build full-stack applications
+            end to end. These days, I prefer Next.js as my core framework, using
+            it across frontend and backend, backed by databases like PostgreSQL
+            and MongoDB. I care about clean architecture, sensible abstractions,
+            and systems that behave predictably in production.
           </p>
 
           <p className={styles.paragraph}>
-            Besides coding, I also keep my data structures and algorithms skills
-            sharp. Not because I love grinding LeetCode all day, but because it
-            really helps me think through tricky situations, performance, and
-            making smart trade-offs. I always go for solutions that are easy to
-            read and understand, rather than super clever ones that become a
-            nightmare to maintain later.
+            I also take data structures and algorithms seriously, not as a
+            numbers game, but as a way to think clearly about performance, edge
+            cases, and trade-offs. I deliberately avoid overly clever solutions
+            and instead aim for code that is readable, maintainable, and easy to
+            reason about months later.
+            <br></br>Outside of code, I enjoy understanding how systems fail,
+            how teams ship, and how small technical decisions compound over
+            time.
           </p>
         </div>
 

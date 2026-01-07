@@ -19,21 +19,23 @@ import { currentWorkData } from "@/data/currentWork";
 
 export default function Home() {
   const [time, setTime] = useState<string>("");
-  const words = useMemo(() => [
-    "Next.js",
-    "Node.js",
-    "Generative AI",
-    "RAG Pipelines",
-    "Python",
-    "Docker",
-    "Kubernetes",
-    "Jenkins",
-    "Git",
-    "React",
-    "Fastify",
-    "PostgreSQL",
-    "Framer Motion",
-  ]);
+  const words = useMemo(
+    () => [
+      "Next.js",
+      "Node.js",
+      "FastAPI",
+      "PostgreSQL",
+      "Docker",
+      // "Kubernetes",
+      // "Jenkins",
+      "Generative AI",
+      "RAG Pipelines",
+      "Python",
+      "React",
+      "Git",
+    ],
+    []
+  );
 
   const [index, setIndex] = useState(0);
 
@@ -114,7 +116,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Backend-focused web developer familiar with <br />
+            Backend-focused web developer working with <br />
             <span className={styles.techRotator}>
               <AnimatePresence mode="wait">
                 <motion.span

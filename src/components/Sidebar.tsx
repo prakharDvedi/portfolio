@@ -31,7 +31,7 @@ const Sidebar = () => {
     { name: "About Me", path: "/about", icon: <FiUser /> },
     { name: "Experience", path: "/experience", icon: <FiBriefcase /> },
     { name: "Working On", path: "/working-on", icon: <FiTerminal /> },
-    { name: "Certifications", path: "/certifications", icon: <FiAward /> },
+    // { name: "Certifications", path: "/certifications", icon: <FiAward /> },
     {
       name: "Programming",
       path: "/programming",
