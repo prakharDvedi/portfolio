@@ -28,7 +28,7 @@ const careerTimeline = [
   },
   {
     title: "DLD Teaching Assistant",
-    org: "University Department",
+    org: "IIIT Bhopal",
     type: "Academic",
     period: "Jan 2025 - Apr 2025",
     description:
