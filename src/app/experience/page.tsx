@@ -1,134 +1,87 @@
 "use client";
 
+import React from "react";
+import { motion } from "framer-motion";
 import styles from "./Experience.module.css";
-import ExperienceCard from "@/components/ExperienceCard";
-import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { FiBriefcase, FiUsers, FiBookOpen } from "react-icons/fi";
+
+const careerTimeline = [
+  {
+    title: "Software Developer",
+    org: "IndiaPathy",
+    type: "Contract",
+    period: "Jan 2026 - Present",
+    description:
+      "Working on full-stack development for the healthcare platform.",
+    icon: <FiBriefcase />,
+    color: "blue",
+  },
+  {
+    title: "Offensive Security Club Lead",
+    org: "University Club",
+    type: "Leadership",
+    period: "Sep 2025 - Present",
+    description:
+      "Leading workshops and CTF events for cybersecurity enthusiasts.",
+    icon: <FiUsers />,
+    color: "purple",
+  },
+  {
+    title: "DLD Teaching Assistant",
+    org: "University Department",
+    type: "Academic",
+    period: "Jan 2025 - Apr 2025",
+    description:
+      "Assisted in Digital Logic Design course, grading assignments and guiding students.",
+    icon: <FiBookOpen />,
+    color: "amber",
+  },
+];
 
 export default function Experience() {
-  const items = [
-    {
-      title: "Pandit AI 🕉️",
-      subtitle: "Neuro-Symbolic Vedic Astrology Application",
-      description: (
-        <>
-          <p>
-            A modern application that combines{" "}
-            <strong>ancient Vedic astrology wisdom with AI</strong> to generate
-            personalized horoscope readings.
-          </p>
-          <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
-            How it works:
-          </h4>
-          <ul style={{ paddingLeft: "1.2rem", marginBottom: "1rem" }}>
-            <li>
-              Calculates precise planetary positions using Swiss Ephemeris
-            </li>
-            <li>
-              Applies classical Vedic astrology rules from a Neo4j knowledge
-              graph
-            </li>
-            <li>
-              Synthesizes natural language insights using AI (Groq/Ollama)
-            </li>
-          </ul>
-          <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
-            Tech Stack:
-          </h4>
-          <ul style={{ paddingLeft: "1.2rem" }}>
-            <li>
-              <strong>Backend:</strong> FastAPI, Python, Swiss Ephemeris, Neo4j
-            </li>
-            <li>
-              <strong>Frontend:</strong> Next.js, TypeScript, Tailwind CSS
-            </li>
-            <li>
-              <strong>AI:</strong> Groq API with Ollama fallback
-            </li>
-          </ul>
-        </>
-      ),
-      link: "https://github.com/prakharDvedi/PanditAI",
-      linkText: "View on GitHub",
-      icon: <FiGithub />,
-    },
-    {
-      title: "Rently",
-      subtitle: "Chore & Expense Management for Shared Living",
-      description: (
-        <>
-          <p>
-            A web application that helps tenants living together manage{" "}
-            <strong>chore rotations and shared expenses</strong> so turns aren’t
-            forgotten and resentment doesn’t quietly poison the apartment.
-          </p>
-          <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
-            The problem it solves:
-          </h4>
-          <ul style={{ paddingLeft: "1.2rem", marginBottom: "1rem" }}>
-            <li>Chores rotate and people forget</li>
-            <li>Responsibility is unclear</li>
-            <li>Expenses get messy</li>
-            <li>Coordination happens in unreliable chat threads</li>
-          </ul>
-          <h4 style={{ marginTop: "1.5rem", marginBottom: "0.5rem" }}>
-            Target users:
-          </h4>
-          <ul style={{ paddingLeft: "1.2rem" }}>
-            <li>3–6 tenants living together</li>
-            <li>Shared responsibilities</li>
-            <li>No need for landlords, payments, or enterprise nonsense</li>
-          </ul>
-        </>
-      ),
-      link: "https://github.com/prakharDvedi/rently",
-      linkText: "View on GitHub",
-      icon: <FiGithub />,
-    },
-    {
-      title: "NEST Hackathon 2.0",
-      subtitle: "Nurturing Excellence Strengthening Talent",
-      description:
-        "Participating in the Novartis NEST 2.0 Hackathon to build innovative healthcare solutions.",
-      link: "https://unstop.com/competitions/nest-20-nurturing-excellence-strengthening-talent-novartis-1591009",
-      linkText: "Competition Details",
-      icon: <FiExternalLink />,
-    },
-    {
-      title: "Microsoft Imagine Cup",
-      subtitle: "Global Student Technology Competition",
-      description:
-        "Building a project for the Microsoft Imagine Cup, focusing on AI and Cloud technologies.",
-      link: "https://imaginecup.microsoft.com/en-us/category/33",
-      linkText: "Event Info",
-      icon: <FiExternalLink />,
-    },
-    {
-      title: "Learning Open Source Contributions",
-      description:
-        "Actively learning how to contribute to large-scale open source projects, understanding codebases, and PR workflows.",
-    },
-    {
-      title: "DevOps Learning",
-      description:
-        "Deep diving into CI/CD pipelines and Docker containerization to improve deployment workflows.",
-    },
-  ];
-
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Working ON</h1>
+      <motion.h1
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className={styles.heading}
+      >
+        My Journey
+      </motion.h1>
 
-      <div className={styles.list}>
-        {items.map((item, index) => (
-          <ExperienceCard
+      <div className={styles.timeline}>
+        {/* Vertical Line */}
+        <div className={styles.line} />
+
+        {careerTimeline.map((item, index) => (
+          <motion.div
             key={index}
-            title={item.title}
-            summary={item.subtitle}
-            description={item.description}
-            link={item.link}
-            linkText={item.linkText}
-            icon={item.icon}
-          />
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: index * 0.2 }}
+            className={styles.item}
+          >
+            {/* Timeline Dot */}
+            <div className={`${styles.dot} ${styles[item.color]}`}>
+              {item.icon}
+            </div>
+
+            {/* Content Card */}
+            <div className={styles.card}>
+              <div className={styles.header}>
+                <h3 className={styles.role}>{item.title}</h3>
+                <span className={styles.period}>{item.period}</span>
+              </div>
+
+              <div className={styles.subHeader}>
+                <span className={styles.org}>{item.org}</span>
+                <span className={styles.type}>{item.type}</span>
+              </div>
+
+              <p className={styles.description}>{item.description}</p>
+            </div>
+          </motion.div>
         ))}
       </div>
     </div>

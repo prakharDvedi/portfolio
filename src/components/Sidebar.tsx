@@ -14,6 +14,7 @@ import {
   FiMail,
   FiAward,
   FiCode,
+  FiBriefcase,
 } from "react-icons/fi";
 import styles from "./Sidebar.module.css";
 
@@ -28,7 +29,7 @@ const Sidebar = () => {
   const navItems = [
     { name: "Projects", path: "/projects", icon: <FiLayers /> },
     { name: "About Me", path: "/about", icon: <FiUser /> },
-    { name: "Working On", path: "/experience", icon: <FiTerminal /> },
+    { name: "Experience", path: "/experience", icon: <FiBriefcase /> },
     { name: "Certifications", path: "/certifications", icon: <FiAward /> },
     {
       name: "Programming",

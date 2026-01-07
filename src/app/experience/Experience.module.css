@@ -1,84 +1,173 @@
 .container {
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem 2rem;
+  min-height: 100vh;
 }
 
-.title {
+.heading {
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 2rem;
-  color: var(--text-primary);
+  margin-bottom: 4rem;
+  text-align: center;
+  background: linear-gradient(to right, #fff, #9ca3af);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
-.section {
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding-left: 2rem;
+}
+
+/* Vertical Line */
+.line {
+  position: absolute;
+  left: 2rem; /* Matches padding-left of timeline approx */
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    to bottom,
+    rgba(59, 130, 246, 0) 0%,
+    rgba(59, 130, 246, 0.3) 10%,
+    rgba(59, 130, 246, 0.3) 90%,
+    rgba(59, 130, 246, 0) 100%
+  );
+  transform: translateX(-50%);
+}
+
+.item {
+  position: relative;
+  width: 100%;
+}
+
+/* Dot */
+.dot {
+  position: absolute;
+  left: -2rem; /* Pull back to the line */
+  top: 0;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #18181b; /* zinc-900 */
+  border: 2px solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 10;
+  font-size: 1rem;
+}
+
+.dot.blue {
+  border-color: #3b82f6;
+  color: #60a5fa;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
+}
+.dot.purple {
+  border-color: #a855f7;
+  color: #c084fc;
+  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
+}
+.dot.amber {
+  border-color: #f59e0b;
+  color: #fbbf24;
+  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+}
+
+/* Card */
+.card {
   background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-color);
-  border-radius: 12px;
-  padding: 2rem;
-  margin-bottom: 2rem;
-  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-left: 2rem; /* Spacing from dot */
+  transition: all 0.3s ease;
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  color: var(--accent-primary);
-  margin-bottom: 1rem;
-  font-weight: 600;
+.card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-2px);
 }
 
-.role {
-  font-size: 1.1rem;
-  color: var(--text-primary);
-  margin-bottom: 1rem;
-  font-weight: 500;
-  opacity: 0.9;
-}
-
-.cardHeader {
+.header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-}
-
-.iconLink {
-  color: var(--text-secondary);
-  font-size: 1.2rem;
-  transition: color 0.3s ease;
-}
-
-.iconLink:hover {
-  color: var(--accent-primary);
-}
-
-.description {
-  color: var(--text-secondary);
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
-}
-
-.description strong {
-  color: var(--text-primary);
-}
-
-.description ul {
-  list-style-type: disc;
-  margin-top: 0.5rem;
-}
-
-.description li {
-  margin-bottom: 0.25rem;
-}
-
-.link {
-  display: inline-flex;
-  align-items: center;
+  margin-bottom: 0.5rem;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  color: var(--accent-primary);
-  text-decoration: none;
+}
+
+.role {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #f4f4f5; /* zinc-100 */
+}
+
+.period {
+  font-family: monospace;
+  font-size: 0.875rem;
+  color: #a1a1aa; /* zinc-400 */
+  background: rgba(255, 255, 255, 0.05);
+  padding: 0.2rem 0.6rem;
+  border-radius: 9999px;
+}
+
+.subHeader {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.org {
+  color: #3b82f6; /* blue-500 */
   font-weight: 500;
 }
 
-.link:hover {
-  text-decoration: underline;
+.type {
+  color: #71717a; /* zinc-500 */
+  padding-left: 0.75rem;
+  border-left: 1px solid #3f3f46;
+}
+
+.description {
+  color: #d4d4d8; /* zinc-300 */
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 4rem 1rem;
+  }
+  .timeline {
+    padding-left: 1.5rem;
+  }
+  .line {
+    left: 1.5rem;
+  }
+  .dot {
+    left: -1.5rem;
+    width: 2rem;
+    height: 2rem;
+    font-size: 0.9rem;
+  }
+  .card {
+    margin-left: 1rem;
+    padding: 1.25rem;
+  }
+  .header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
 }
