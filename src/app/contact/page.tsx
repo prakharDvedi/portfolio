@@ -10,6 +10,8 @@ import {
   FiSend,
   FiCheck,
   FiAlertCircle,
+  FiCopy,
+  FiMessageCircle,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -23,6 +25,14 @@ export default function Contact() {
     "idle" | "loading" | "success" | "error"
   >("idle");
   const [errorMessage, setErrorMessage] = useState("");
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = (e: React.MouseEvent) => {
+    e.preventDefault();
+    navigator.clipboard.writeText("prakhar.dwivedi.3782@gmail.com");
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -71,13 +81,32 @@ export default function Contact() {
           </p>
 
           <div className={styles.contactLinks}>
+            <div className={styles.emailWrapper}>
+              <Link
+                href="mailto:prakhar.dwivedi.3782@gmail.com"
+                className={styles.linkItem}
+              >
+                <FiMail className={styles.icon} />
+                <span>prakhar.dwivedi.3782@gmail.com</span>
+              </Link>
+              <button
+                onClick={handleCopy}
+                className={styles.copyBtn}
+                aria-label="Copy email"
+              >
+                {copied ? <FiCheck /> : <FiCopy />}
+              </button>
+            </div>
+
             <Link
-              href="mailto:prakhar.dwivedi.3782@gmail.com"
+              href="https://wa.me/919354894089"
+              target="_blank"
               className={styles.linkItem}
             >
-              <FiMail className={styles.icon} />
-              <span>prakhar.dwivedi.3782@gmail.com</span>
+              <FiMessageCircle className={styles.icon} />
+              <span>WhatsApp (+91 9354894089)</span>
             </Link>
+
             <Link
               href="https://www.linkedin.com/in/prakhar-dwivedi-a05611292/"
               target="_blank"
