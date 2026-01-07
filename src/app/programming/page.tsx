@@ -243,7 +243,6 @@ const Programming = () => {
           ))}
         </div>
       </div>
-
       <div className={styles.section} id="contest-experiences">
         <h2 className={styles.sectionTitle}>Past Coding Comps</h2>
         <div className={styles.blogGrid}>
@@ -252,6 +251,12 @@ const Programming = () => {
               key={index}
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
+              whileHover={{
+                scale: 1.03,
+                y: -5,
+                filter: "brightness(1.1)",
+                transition: { duration: 0.2 },
+              }}
               transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
             >
               <ContestTile
@@ -259,7 +264,6 @@ const Programming = () => {
                 date={contest.date}
                 result={contest.result}
                 description={contest.description}
-                image={contest.image}
                 link={contest.link}
               />
             </motion.div>

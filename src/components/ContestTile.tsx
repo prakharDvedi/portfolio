@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { FiExternalLink } from "react-icons/fi";
 
 interface ContestTileProps {
@@ -10,8 +10,8 @@ interface ContestTileProps {
   date: string;
   description: string;
   result?: string;
-  image?: string;
   link?: string;
+  image?: string;
 }
 
 const ContestTile: React.FC<ContestTileProps> = ({
@@ -19,58 +19,65 @@ const ContestTile: React.FC<ContestTileProps> = ({
   date,
   description,
   result,
-  image,
   link,
+  image,
 }) => {
   return (
-    <div className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors duration-300">
-      <div className="flex flex-col md:flex-row gap-6 p-6">
-        {/* Image Section */}
-        {image && (
-          <div className="flex-shrink-0 w-full md:w-48 h-48 md:h-auto relative rounded-lg overflow-hidden bg-white/5">
-            <Image
-              src={image}
-              alt={title}
-              width={500}
-              height={500}
-              className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-            />
-          </div>
-        )}
+    <div className="group relative flex flex-col h-full overflow-hidden rounded-2xl bg-white/5 backdrop-blur-md border-2 border-white/20 shadow-[0_8px_16px_rgba(0,0,0,0.4)] transition-all duration-300 hover:bg-white/[0.08] hover:border-blue-400/50 hover:shadow-[0_12px_24px_rgba(59,130,246,0.2)] hover:-translate-y-1">
+      {/* Image */}
+      {image && (
+        <div className="relative w-full aspect-video overflow-hidden rounded-t-xl -m-[2px] mb-4">
+          <Image
+            src={image}
+            alt={title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          />
+        </div>
+      )}
 
-        {/* Content Section */}
-        <div className="flex-1 min-w-0 flex flex-col">
-          <div className="flex items-start justify-between gap-4 mb-2">
-            <div>
-              <h3 className="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">
-                {title}
-              </h3>
-              <p className="text-sm text-gray-400 mt-1">{date}</p>
-            </div>
-            {result && (
-              <span className="inline-flex px-3 py-1 rounded-full text-xs font-medium bg-blue-500/10 text-blue-400 border border-blue-500/20 whitespace-nowrap">
+      {/* Content Container */}
+      <div className="px-6 pb-6">
+        {/* Header */}
+        <div className="flex flex-col gap-3 mb-4">
+          <div className="flex justify-between items-start gap-4">
+            <h3 className="text-lg font-bold text-gray-100 group-hover:text-blue-400 transition-colors leading-tight">
+              {title}
+            </h3>
+            <span className="text-xs font-mono text-zinc-500 whitespace-nowrap mt-1">
+              {date}
+            </span>
+          </div>
+
+          {result && (
+            <div className="flex">
+              <span className="inline-flex px-2.5 py-1 rounded-md text-xs font-medium bg-blue-500/10 text-blue-300 border border-blue-500/20">
                 {result}
               </span>
-            )}
-          </div>
-
-          <p className="text-gray-300 text-sm leading-relaxed mb-4 flex-grow">
-            {description}
-          </p>
-
-          {link && (
-            <div className="mt-auto pt-2">
-              <Link
-                href={link}
-                target="_blank"
-                className="inline-flex items-center gap-2 text-sm font-medium text-blue-400 hover:text-blue-300 transition-colors"
-                onClick={(e) => e.stopPropagation()}
-              >
-                View Details <FiExternalLink />
-              </Link>
             </div>
           )}
         </div>
+
+        {/* Description */}
+        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+          {description}
+        </p>
+
+        {/* Footer */}
+        {link && (
+          <div className="mt-auto border-t border-white/5 pt-4">
+            <Link
+              href={link}
+              target="_blank"
+              className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors group/link"
+              onClick={(e) => e.stopPropagation()}
+            >
+              View Details
+              <FiExternalLink className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

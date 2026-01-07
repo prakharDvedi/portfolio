@@ -1,29 +1,20 @@
 export const contests = [
   {
-    title: "ICPC Regional 2024",
-    date: "Dec 2024",
-    result: "Regional Finalist",
+    title: "CodeUtsav 9.0",
+    date: "Feb 2025",
+    result: "",
     description:
-      "Qualified for the regionals after securing top rank in the preliminary round. Solved 4 out of 5 problems in the contest.",
+      "Built Authentica, a decentralized platform to verify AI-generated content using cryptographic IDs, IPFS, and Ethereum. Featured in local news for tackling deepfakes and content accountability.",
+    link: "https://authentica-six.vercel.app/",
     image: "/LeetCode_Sharing.png",
-    link: "https://icpc.global/",
   },
   {
-    title: "Google Kickstart Round E",
-    date: "Aug 2024",
-    result: "Global Rank 342",
-    description:
-      "Secured a global rank of 342 out of 10,000+ participants. Solved all problems including the hard graph dp problem.",
-    image: "/LeetCode_Sharing.png",
-    link: "https://codingcompetitions.withgoogle.com/kickstart",
-  },
-  {
-    title: "Meta Hacker Cup",
-    date: "July 2024",
+    title: "HackX 3.0",
+    date: "Oct 2024",
     result: "Round 2 Qualifier",
     description:
-      "Successfully cleared Round 1 and qualified for Round 2. Implemented complex algorithms for optimization problems.",
+      "Developed 'AI Legal Advisor', an AI-based platform for simplifying legal assistance through smart automation and document insights. Reached Round 2 among 170+ participating teams.",
+    link: "https://e-vakeel.vercel.app/",
     image: "/LeetCode_Sharing.png",
-    link: "https://www.facebook.com/codingcompetitions/hacker-cup",
   },
 ];
