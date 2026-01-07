@@ -23,58 +23,56 @@ const ContestTile: React.FC<ContestTileProps> = ({
   image,
 }) => {
   return (
-    <div className="group relative flex flex-col h-full overflow-hidden rounded-2xl bg-white/5 backdrop-blur-md border-2 border-white/20 shadow-[0_8px_16px_rgba(0,0,0,0.4)] transition-all duration-300 hover:bg-white/[0.08] hover:border-blue-400/50 hover:shadow-[0_12px_24px_rgba(59,130,246,0.2)] hover:-translate-y-1">
+    <div className="group relative flex flex-col h-full overflow-hidden rounded-xl bg-zinc-900/80 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-500 hover:bg-zinc-800 hover:border-blue-500/30 hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] hover:-translate-y-1">
       {/* Image */}
       {image && (
-        <div className="relative w-full aspect-video overflow-hidden rounded-t-xl -m-[2px] mb-4">
+        <div className="relative w-full aspect-video overflow-hidden border-b border-white/5">
           <Image
             src={image}
             alt={title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
         </div>
       )}
 
       {/* Content Container */}
-      <div className="px-6 pb-6">
+      <div className="flex flex-col flex-grow p-6">
         {/* Header */}
-        <div className="flex flex-col gap-3 mb-4">
-          <div className="flex justify-between items-start gap-4">
-            <h3 className="text-lg font-bold text-gray-100 group-hover:text-blue-400 transition-colors leading-tight">
+        <div className="flex justify-between items-start gap-4 mb-4">
+          <div className="flex flex-col gap-1.5">
+            <h3 className="text-lg font-bold text-gray-100 group-hover:text-blue-400 transition-colors leading-tight tracking-tight">
               {title}
             </h3>
-            <span className="text-xs font-mono text-zinc-500 whitespace-nowrap mt-1">
+            <span className="text-xs font-medium text-zinc-500 uppercase tracking-wider">
               {date}
             </span>
           </div>
 
           {result && (
-            <div className="flex">
-              <span className="inline-flex px-2.5 py-1 rounded-md text-xs font-medium bg-blue-500/10 text-blue-300 border border-blue-500/20">
-                {result}
-              </span>
-            </div>
+            <span className="shrink-0 inline-flex px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wide bg-gradient-to-r from-blue-500/10 to-cyan-500/10 text-blue-300 border border-blue-500/20 shadow-[0_0_10px_rgba(59,130,246,0.1)]">
+              {result}
+            </span>
           )}
         </div>
 
         {/* Description */}
-        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow">
+        <p className="text-zinc-400 text-sm leading-relaxed mb-6 flex-grow line-clamp-3">
           {description}
         </p>
 
         {/* Footer */}
         {link && (
-          <div className="mt-auto border-t border-white/5 pt-4">
+          <div className="mt-auto pt-4 border-t border-white/5 flex items-center justify-between group/link">
             <Link
               href={link}
               target="_blank"
-              className="inline-flex items-center gap-2 text-sm font-medium text-zinc-300 hover:text-blue-400 transition-colors group/link"
+              className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-400 group-hover:text-blue-400 transition-colors"
               onClick={(e) => e.stopPropagation()}
             >
               View Details
-              <FiExternalLink className="transition-transform group-hover/link:-translate-y-0.5 group-hover/link:translate-x-0.5" />
+              <FiExternalLink className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
         )}

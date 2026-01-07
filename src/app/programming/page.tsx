@@ -174,7 +174,7 @@ const Programming = () => {
       platform: "GitHub",
       icon: <SiGithub style={{ color: "#ffffff" }} />,
       stats: [
-        { label: "Contributions (Year)", value: ghStats.contributions },
+        { label: "Contributions (last year)", value: ghStats.contributions },
         { label: "Max Streak", value: ghStats.streak },
         { label: "Public Repos", value: ghStats.repos },
       ],
@@ -243,7 +243,7 @@ const Programming = () => {
           ))}
         </div>
       </div>
-      <div className={styles.section} id="contest-experiences">
+      {/* <div className={styles.section} id="contest-experiences">
         <h2 className={styles.sectionTitle}>Past Coding Comps</h2>
         <div className={styles.blogGrid}>
           {contests.map((contest, index) => (
@@ -269,7 +269,7 @@ const Programming = () => {
             </motion.div>
           ))}
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
