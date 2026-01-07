@@ -179,8 +179,7 @@ const Programming = () => {
         { label: "Public Repos", value: ghStats.repos },
       ],
       link: "https://github.com/prakharDvedi",
-      description:
-        "Consistent contributions focused on real projects over throwaway repos.",
+      description: "Open source contributions and project development.",
     },
     {
       platform: "CodeForces",
@@ -191,8 +190,7 @@ const Programming = () => {
         { label: "Rank", value: cfStats.rank },
       ],
       link: "https://codeforces.com/profile/prakhar_d_vedi",
-      description:
-        "Regular contest participation to improve speed and decision-making under pressure.",
+      description: "Competitive programming and algorithmic problem solving.",
     },
     {
       platform: "LeetCode",
@@ -203,8 +201,7 @@ const Programming = () => {
         { label: "Global Rank", value: lcStats.ranking },
       ],
       link: "https://leetcode.com/u/prakhar_the_vedi/",
-      description:
-        "Strong fundamentals with emphasis on problem-solving over leaderboard chasing.",
+      description: "Data structures and algorithm proficiency.",
     },
     {
       platform: "CodeChef",
@@ -215,8 +212,7 @@ const Programming = () => {
         { label: "Stars", value: ccStats.stars },
       ],
       link: "https://www.codechef.com/users/prakhar_d_vedi",
-      description:
-        "Actively improving through rated contests and long-term practice.",
+      description: "Rated contests and competitive programming practice.",
     },
   ];
 
