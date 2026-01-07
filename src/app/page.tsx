@@ -21,18 +21,9 @@ export default function Home() {
   const [time, setTime] = useState<string>("");
   const words = useMemo(
     () => [
-      "Next.js",
-      "Node.js",
-      "FastAPI",
-      "PostgreSQL",
-      "Docker",
-      // "Kubernetes",
-      // "Jenkins",
-      "Generative AI",
-      "RAG Pipelines",
-      "Python",
-      "React",
-      "Git",
+      "Next.js • Databases • React • Tailwind",
+      "FastAPI • Python • Langchain",
+      "Docker • AWS • Redis • Git",
     ],
     []
   );

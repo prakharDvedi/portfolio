@@ -44,7 +44,7 @@
 @media (min-width: 1024px) {
   .statsGrid {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 900px; /* Optional: Constrain width so cards don't get too wide */
+    max-width: 900px; /* layout */
   }
 }
 

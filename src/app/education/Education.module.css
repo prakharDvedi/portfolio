@@ -25,14 +25,14 @@
   min-width: 0; /* Prevent flex overflow */
 }
 
-/* Mobile Responsive */
+/* mobile */
 @media (max-width: 768px) {
   .column {
     flex-basis: 100%;
   }
 }
 
-/* --- Left Column: Timeline (Education) --- */
+/* timeline section */
 .sectionTitle {
   font-size: 1.8rem;
   font-weight: 600;
@@ -58,7 +58,7 @@
 .dot {
   position: absolute;
   top: 0;
-  left: -2.6rem; /* Adjust based on padding-left of timeline */
+  left: -2.6rem; /* alignment */
   width: 16px;
   height: 16px;
   background: var(--accent-primary);
@@ -139,7 +139,7 @@
   white-space: nowrap;
 }
 
-/* --- Right Column: Achievements --- */
+/* achievements section */
 .achievementsList {
   display: flex;
   flex-direction: column;
@@ -177,4 +177,22 @@
   line-height: 1.5;
 }
 
-/* Mobile Responsive */
+/* mobile */
+
+.eduContext {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+  font-style: italic;
+  border-left: 2px solid var(--accent-primary);
+  padding-left: 0.75rem;
+}
+
+.framingText {
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}

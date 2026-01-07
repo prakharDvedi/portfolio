@@ -22,10 +22,10 @@
   flex-direction: column;
   gap: 3rem;
   padding-left: 2rem;
-  margin-bottom: 6rem; /* Add spacing before certs */
+  margin-bottom: 6rem; /* spacing */
 }
 
-/* Vertical Line */
+/* vertical line */
 .line {
   position: absolute;
   left: 2rem; /* Matches padding-left of timeline approx */
@@ -47,7 +47,7 @@
   width: 100%;
 }
 
-/* Dot */
+/* dot */
 .dot {
   position: absolute;
   left: -2rem; /* Pull back to the line */
@@ -56,7 +56,7 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 50%;
-  background: #18181b; /* zinc-900 */
+  background: #18181b;
   border: 2px solid;
   display: flex;
   align-items: center;
@@ -82,7 +82,7 @@
   box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
 }
 
-/* Card */
+/* card */
 .card {
   background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -112,13 +112,13 @@
 .role {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #f4f4f5; /* zinc-100 */
+  color: #f4f4f5;
 }
 
 .period {
   font-family: monospace;
   font-size: 0.875rem;
-  color: #a1a1aa; /* zinc-400 */
+  color: #a1a1aa;
   background: rgba(255, 255, 255, 0.05);
   padding: 0.2rem 0.6rem;
   border-radius: 9999px;
@@ -133,18 +133,18 @@
 }
 
 .org {
-  color: #3b82f6; /* blue-500 */
+  color: #3b82f6;
   font-weight: 500;
 }
 
 .type {
-  color: #71717a; /* zinc-500 */
+  color: #71717a;
   padding-left: 0.75rem;
   border-left: 1px solid #3f3f46;
 }
 
 .description {
-  color: #d4d4d8; /* zinc-300 */
+  color: #d4d4d8;
   line-height: 1.6;
   font-size: 0.95rem;
   margin-bottom: 1rem;
@@ -162,17 +162,17 @@
   gap: 0.5rem;
   font-size: 0.875rem;
   font-weight: 500;
-  color: #60a5fa; /* blue-400 */
+  color: #60a5fa;
   transition: all 0.2s ease;
   text-decoration: none;
 }
 
 .link:hover {
-  color: #93c5fd; /* blue-300 */
+  color: #93c5fd;
   transform: translateX(2px);
 }
 
-/* Certifications Section */
+/* certifications */
 .certSection {
   margin-top: 4rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);

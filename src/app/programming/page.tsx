@@ -179,6 +179,8 @@ const Programming = () => {
         { label: "Public Repos", value: ghStats.repos },
       ],
       link: "https://github.com/prakharDvedi",
+      description:
+        "Consistent contributions focused on real projects over throwaway repos.",
     },
     {
       platform: "CodeForces",
@@ -189,6 +191,8 @@ const Programming = () => {
         { label: "Rank", value: cfStats.rank },
       ],
       link: "https://codeforces.com/profile/prakhar_d_vedi",
+      description:
+        "Regular contest participation to improve speed and decision-making under pressure.",
     },
     {
       platform: "LeetCode",
@@ -199,6 +203,8 @@ const Programming = () => {
         { label: "Global Rank", value: lcStats.ranking },
       ],
       link: "https://leetcode.com/u/prakhar_the_vedi/",
+      description:
+        "Strong fundamentals with emphasis on problem-solving over leaderboard chasing.",
     },
     {
       platform: "CodeChef",
@@ -209,6 +215,8 @@ const Programming = () => {
         { label: "Stars", value: ccStats.stars },
       ],
       link: "https://www.codechef.com/users/prakhar_d_vedi",
+      description:
+        "Actively improving through rated contests and long-term practice.",
     },
   ];
 
@@ -238,6 +246,7 @@ const Programming = () => {
                 icon={stat.icon}
                 stats={stat.stats}
                 link={stat.link}
+                description={stat.description}
               />
             </motion.div>
           ))}

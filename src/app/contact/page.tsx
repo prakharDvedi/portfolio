@@ -76,8 +76,8 @@ export default function Contact() {
         <div className={styles.infoSection}>
           <h2 className={styles.subtitle}>Let's Chat!</h2>
           <p className={styles.text}>
-            Whether you have a question, a project idea, or just want to say hi,
-            I'll try my best to get back to you!
+            If you’re interested in collaborating, discussing an idea, or just
+            having a thoughtful conversation, feel free to reach out.
           </p>
 
           <div className={styles.contactLinks}>
@@ -102,6 +102,7 @@ export default function Contact() {
               href="https://wa.me/919354894089"
               target="_blank"
               className={styles.linkItem}
+              style={{ opacity: 1, fontSize: "0.95em" }}
             >
               <FiMessageCircle className={styles.icon} />
               <span>WhatsApp (+91 9354894089)</span>

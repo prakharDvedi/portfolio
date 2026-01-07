@@ -67,7 +67,7 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex-grow: 1; /* Pushes the footer down */
+  flex-grow: 1; /* layout */
 }
 
 .cardFooter {
@@ -86,7 +86,7 @@
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
   border-radius: 6px;
-  background: rgba(59, 130, 246, 0.1); /* Low opacity blue */
+  background: rgba(59, 130, 246, 0.1);
   color: var(--accent-primary);
   text-decoration: none;
   font-weight: 500;

@@ -10,8 +10,8 @@
 
 .mainSection {
   display: flex;
-  align-items: center; /* Centers items vertically */
-  justify-content: center; /* Centers items horizontally */
+  align-items: center;
+  justify-content: center;
   width: 100%;
   gap: 4rem;
   margin-bottom: 0rem;
@@ -138,7 +138,7 @@
   opacity: 0.8;
 }
 
-/* Update Mobile Styles */
+/* mobile */
 @media (max-width: 1024px) {
   .mainSection {
     flex-direction: column;
@@ -182,8 +182,8 @@
 .techRotator {
   display: inline-flex;
   justify-content: flex-start;
-  min-width: 250px;
-  color: var(--accent-primary);
+  min-width: 350px;
+  color: #60a5fa;
   font-weight: 600;
   vertical-align: bottom;
   text-align: left;
@@ -194,7 +194,7 @@
   color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.6;
-  margin-bottom: 1.5rem; /* Reduced to make room for location */
+  margin-bottom: 1.5rem;
 }
 
 .location {
@@ -228,7 +228,7 @@
   width: 100%;
 }
 
-/* Marquee Styles */
+/* marquee */
 .techStack {
   width: 100%;
   overflow: hidden;
@@ -315,7 +315,7 @@
   transform: translateY(-2px);
 }
 
-/* Majestic Contact Button */
+/* buttons */
 .contactBtn {
   position: relative;
   padding: 1rem 2rem;
@@ -462,12 +462,12 @@
   height: 20px;
   object-fit: contain;
   transition: all 0.3s ease;
-  filter: grayscale(100%) invert(1); /* Start white-ish */
+  filter: grayscale(100%) invert(1);
   opacity: 0.8;
 }
 
 .socialLink:hover .socialIconImg {
-  filter: none; /* Show original colors on hover */
+  filter: none;
   transform: scale(1.1);
   opacity: 1;
 }

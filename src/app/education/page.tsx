@@ -14,6 +14,8 @@ export default function Education() {
       degree:
         "Bachelor of Technology in Electronics and Communication Engineering (ECE)",
       grade: "CPI: 8.74",
+      context:
+        "ECE background helps me understand the real world problems and how to solve them.",
       coursework:
         "Data Structures and Algorithms, Object Oriented Programming, DBMS",
     },
@@ -35,6 +37,8 @@ export default function Education() {
 
   const achievements = [
     {
+      framing:
+        "Competitive programming helped sharpen my ability to reason under constraints.",
       text: "Achieved competitive programming ratings: 1614 on CodeChef (3-Star) and 1799 on LeetCode.",
       icon: <FaChartLine />,
     },
@@ -47,14 +51,17 @@ export default function Education() {
       icon: <FaCode />,
     },
     {
+      framing: "Teaching reinforced my understanding and communication skills.",
       text: "Mentored peers in Digital Logic Design as a Teaching Assistant (3+ sessions).",
       icon: <FaChalkboardTeacher />,
     },
     {
-      text: "Qualified in the top ~4.5% (Top 12000) of Adobe India Hackathon 2025.",
+      text: "Qualified in the top ~4.5% of Adobe India Hackathon 2025.",
       icon: <FaTrophy />,
     },
     {
+      framing:
+        "Hackathons are my favorite mode of competing. Building and making something from scratch is the best feeling.",
       text: "Participated in 6+ hackathons, gaining experience in rapid prototyping and teamwork.",
       icon: <FaCode />,
     },
@@ -68,13 +75,16 @@ export default function Education() {
         <div className={styles.column}>
           <h2 className={styles.sectionTitle}>Education</h2>
           <div className={styles.timeline}>
-            {educationData.map((edu, index) => (
+            {educationData.map((edu: any, index) => (
               <div key={index} className={styles.timelineItem}>
                 <span className={styles.dot}></span>
                 <div className={styles.content}>
                   <span className={styles.date}>{edu.date}</span>
                   <h3 className={styles.school}>{edu.school}</h3>
                   <p className={styles.degree}>{edu.degree}</p>
+                  {edu.context && (
+                    <p className={styles.eduContext}>{edu.context}</p>
+                  )}
                   <div className={styles.details}>
                     {edu.grade}
                     {edu.coursework && (
@@ -83,11 +93,13 @@ export default function Education() {
                           Relevant Coursework:
                         </span>
                         <div className={styles.courseworkList}>
-                          {edu.coursework.split(",").map((subject, i) => (
-                            <span key={i} className={styles.courseTag}>
-                              {subject.trim()}
-                            </span>
-                          ))}
+                          {edu.coursework
+                            .split(",")
+                            .map((subject: string, i: number) => (
+                              <span key={i} className={styles.courseTag}>
+                                {subject.trim()}
+                              </span>
+                            ))}
                         </div>
                       </>
                     )}
@@ -101,10 +113,15 @@ export default function Education() {
         <div className={styles.column}>
           <h2 className={styles.sectionTitle}>Key Achievements</h2>
           <div className={styles.achievementsList}>
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement: any, index) => (
               <div key={index} className={styles.achievementCard}>
                 <div className={styles.icon}>{achievement.icon}</div>
-                <p className={styles.achievementText}>{achievement.text}</p>
+                <div>
+                  {achievement.framing && (
+                    <p className={styles.framingText}>{achievement.framing}</p>
+                  )}
+                  <p className={styles.achievementText}>{achievement.text}</p>
+                </div>
               </div>
             ))}
           </div>

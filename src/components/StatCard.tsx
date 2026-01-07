@@ -14,9 +14,16 @@ interface StatCardProps {
   icon: ReactNode;
   stats: Stat[];
   link: string;
+  description?: string;
 }
 
-const StatCard: React.FC<StatCardProps> = ({ platform, icon, stats, link }) => {
+const StatCard: React.FC<StatCardProps> = ({
+  platform,
+  icon,
+  stats,
+  link,
+  description,
+}) => {
   const isInternal = link.startsWith("#");
 
   return (
@@ -40,6 +47,7 @@ const StatCard: React.FC<StatCardProps> = ({ platform, icon, stats, link }) => {
           </div>
         ))}
       </div>
+      {description && <p className={styles.description}>{description}</p>}
     </div>
   );
 };
