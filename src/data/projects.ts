@@ -3,7 +3,7 @@ export const projects = [
     name: "Pandit AI",
     description:
       "Generates personalized Vedic horoscope readings by calculating precise planetary positions using Swiss Ephemeris, applying classical Vedic astrology rules from a knowledge graph, and synthesizing insights using AI (Groq/Ollama).",
-    date: "2025",
+    date: "2026",
     tags: [
       "FastAPI",
       "Python",

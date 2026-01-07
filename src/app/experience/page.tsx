@@ -14,11 +14,10 @@ import {
 const careerTimeline = [
   {
     title: "Software Developer",
-    org: "IndiaPathy",
-    type: "Contract",
+    org: "IndiaPaathy",
+    type: "Freelance Contract",
     period: "Jan 2026 - Present",
-    description:
-      "Working on full-stack development for the healthcare platform.",
+    description: "Working on full-stack development for a healthcare platform.",
     icon: <FiBriefcase />,
     color: "blue",
     link: "https://indiapaathy.in/",
