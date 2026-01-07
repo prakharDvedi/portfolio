@@ -2,8 +2,14 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import styles from "./Experience.module.css";
-import { FiBriefcase, FiUsers, FiBookOpen } from "react-icons/fi";
+import {
+  FiBriefcase,
+  FiUsers,
+  FiBookOpen,
+  FiExternalLink,
+} from "react-icons/fi";
 
 const careerTimeline = [
   {
@@ -15,16 +21,18 @@ const careerTimeline = [
       "Working on full-stack development for the healthcare platform.",
     icon: <FiBriefcase />,
     color: "blue",
+    link: "",
   },
   {
-    title: "Offensive Security Club Lead",
-    org: "University Club",
+    title: "XPLOIT Club Offensive Security Lead",
+    org: "IIIT Bhopal CyberSecurity Club",
     type: "Leadership",
     period: "Sep 2025 - Present",
     description:
       "Leading workshops and CTF events for cybersecurity enthusiasts.",
     icon: <FiUsers />,
     color: "purple",
+    link: "",
   },
   {
     title: "DLD Teaching Assistant",
@@ -35,6 +43,7 @@ const careerTimeline = [
       "Assisted in Digital Logic Design course, grading assignments and guiding students.",
     icon: <FiBookOpen />,
     color: "amber",
+    link: "",
   },
 ];
 
@@ -80,6 +89,18 @@ export default function Experience() {
               </div>
 
               <p className={styles.description}>{item.description}</p>
+
+              {item.link && (
+                <div className={styles.linkWrapper}>
+                  <Link
+                    href={item.link}
+                    target="_blank"
+                    className={styles.link}
+                  >
+                    View Details <FiExternalLink />
+                  </Link>
+                </div>
+              )}
             </div>
           </motion.div>
         ))}
