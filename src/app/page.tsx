@@ -15,25 +15,26 @@ import {
 } from "react-icons/si";
 
 import { techStackData } from "@/data/techStack";
+import { currentWorkData } from "@/data/currentWork";
 
 export default function Home() {
   const [time, setTime] = useState<string>("");
-  const words = useMemo(
-    () => [
-      "React",
-      "Node.js",
-      "Fastify",
-      "PostgreSQL",
-      "Framer Motion",
-      "Docker",
-      "REST APIs",
-      "Generative AI",
-      "RAG Pipelines",
-      "Python",
-      "System Design",
-    ],
-    []
-  );
+  const words = useMemo(() => [
+    "Next.js",
+    "Node.js",
+    "Generative AI",
+    "RAG Pipelines",
+    "Python",
+    "Docker",
+    "Kubernetes",
+    "Jenkins",
+    "Git",
+    "React",
+    "Fastify",
+    "PostgreSQL",
+    "Framer Motion",
+  ]);
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -229,42 +230,24 @@ export default function Home() {
               CURRENTLY WORKING ON
             </div>
             <div className={styles.workList}>
-              <Link
-                href="https://github.com/prakharDvedi/PanditAI"
-                target="_blank"
-                className={styles.workItemLink}
-              >
-                <span className={styles.workIcon}>▹</span>
-                <strong>Building Pandit AI</strong>
-              </Link>
-              <Link
-                href="https://github.com/prakharDvedi/rently"
-                target="_blank"
-                className={styles.workItemLink}
-              >
-                <span className={styles.workIcon}>▹</span>
-                <strong>Building Rently</strong>
-              </Link>
-              <Link
-                href="https://unstop.com/competitions/nest-20-nurturing-excellence-strengthening-talent-novartis-1591009"
-                target="_blank"
-                className={styles.workItemLink}
-              >
-                <span className={styles.workIcon}>▹</span>
-                NEST Hackathon 2.0
-              </Link>
-              <Link
-                href="https://imaginecup.microsoft.com/en-us/category/33"
-                target="_blank"
-                className={styles.workItemLink}
-              >
-                <span className={styles.workIcon}>▹</span>
-                Microsoft Imagine Cup
-              </Link>
-              <div className={styles.workItem}>
-                <span className={styles.workIcon}>▹</span>
-                Contributing to Open Source
-              </div>
+              {currentWorkData.map((item, index) =>
+                item.link ? (
+                  <Link
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    className={styles.workItemLink}
+                  >
+                    <span className={styles.workIcon}>▹</span>
+                    {item.highlight ? <strong>{item.text}</strong> : item.text}
+                  </Link>
+                ) : (
+                  <div key={index} className={styles.workItem}>
+                    <span className={styles.workIcon}>▹</span>
+                    {item.text}
+                  </div>
+                )
+              )}
             </div>
             <Link href="/experience" className={styles.smallContactBtn}>
               What I'm Doing

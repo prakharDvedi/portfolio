@@ -181,11 +181,12 @@
 
 .techRotator {
   display: inline-flex;
-  justify-content: center;
-  min-width: 100px;
+  justify-content: flex-start;
+  min-width: 250px;
   color: var(--accent-primary);
   font-weight: 600;
   vertical-align: bottom;
+  text-align: left;
 }
 
 .subtitle {
