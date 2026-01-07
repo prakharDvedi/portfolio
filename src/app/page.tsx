@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import styles from "./home.module.css";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
+import {
   SiGithub,
   SiLinkedin,
   SiInstagram,
@@ -12,6 +13,8 @@ import GitHubHeatmap from "@/components/GitHubHeatmap";
   SiCodeforces,
   SiGeeksforgeeks,
 } from "react-icons/si";
+
+import { techStackData } from "@/data/techStack";
 
 export default function Home() {
   const [time, setTime] = useState<string>("");
@@ -61,157 +64,17 @@ export default function Home() {
   }, [words]);
 
   const techStack = useMemo(
-    () => [
-      // Languages
-      {
+    () =>
+      techStackData.map((tech) => ({
+        ...tech,
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
-            alt="JavaScript"
-            className="w-8 h-8"
+            src={tech.iconUrl}
+            alt={tech.name}
+            className={`w-6 h-6 ${tech.className || ""}`}
           />
         ),
-        name: "JavaScript",
-        description: "Language of the web",
-        bgColor: "bg-[#F7DF1E]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
-            alt="TypeScript"
-            className="w-8 h-8"
-          />
-        ),
-        name: "TypeScript",
-        description: "Typed JavaScript Superset",
-        bgColor: "bg-[#3178C6]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"
-            alt="Python"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Python",
-        description: "Versatile & Powerful",
-        bgColor: "bg-[#3776AB]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"
-            alt="Java"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Java",
-        description: "Object-Oriented Standard",
-        bgColor: "bg-[#007396]/10",
-      },
-
-      // Frontend
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"
-            alt="React"
-            className="w-8 h-8"
-          />
-        ),
-        name: "React",
-        description: "UI Library",
-        bgColor: "bg-[#61DAFB]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg"
-            alt="Next.js"
-            className="w-8 h-8 dark:invert"
-          />
-        ),
-        name: "Next.js",
-        description: "React Framework",
-        bgColor: "bg-gray-100 dark:bg-zinc-800",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg"
-            alt="Tailwind"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Tailwind",
-        description: "Utility-First CSS",
-        bgColor: "bg-[#06B6D4]/10",
-      },
-
-      // Backend
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"
-            alt="Node.js"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Node.js",
-        description: "JS Runtime",
-        bgColor: "bg-[#339933]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg"
-            alt="PostgreSQL"
-            className="w-8 h-8"
-          />
-        ),
-        name: "PostgreSQL",
-        description: "Relational Database",
-        bgColor: "bg-[#4169E1]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
-            alt="Docker"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Docker",
-        description: "Containerization",
-        bgColor: "bg-[#2496ED]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
-            alt="Git"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Git",
-        description: "Version Control",
-        bgColor: "bg-[#F05032]/10",
-      },
-      {
-        icon: (
-          <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/supabase/supabase-original.svg"
-            alt="Supabase"
-            className="w-8 h-8"
-          />
-        ),
-        name: "Supabase",
-        description: "Backend as a Service",
-        bgColor: "bg-[#3ECF8E]/10",
-      },
-    ],
+      })),
     []
   );
 
