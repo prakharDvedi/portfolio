@@ -1,5 +1,49 @@
 export const projects = [
   {
+    name: "Pandit AI",
+    description:
+      "Generates personalized Vedic horoscope readings by calculating precise planetary positions using Swiss Ephemeris, applying classical Vedic astrology rules from a knowledge graph, and synthesizing insights using AI (Groq/Ollama).",
+    date: "2025",
+    tags: [
+      "FastAPI",
+      "Python",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Neo4j",
+      "Docker",
+      "Swiss Ephemeris",
+      "Groq API",
+    ],
+    slug: "pandit-ai",
+    links: {
+      source: "https://github.com/prakharDvedi/PanditAI/",
+      demo: "https://thepanditai.vercel.app/",
+    },
+  },
+  {
+    name: "Pandit AI",
+    description:
+      "Generates personalized Vedic horoscope readings by calculating precise planetary positions using Swiss Ephemeris, applying classical Vedic astrology rules from a knowledge graph, and synthesizing insights using AI (Groq/Ollama).",
+    date: "2025",
+    tags: [
+      "FastAPI",
+      "Python",
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Neo4j",
+      "Docker",
+      "Swiss Ephemeris",
+      "Groq API",
+    ],
+    slug: "pandit-ai",
+    links: {
+      source: "https://github.com/prakharDvedi/PanditAI/",
+      demo: "https://thepanditai.vercel.app/",
+    },
+  },
+  {
     name: "eVakeel",
     description:
       "A legal tech platform powered by Generative AI to assist with legal queries and documentation. Features a modern React frontend and scalable Fastify backend.",
@@ -72,6 +116,28 @@ export const projects = [
     links: {
       demo: "https://dsa-ka-tracker.vercel.app/",
       source: "https://github.com/prakharDvedi/dsa_tracker",
+    },
+  },
+  {
+    name: "LovelyHome",
+    description:
+      "A personalized browser extension for a clean, minimal home page. Features include daily quotes, AQI & temperature tracking, a clock, and a simple TODO list. Designed for immersion with gradient color themes and cozy background sounds.",
+    date: "2025",
+    tags: ["JavaScript", "HTML5", "CSS3", "Web Extension API"],
+    slug: "lovely-home",
+    links: {
+      source: "https://github.com/prakharDvedi/LovelyHome",
+    },
+  },
+  {
+    name: "LovelyHome",
+    description:
+      "A personalized browser extension for a clean, minimal home page. Features include daily quotes, AQI & temperature tracking, a clock, and a simple TODO list. Designed for immersion with gradient color themes and cozy background sounds.",
+    date: "2025",
+    tags: ["JavaScript", "HTML5", "CSS3", "Web Extension API"],
+    slug: "lovely-home",
+    links: {
+      source: "https://github.com/prakharDvedi/LovelyHome",
     },
   },
   {

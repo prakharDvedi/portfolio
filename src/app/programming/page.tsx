@@ -5,14 +5,7 @@ import styles from "./Programming.module.css";
 import { motion } from "framer-motion";
 import StatCard from "@/components/StatCard";
 import ContestTile from "@/components/ContestTile";
-import {
-  SiLeetcode,
-  SiCodeforces,
-  SiCodechef,
-  SiGeeksforgeeks,
-  SiGithub,
-  SiNotion,
-} from "react-icons/si";
+import { SiLeetcode, SiCodeforces, SiCodechef, SiGithub } from "react-icons/si";
 
 const Programming = () => {
   const [cfStats, setCfStats] = React.useState({
@@ -216,26 +209,6 @@ const Programming = () => {
       ],
       link: "https://www.codechef.com/users/prakhar_d_vedi",
     },
-    {
-      platform: "GeeksforGeeks",
-      icon: <SiGeeksforgeeks style={{ color: "#2f8d46" }} />,
-      stats: [
-        { label: "Coding Score", value: "17" },
-        { label: "Problems Solved", value: "11" },
-        { label: "Institute Rank", value: "790" },
-      ],
-      link: "https://www.geeksforgeeks.org/profile/prakhardwivedi12",
-    },
-    {
-      platform: "Experiences",
-      icon: <SiNotion style={{ color: "#ffffff" }} />,
-      stats: [
-        { label: "Total Entries", value: "3" },
-        { label: "Latest Entry", value: "Dec 30" },
-        { label: "Status", value: "Active" },
-      ],
-      link: "#contest-experiences",
-    },
   ];
 
   const contests = [
@@ -273,27 +246,6 @@ const Programming = () => {
                 icon={stat.icon}
                 stats={stat.stats}
                 link={stat.link}
-              />
-            </motion.div>
-          ))}
-        </div>
-      </div>
-
-      <div className={styles.section} id="contest-experiences">
-        <h2 className={styles.sectionTitle}>Contest Experiences</h2>
-        <div className={styles.blogGrid}>
-          {contests.map((contest, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, x: -20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
-            >
-              <ContestTile
-                title={contest.title}
-                date={contest.date}
-                result={contest.result}
-                description={contest.description}
               />
             </motion.div>
           ))}

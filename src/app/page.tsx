@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState, useEffect, useMemo } from "react";
 import styles from "./home.module.css";
 import GitHubHeatmap from "@/components/GitHubHeatmap";
+import TechCard from "@/components/TechCard";
 import {
   SiCplusplus,
   SiPython,
@@ -104,69 +105,89 @@ export default function Home() {
       {
         icon: <SiJavascript style={{ color: "#F7DF1E" }} />,
         name: "JavaScript",
+        description: "Language of the web",
+        bgColor: "bg-[#F7DF1E]/10",
       },
       {
         icon: <SiTypescript style={{ color: "#3178C6" }} />,
         name: "TypeScript",
+        description: "Typed JavaScript Superset",
+        bgColor: "bg-[#3178C6]/10",
       },
-      { icon: <SiPython style={{ color: "#3776AB" }} />, name: "Python" },
-      { icon: <FaJava style={{ color: "#007396" }} />, name: "Java" },
-      { icon: <SiHtml5 style={{ color: "#E34F26" }} />, name: "HTML5" },
-      { icon: <SiCss3 style={{ color: "#1572B6" }} />, name: "CSS3" },
+      {
+        icon: <SiPython style={{ color: "#3776AB" }} />,
+        name: "Python",
+        description: "Versatile & Powerful",
+        bgColor: "bg-[#3776AB]/10",
+      },
+      {
+        icon: <FaJava style={{ color: "#007396" }} />,
+        name: "Java",
+        description: "Object-Oriented Standard",
+        bgColor: "bg-[#007396]/10",
+      },
 
       // Frontend
-      { icon: <SiReact style={{ color: "#61DAFB" }} />, name: "React" },
-      { icon: <SiNextdotjs style={{ color: "#FFFFFF" }} />, name: "Next.js" },
-
+      {
+        icon: <SiReact style={{ color: "#61DAFB" }} />,
+        name: "React",
+        description: "UI Library",
+        bgColor: "bg-[#61DAFB]/10",
+      },
+      {
+        icon: (
+          <SiNextdotjs
+            style={{
+              color: "#000000",
+              border: "1px solid #333",
+              borderRadius: "100%",
+            }}
+          />
+        ),
+        name: "Next.js",
+        description: "React Framework",
+        bgColor: "bg-gray-100 dark:bg-zinc-800",
+      },
       {
         icon: <SiTailwindcss style={{ color: "#06B6D4" }} />,
-        name: "Tailwind CSS",
+        name: "Tailwind",
+        description: "Utility-First CSS",
+        bgColor: "bg-[#06B6D4]/10",
       },
-      { icon: <SiRedux style={{ color: "#764ABC" }} />, name: "Redux" },
-
-      { icon: <SiMui style={{ color: "#007FFF" }} />, name: "Material UI" },
 
       // Backend
-      { icon: <SiNodedotjs style={{ color: "#339933" }} />, name: "Node.js" },
-      { icon: <SiExpress style={{ color: "#FFFFFF" }} />, name: "Express.js" },
-      { icon: <SiFastapi style={{ color: "#009688" }} />, name: "FastAPI" },
-      { icon: <SiGraphql style={{ color: "#E10098" }} />, name: "GraphQL" },
-      { icon: <TbApi style={{ color: "#FFFFFF" }} />, name: "REST APIs" },
       {
-        icon: <SiTensorflow style={{ color: "#FF6F00" }} />,
-        name: "TensorFlow",
+        icon: <SiNodedotjs style={{ color: "#339933" }} />,
+        name: "Node.js",
+        description: "JS Runtime",
+        bgColor: "bg-[#339933]/10",
       },
-
-      // Databases
       {
         icon: <SiPostgresql style={{ color: "#4169E1" }} />,
         name: "PostgreSQL",
+        description: "Relational Database",
+        bgColor: "bg-[#4169E1]/10",
       },
-      { icon: <SiMongodb style={{ color: "#47A248" }} />, name: "MongoDB" },
-      { icon: <SiMysql style={{ color: "#4479A1" }} />, name: "MySQL" },
-      { icon: <SiSqlite style={{ color: "#003B57" }} />, name: "SQLite" },
-      { icon: <SiRedis style={{ color: "#DC382D" }} />, name: "Redis" },
-      { icon: <SiSupabase style={{ color: "#3ECF8E" }} />, name: "Supabase" },
-      { icon: <SiFirebase style={{ color: "#FFCA28" }} />, name: "Firebase" },
-
-      // DevOps & Cloud
-      { icon: <SiDocker style={{ color: "#2496ED" }} />, name: "Docker" },
-      { icon: <SiGit style={{ color: "#F05032" }} />, name: "Git" },
-      { icon: <SiAmazon style={{ color: "#FF9900" }} />, name: "AWS" },
-      { icon: <SiVercel style={{ color: "#FFFFFF" }} />, name: "Vercel" },
-      { icon: <SiNetlify style={{ color: "#00C7B7" }} />, name: "Netlify" },
-      { icon: <SiLinux style={{ color: "#FCC624" }} />, name: "Linux" },
+      {
+        icon: <SiDocker style={{ color: "#2496ED" }} />,
+        name: "Docker",
+        description: "Containerization",
+        bgColor: "bg-[#2496ED]/10",
+      },
+      {
+        icon: <SiGit style={{ color: "#F05032" }} />,
+        name: "Git",
+        description: "Version Control",
+        bgColor: "bg-[#F05032]/10",
+      },
+      {
+        icon: <SiSupabase style={{ color: "#3ECF8E" }} />,
+        name: "Supabase",
+        description: "Backend as a Service",
+        bgColor: "bg-[#3ECF8E]/10",
+      },
     ],
     []
-  );
-
-  const marqueeIcons = useMemo(
-    () =>
-      [...techStack, ...techStack].map((tech, i) => ({
-        ...tech,
-        uniqueKey: `${tech.name}-${i}`,
-      })),
-    [techStack]
   );
 
   return (
@@ -356,22 +377,53 @@ export default function Home() {
         </div>
       </div>
 
-      <motion.div
-        className={styles.techStack}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+      <div
+        className="relative z-10 py-16 sm:py-24 max-w-6xl mx-auto px-4"
+        id="tech-stack"
       >
-        <h3 className={styles.toolsHeading}>TOOLS I USE</h3>
-        <div className={styles.marqueeTrack}>
-          {marqueeIcons.map((tech) => (
-            <div key={tech.uniqueKey} className={styles.techIcon}>
-              {tech.icon}
-              <span className={styles.techName}>{tech.name}</span>
-            </div>
-          ))}
+        <div className="space-y-4 mb-10 w-full">
+          <motion.h1
+            initial={{ opacity: 0, x: -75 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-3xl min-[430px]:text-4xl md:text-5xl font-bold dark:text-stone-200"
+          >
+            Current technologies
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, x: -90 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="text-sm min-[430px]:text-base max-w-lg md:max-w-3xl text-dark-200/70 dark:text-stone-200/70"
+          >
+            I&apos;m proficient in a range of modern technologies that empower
+            me to build highly functional solutions. These are some of my main
+            technologies.
+          </motion.p>
         </div>
-      </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 75 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.25 }}
+          className="grid grid-cols-2 md:grid-cols-4 items-stretch gap-4 w-full"
+        >
+          {techStack.map((tech) => (
+            <TechCard
+              key={tech.name}
+              cardInfo={{
+                name: tech.name,
+                description: tech.description || "Tech Stack",
+                icon: tech.icon,
+                bgColor: tech.bgColor || "bg-gray-100",
+              }}
+            />
+          ))}
+        </motion.div>
+      </div>
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
