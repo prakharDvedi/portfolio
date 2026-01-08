@@ -14,8 +14,6 @@ export default function Education() {
       degree:
         "Bachelor of Technology in Electronics and Communication Engineering (ECE)",
       grade: "CPI: 8.74",
-      context:
-        "ECE background helps me understand the real world problems and how to solve them.",
       coursework:
         "Data Structures and Algorithms, Object Oriented Programming, DBMS",
     },
@@ -37,8 +35,6 @@ export default function Education() {
 
   const achievements = [
     {
-      framing:
-        "Competitive programming helped sharpen my ability to reason under constraints.",
       text: "Achieved competitive programming ratings: 1614 on CodeChef (3-Star) and 1799 on LeetCode.",
       icon: <FaChartLine />,
     },
