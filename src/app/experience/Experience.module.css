@@ -1,224 +1,274 @@
 .container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
-  padding: 4rem 2rem;
+  padding: 6rem 1.5rem;
   min-height: 100vh;
+  /* Dark matte canvas feels */
+  color: #e4e4e7;
 }
 
 .heading {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 4rem;
-  text-align: center;
-  background: linear-gradient(to right, #fff, #9ca3af);
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 5rem;
+  text-align: left;
+  /* Muted matte gradient */
+  background: linear-gradient(to bottom right, #ffffff, #a1a1aa);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  letter-spacing: -0.02em;
 }
 
-.timeline {
+.ledger {
+  display: flex;
+  flex-direction: column;
+  gap: 6rem;
+  position: relative;
+}
+
+/* Row Layout */
+.ledgerRow {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 2rem;
+  position: relative;
+}
+
+/* Left Column: Periodic Stamp */
+.stampColumn {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 3rem;
-  padding-left: 2rem;
-  margin-bottom: 6rem; /* spacing */
-}
-
-/* vertical line */
-.line {
-  position: absolute;
-  left: 2rem; /* Matches padding-left of timeline approx */
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(
-    to bottom,
-    rgba(59, 130, 246, 0) 0%,
-    rgba(59, 130, 246, 0.3) 10%,
-    rgba(59, 130, 246, 0.3) 90%,
-    rgba(59, 130, 246, 0) 100%
-  );
-  transform: translateX(-50%);
-}
-
-.item {
-  position: relative;
-  width: 100%;
-}
-
-/* dot */
-.dot {
-  position: absolute;
-  left: -2rem; /* Pull back to the line */
-  top: 0;
-  transform: translateX(-50%);
-  width: 2.5rem;
-  height: 2.5rem;
-  border-radius: 50%;
-  background: #18181b;
-  border: 2px solid;
-  display: flex;
   align-items: center;
-  justify-content: center;
-  color: #fff;
+}
+
+.stampWrapper {
+  position: sticky;
+  top: 40vh; /* Centered visually in viewport when scrolling */
   z-index: 10;
-  font-size: 1rem;
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-.dot.blue {
-  border-color: #3b82f6;
-  color: #60a5fa;
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-}
-.dot.purple {
-  border-color: #a855f7;
-  color: #c084fc;
-  box-shadow: 0 0 15px rgba(168, 85, 247, 0.3);
-}
-.dot.amber {
-  border-color: #f59e0b;
-  color: #fbbf24;
-  box-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
-}
+.stamp {
+  display: inline-block;
+  padding: 0.35rem 0.85rem;
+  background: #18181b;
+  border: 1px solid #27272a;
+  border-radius: 9999px;
 
-/* card */
-.card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  margin-left: 2rem; /* Spacing from dot */
+  font-family: monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #71717a; /* Muted text */
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+
   transition: all 0.3s ease;
-  display: flex;
-  flex-direction: column;
 }
 
+.ledgerRow:hover .stamp {
+  border-color: #3b82f6; /* Muted blue */
+  color: #dbeafe;
+  background: #1e3a8a;
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+}
+
+/* Connective Thread (Visual Only) */
+.thread {
+  position: absolute;
+  top: 40vh;
+  left: 50%;
+  width: 2rem; /* Stretch to card */
+  height: 1px;
+  background: linear-gradient(90deg, #3b82f6 0%, transparent 100%);
+  transform: translate(100%, 0); /* Check visual alignment */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.ledgerRow:hover .thread {
+  opacity: 0.6;
+}
+
+/* Right Column: Editorial Card */
+.cardColumn {
+  position: relative;
+}
+
+.card {
+  /* Dark matte canvas */
+  background: rgba(24, 24, 27, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 0.75rem; /* Slightly boxier than standard rounded-xl */
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(0px); /* Hardware acceleration prep */
+}
+
+/* Hover State for Card */
 .card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
+  background: rgba(39, 39, 42, 0.8); /* Slightly lighter matte */
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2),
+    0 10px 10px -5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+  backdrop-filter: blur(4px); /* Soft glass effect */
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin-bottom: 0.5rem;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+/* Card Typography Beats */
+.cardHeader {
+  margin-bottom: 1rem;
 }
 
 .role {
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
   color: #f4f4f5;
+  margin-bottom: 0.25rem;
 }
 
-.period {
-  font-family: monospace;
+.metaRow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   font-size: 0.875rem;
   color: #a1a1aa;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 0.2rem 0.6rem;
-  border-radius: 9999px;
-}
-
-.subHeader {
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
 }
 
 .org {
-  color: #3b82f6;
+  color: #60a5fa; /* Muted blue accent */
   font-weight: 500;
 }
 
-.type {
-  color: #71717a;
-  padding-left: 0.75rem;
-  border-left: 1px solid #3f3f46;
+.separator {
+  color: #3f3f46;
 }
 
-.description {
-  color: #d4d4d8;
-  line-height: 1.6;
+.type {
+  font-style: italic;
+  font-family: serif; /* Editorial touch */
+  color: #71717a;
+}
+
+.summary {
   font-size: 0.95rem;
+  line-height: 1.6;
+  color: #d4d4d8;
+  margin-bottom: 0; /* Will grow if needed */
+  max-width: 65ch;
+}
+
+/* Reveal Panel */
+.revealPanel {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 0;
+}
+
+.card:hover .revealPanel {
+  max-height: 500px; /* Arbitrary large height for text */
+  opacity: 1;
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.techStack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.linkWrapper {
-  margin-top: auto;
-  padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+.techChip {
+  font-size: 0.75rem;
+  padding: 0.25rem 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 0.25rem;
+  color: #a1a1aa;
+  font-family: monospace;
 }
 
-.link {
+.achievementList {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.achievementList li {
+  position: relative;
+  padding-left: 1rem;
+  font-size: 0.9rem;
+  color: #d4d4d8;
+  line-height: 1.5;
+}
+
+.achievementList li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #60a5fa;
+  font-size: 0.75rem;
+  top: 0.2rem;
+}
+
+.cardLink {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   font-size: 0.875rem;
-  font-weight: 500;
-  color: #60a5fa;
-  transition: all 0.2s ease;
-  text-decoration: none;
-}
-
-.link:hover {
-  color: #93c5fd;
-  transform: translateX(2px);
-}
-
-/* certifications */
-.certSection {
-  margin-top: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 3rem;
-}
-
-.subHeading {
-  font-size: 1.75rem;
   font-weight: 600;
-  margin-bottom: 2rem;
-  color: #fff;
-  text-align: center;
+  color: #f4f4f5;
+  text-decoration: none;
+  border-bottom: 1px solid #3f3f46;
+  padding-bottom: 0.1rem;
+  transition: border-color 0.2s;
 }
 
-.certGrid {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  gap: 1.5rem;
+.cardLink:hover {
+  border-color: #60a5fa;
 }
 
-@media (min-width: 640px) {
-  .container {
-    padding: 4rem 1rem;
-  }
-  .timeline {
-    padding-left: 1.5rem;
-  }
-  .line {
-    left: 1.5rem;
-  }
-  .dot {
-    left: -1.5rem;
-    width: 2rem;
-    height: 2rem;
-    font-size: 0.9rem;
-  }
-  .card {
-    margin-left: 1rem;
-    padding: 1.25rem;
-  }
-  .header {
-    flex-direction: column;
-    gap: 0.25rem;
+/* Mobile Adaptation */
+@media (max-width: 768px) {
+  .ledgerRow {
+    grid-template-columns: 1fr; /* Stack */
+    gap: 1rem;
   }
 
-  .certGrid {
-    grid-template-columns: repeat(2, 1fr);
+  .stampColumn {
+    align-items: flex-start;
+    padding-left: 1rem;
+  }
+
+  .stampWrapper {
+    position: relative;
+    top: 0;
+    transform: rotate(0deg) !important; /* Reset rotation */
+  }
+
+  .thread {
+    display: none;
+  }
+
+  .card:hover .revealPanel {
+    /* Always show specific details or keep interaction? 
+        Editorial choice: Keep interaction for cleanness, 
+        but make sure touch works (hover logic often weird on mobile).
+        For now, we trust the user wants the interaction.
+     */
   }
 }
