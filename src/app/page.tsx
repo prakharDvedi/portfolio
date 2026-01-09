@@ -20,11 +20,7 @@ import { currentWorkData } from "@/data/currentWork";
 export default function Home() {
   const [time, setTime] = useState<string>("");
   const words = useMemo(
-    () => [
-      "Next.js • Databases • React • Tailwind",
-      "FastAPI • Python • Langchain",
-      "Docker • AWS • Redis • Git",
-    ],
+    () => ["Next.js • FastAPI • Prisma • React • Tailwind"],
     []
   );
 
@@ -57,29 +53,6 @@ export default function Home() {
     };
   }, [words]);
 
-  const techStack = useMemo(
-    () =>
-      techStackData.map((tech) => ({
-        ...tech,
-        icon: (
-          <img
-            src={tech.iconUrl}
-            alt={tech.name}
-            className={`w-6 h-6 ${tech.className || ""}`}
-          />
-        ),
-      })),
-    []
-  );
-
-  const marqueeIcons = useMemo(
-    () =>
-      [...techStack, ...techStack].map((tech, i) => ({
-        ...tech,
-        uniqueKey: `${tech.name}-${i}`,
-      })),
-    [techStack]
-  );
   return (
     <div className={styles.container}>
       <div className={styles.mainSection}>
@@ -145,7 +118,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Link href="/projects" className={styles.contactBtn}>
-              Check out my work
+              View my projects
             </Link>
             <Link
               href="https://drive.google.com/file/d/19_fqZBTyQktXTRg7cfb9HbkC0kabwa93/view?usp=sharing"
@@ -249,21 +222,57 @@ export default function Home() {
         </div>
       </div>
 
+      {/* TECH STACK REDesign: Editorial Core */}
       <motion.div
-        className={styles.techStack}
+        className={styles.techSection}
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.8 }}
       >
-        <h3 className={styles.toolsHeading}>TOOLS I USE</h3>
-        <div className={styles.marqueeTrack}>
-          {marqueeIcons.map((tech) => (
-            <div key={tech.uniqueKey} className={styles.techIcon}>
-              {tech.icon}
-              <span className={styles.techName}>{tech.name}</span>
-            </div>
+        <span className={styles.sectionLabel} style={{ textAlign: "center" }}>
+          Core Technical DNA
+        </span>
+
+        {/* Primary Grid */}
+        <div className={styles.coreGrid}>
+          {techStackData.core.map((tech) => (
+            <Link key={tech.name} href="/projects" className={styles.coreCard}>
+              <div className={styles.coreHeader}>
+                <img
+                  src={tech.iconUrl}
+                  alt={tech.name}
+                  className={`${styles.coreIcon} ${tech.className || ""}`}
+                />
+                <span className={styles.coreName}>{tech.name}</span>
+              </div>
+              <p className={styles.coreDesc}>{tech.description}</p>
+            </Link>
           ))}
         </div>
+
+        {/* Ecosystem List
+        <div className={styles.ecosystemGrid}>
+          {techStackData.ecosystem.map((category) => (
+            <div key={category.category} className={styles.ecoCategory}>
+              <h4 className={styles.ecoTitle}>{category.category}</h4>
+              <div className={styles.ecoList}>
+                {category.items.map((item) => (
+                  <div key={item.name} className={styles.ecoItem}>
+                    {item.icon && (
+                      <img
+                        src={item.icon}
+                        alt={item.name}
+                        className={styles.ecoIcon}
+                      />
+                    )}
+                    <span className={styles.ecoName}>{item.name}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div> */}
       </motion.div>
 
       <motion.div

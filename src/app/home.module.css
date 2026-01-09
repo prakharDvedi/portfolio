@@ -217,84 +217,143 @@
   margin-bottom: 4rem;
 }
 
-.toolsHeading {
-  font-size: 0.85rem;
-  text-transform: uppercase;
+/* Tech Section Redesign */
+.techSection {
+  margin-top: 4rem;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
   letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--text-secondary);
-  text-align: center;
   margin-bottom: 2rem;
   display: block;
-  width: 100%;
 }
 
-/* marquee */
-.techStack {
-  width: 100%;
+/* Core Grid */
+.coreGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 4rem;
+}
+
+.coreCard {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  position: relative;
   overflow: hidden;
-  position: relative;
-  padding: 1rem 0 3rem 0;
-  mask-image: linear-gradient(
-    to right,
-    transparent,
-    black 10%,
-    black 90%,
-    transparent
-  );
 }
 
-.marqueeTrack {
-  display: flex;
-  gap: 2rem;
-  width: max-content;
-  animation: scroll 120s linear infinite;
-  align-items: flex-start;
+.coreCard:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
 }
 
-.techIcon {
-  font-size: 2.5rem;
-  color: var(--text-secondary);
-  transition: all 0.3s ease;
-  position: relative;
+.coreHeader {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 0.5rem;
-  min-width: 80px;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.techIcon:hover {
-  transform: translateY(-5px);
+.coreIcon {
+  width: 40px;
+  height: 40px;
+  opacity: 0.9;
 }
 
-.techName {
-  position: static;
-  background: transparent;
+.coreName {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.coreDesc {
+  font-size: 0.95rem;
   color: var(--text-secondary);
-  font-size: 0.75rem;
-  padding: 0;
-  border-radius: 0;
-  opacity: 1;
-  visibility: visible;
-  transition: all 0.3s ease;
-  white-space: nowrap;
-  font-weight: 500;
-  pointer-events: none;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Ecosystem List */
+.ecosystemGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 3rem;
+}
+
+.ecoTitle {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
 
-.techIcon:hover .techName {
-  color: var(--text-primary);
-  bottom: auto;
+.ecoList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
+.ecoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s ease;
+  width: fit-content;
+}
+
+.ecoItem:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.ecoIcon {
+  width: 18px;
+  height: 18px;
+  opacity: 0.7;
+  filter: grayscale(100%);
+  transition: all 0.2s ease;
+}
+
+.ecoItem:hover .ecoIcon {
+  opacity: 1;
+  filter: none;
+}
+
+.ecoName {
+  font-size: 0.9rem;
+  color: #a1a1aa;
+  transition: color 0.2s ease;
+}
+
+.ecoItem:hover .ecoName {
+  color: var(--text-primary);
+}
+
+/* Mobile Adaptation */
+@media (max-width: 768px) {
+  .coreGrid {
+    grid-template-columns: 1fr;
   }
-  100% {
-    transform: translateX(-50%);
+
+  .ecosystemGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 }
 

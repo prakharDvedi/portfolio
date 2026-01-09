@@ -16,7 +16,7 @@ const ExperienceCard: React.FC<ExperienceCardProps> = ({
   summary,
   description,
   link,
-  linkText = "View Project",
+  linkText,
   icon,
 }) => {
   return (

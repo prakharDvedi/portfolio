@@ -18,6 +18,7 @@ const careerTimeline = [
     achievements: [
       "Designed scalable schema for patient records and doctor availability.",
       "Implemented real-time appointment booking system.",
+      "This website is thier older one, I am working on a new yet to be  deployed.",
     ],
     link: "https://indiapaathy.in/",
   },
@@ -27,7 +28,7 @@ const careerTimeline = [
     type: "Leadership",
     period: "Sep 2025 — Present",
     description:
-      "Spearheading cybersecurity initiatives and fostering a culture of ethical hacking.",
+      "Learning Offensive Security and fostering a culture of ethical hacking.",
     tech: ["Kali Linux", "TryHackMe", "Linux"],
     achievements: [
       "Organized campus-wide CTF with 100+ participants.",
@@ -41,8 +42,8 @@ const careerTimeline = [
     type: "Academic",
     period: "Jan 2025 — Apr 2025",
     description:
-      "Mentoring students in Digital Logic Design and ensuring core concept clarity.",
-    tech: ["Verilog", "Digital Logic", "Teaching"],
+      "Mentored students in Digital Logic Design and ensuring core concept clarity.",
+    tech: ["Verilog", "MATLAB", "Digital Logic", "Teaching"],
     achievements: [
       "Graded assignments and project submissions for a batch of 60.",
       "Held remedial sessions for struggling students.",

@@ -7,6 +7,8 @@
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
+  text-decoration: none; /* Remove underline from link */
+  cursor: pointer;
 }
 
 .card:hover {

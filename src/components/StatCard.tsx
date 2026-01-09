@@ -27,16 +27,14 @@ const StatCard: React.FC<StatCardProps> = ({
   const isInternal = link.startsWith("#");
 
   return (
-    <div className={styles.card}>
+    <Link
+      href={link}
+      target={isInternal ? undefined : "_blank"}
+      className={styles.card}
+    >
       <div className={styles.header}>
         <div className={styles.iconWrapper}>{icon}</div>
-        <Link
-          href={link}
-          target={isInternal ? undefined : "_blank"}
-          className={styles.platformLink}
-        >
-          <h3 className={styles.platformName}>{platform}</h3>
-        </Link>
+        <h3 className={styles.platformName}>{platform}</h3>
       </div>
 
       <div className={styles.statsList}>
@@ -48,7 +46,7 @@ const StatCard: React.FC<StatCardProps> = ({
         ))}
       </div>
       {description && <p className={styles.description}>{description}</p>}
-    </div>
+    </Link>
   );
 };
 

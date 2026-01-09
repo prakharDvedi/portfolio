@@ -49,7 +49,7 @@ export default function WorkingOn() {
         </>
       ),
       link: "https://github.com/prakharDvedi/PanditAI",
-      linkText: "View on GitHub",
+
       icon: <FiGithub />,
     },
     {
@@ -82,7 +82,7 @@ export default function WorkingOn() {
         </>
       ),
       link: "https://github.com/prakharDvedi/rently",
-      linkText: "View on GitHub",
+
       icon: <FiGithub />,
     },
     {
