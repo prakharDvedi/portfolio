@@ -20,7 +20,7 @@ import { currentWorkData } from "@/data/currentWork";
 export default function Home() {
   const [time, setTime] = useState<string>("");
   const words = useMemo(
-    () => ["Next.js • FastAPI • Prisma • React • Tailwind"],
+    () => ["Next.js • FastAPI • Prisma • React • Docker"],
     []
   );
 
