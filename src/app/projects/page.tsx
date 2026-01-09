@@ -19,10 +19,10 @@ export default function Projects() {
             <Link
               href={project.links.demo || project.links.source}
               target="_blank"
-              className={styles.cardTitle}
-            >
-              {project.name}
-            </Link>
+              className={styles.stretchedLink}
+              aria-label={`View project ${project.name}`}
+            />
+            <h3 className={styles.cardTitle}>{project.name}</h3>
 
             <div className={styles.tags}>
               {project.tags.map((tag) => (
