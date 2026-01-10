@@ -48,7 +48,14 @@ export default function About() {
         </div>
 
         <div className={styles.imageSection}>
-          <img src="/me.jpeg" alt="Prakhar" className={styles.image} />
+          <div className={styles.imageContainer}>
+            <img
+              src="/portfolioPixel.png"
+              alt="Prakhar Pixelated"
+              className={styles.pixelImage}
+            />
+            <img src="/me.jpeg" alt="Prakhar" className={styles.realImage} />
+          </div>
 
           <div className={styles.socialLinks}>
             {[
