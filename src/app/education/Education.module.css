@@ -79,6 +79,9 @@
   border-radius: 12px;
   padding: 1.5rem;
   transition: all 0.3s ease;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 .content:hover {

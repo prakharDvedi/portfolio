@@ -1,4 +1,5 @@
 import styles from "./Education.module.css";
+import Link from "next/link";
 import {
   FaTrophy,
   FaCode,
@@ -16,6 +17,7 @@ export default function Education() {
       grade: "CPI: 8.74",
       coursework:
         "Data Structures and Algorithms, Object Oriented Programming, DBMS",
+      link: "https://iiitbhopal.ac.in/#/website/home",
     },
     {
       school: "Somerville School Greater Noida",
@@ -23,6 +25,7 @@ export default function Education() {
       degree: "Senior Secondary High School (12th)",
       grade: "Percentage: 94.6%",
       coursework: "Physics, Chemistry, Maths, English, Computer Science",
+      link: "https://www.somervillegreaternoida.in/",
     },
     {
       school: "Somerville School Greater Noida",
@@ -30,6 +33,7 @@ export default function Education() {
       degree: "Primary High School (10th)",
       grade: "Percentage: 96.4%",
       coursework: "",
+      link: "https://www.somervillegreaternoida.in/",
     },
   ];
 
@@ -74,7 +78,11 @@ export default function Education() {
             {educationData.map((edu: any, index) => (
               <div key={index} className={styles.timelineItem}>
                 <span className={styles.dot}></span>
-                <div className={styles.content}>
+                <Link
+                  href={edu.link}
+                  target="_blank"
+                  className={styles.content}
+                >
                   <span className={styles.date}>{edu.date}</span>
                   <h3 className={styles.school}>{edu.school}</h3>
                   <p className={styles.degree}>{edu.degree}</p>
@@ -100,7 +108,7 @@ export default function Education() {
                       </>
                     )}
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
