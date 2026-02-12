@@ -23,6 +23,22 @@ const careerTimeline = [
     link: "https://indiapaathy.in/",
   },
   {
+    title: "Software Development Intern",
+    org: "Brinavv Technologies",
+    type: "Internship",
+    period: "Jan 2026 — Present",
+    description:
+      "Enhancing the ERP HR module by debugging backend workflows and implementing robust validations.",
+    tech: ["MERN Stack", "React", "Node.js", "Express", "MongoDB"],
+    achievements: [
+      "Identified and debugged 21 backend and workflow-related bugs in the ERP HR module, improving overall system usability.",
+      "Implemented robust error handling and validation across 12+ user input fields, reducing user-facing failures.",
+      "Improved reliability of HR workflows by fixing edge cases in form handling and API responses.",
+      "Collaborated with team members to test and verify fixes using real usage scenarios.",
+    ],
+    link: "",
+  },
+  {
     title: "Offensive Security Lead",
     org: "XPLOIT Club",
     type: "Leadership",
