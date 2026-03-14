@@ -15,7 +15,7 @@ export const projects = [
     ],
     slug: "microservices-test-infrastructure",
     links: {
-      source: "https://github.com/prakharDvedi/Automated-Test-Infrastructure",
+      source: "https://github.com/prakharDvedi/automatedTesting",
     },
   },
   {
