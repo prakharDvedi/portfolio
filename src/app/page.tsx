@@ -20,8 +20,8 @@ import { currentWorkData } from "@/data/currentWork";
 export default function Home() {
   const [time, setTime] = useState<string>("");
   const words = useMemo(
-    () => ["Next.js • FastAPI • Prisma • React • Docker"],
-    []
+    () => ["Next.js • FastAPI • Golang • React • Docker"],
+    [],
   );
 
   const [index, setIndex] = useState(0);
@@ -36,7 +36,7 @@ export default function Home() {
           second: "2-digit",
           hour12: true,
           timeZone: "Asia/Kolkata",
-        })
+        }),
       );
     };
 
@@ -193,7 +193,7 @@ export default function Home() {
           >
             <div className={styles.workLabel}>
               <span className={styles.pulsingDot}></span>
-              CURRENTLY WORKING ON
+              CURRENT UNDERTAKINGS
             </div>
             <div className={styles.workList}>
               {currentWorkData.map((item, index) =>
@@ -212,7 +212,7 @@ export default function Home() {
                     <span className={styles.workIcon}>▹</span>
                     {item.text}
                   </div>
-                )
+                ),
               )}
             </div>
             <Link href="/experience" className={styles.smallContactBtn}>

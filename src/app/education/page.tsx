@@ -14,9 +14,9 @@ export default function Education() {
       date: "November 2023 - June 2027",
       degree:
         "Bachelor of Technology in Electronics and Communication Engineering (ECE)",
-      grade: "CPI: 8.74",
+      grade: "GPA: 8.55",
       coursework:
-        "Data Structures and Algorithms, Object Oriented Programming, DBMS",
+        "Data Structures & Algorithms, DBMS, Computer Networks, Operating Systems",
       link: "https://iiitbhopal.ac.in/#/website/home",
     },
     {
@@ -39,31 +39,25 @@ export default function Education() {
 
   const achievements = [
     {
-      text: "Achieved competitive programming ratings: 1614 on CodeChef (3-Star) and 1799 on LeetCode.",
+      text: "Achieved top 12K rank among 262K participants in Adobe India Hackathon 2025, placing in the top 5% nationally.",
+      icon: <FaTrophy />,
+    },
+    {
+      text: "Ranked 1st in the ECE department with a 9.32 SGPA in Semester 3, demonstrating consistent academic excellence.",
+      icon: <FaTrophy />,
+    },
+    {
+      text: "Codeforces: 1314 (Pupil) | CodeChef: 1614 | LeetCode: 1799. Solved 400+ DSA problems across platforms.",
       icon: <FaChartLine />,
     },
     {
-      text: "Achieved 1st rank in ECE cohort with a 9.32 SGPA in Semester 3.",
-      icon: <FaTrophy />,
-    },
-    {
-      text: "Solved 250+ DSA problems on platforms like LeetCode (210+), CodeChef, CodeForces, and GeeksforGeeks.",
+      text: "Secured top 5 and top 20 positions at inter-college hackathons (CodeUtsav – NIT Raipur; HackX 3.0 – Manipal University Jaipur).",
       icon: <FaCode />,
     },
     {
-      framing: "Teaching reinforced my understanding and communication skills.",
-      text: "Mentored peers in Digital Logic Design as a Teaching Assistant (3+ sessions).",
+      framing: "Supported peers and improved communication skills.",
+      text: "Selected as Teaching Assistant for Digital Logic Design, mentoring 60+ students and assisting with evaluation and problem-solving sessions.",
       icon: <FaChalkboardTeacher />,
-    },
-    {
-      text: "Qualified in the top ~4.5% of Adobe India Hackathon 2025.",
-      icon: <FaTrophy />,
-    },
-    {
-      framing:
-        "Hackathons are my favorite mode of competing. Building and making something from scratch is the best feeling.",
-      text: "Participated in 6+ hackathons, gaining experience in rapid prototyping and teamwork.",
-      icon: <FaCode />,
     },
   ];
 

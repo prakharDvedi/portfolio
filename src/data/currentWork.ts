@@ -6,24 +6,24 @@ export interface WorkItem {
 
 export const currentWorkData: WorkItem[] = [
   {
-    text: "Building Pandit AI",
-    link: "https://github.com/prakharDvedi/PanditAI",
+    text: "SDE Intern @ Brinavv Technologies",
+    link: "https://www.brinavv.com/",
     highlight: true,
   },
   {
-    text: "Building Rently",
-    link: "https://github.com/prakharDvedi/rently",
+    text: "LFX Mentorship - Magma Core",
+    link: "https://magmacore.org/",
     highlight: true,
   },
+
   {
-    text: "NEST Hackathon 2.0",
-    link: "https://unstop.com/competitions/nest-20-nurturing-excellence-strengthening-talent-novartis-1591009",
+    text: "Building Database in Golang",
+    link: "https://github.com/prakharDvedi/golangDB",
+    highlight: false,
   },
   {
-    text: "Microsoft Imagine Cup",
-    link: "https://imaginecup.microsoft.com/en-us/category/33",
-  },
-  {
-    text: "Contributing to Open Source",
+    text: "Exploring Jest and Supertest for backend APIs.",
+    link: "https://github.com/prakharDvedi/automatedTesting",
+    highlight: false,
   },
 ];

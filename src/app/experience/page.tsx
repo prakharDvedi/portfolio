@@ -8,36 +8,53 @@ import { FiExternalLink } from "react-icons/fi";
 
 const careerTimeline = [
   {
-    title: "Software Developer",
-    org: "IndiaPaathy",
-    type: "Freelance",
+    title: "Software Development Intern",
+    org: "Brinavv Technologies",
+    type: "Internship",
     period: "Jan 2026 — Present",
+    description:
+      "Engineering HR workflows, rebuilding payslip directory architectures, and stabilizing backend microservices.",
+    tech: ["MERN Stack", "React", "Redux Toolkit", "Node.js", "MongoDB"],
+    achievements: [
+      "Diagnosed and resolved 21 critical production bugs (500 errors, module import failures).",
+      "Re-architected backend to a Controller–Service–Repository (CSR) pattern, improving code reuse by ~40%.",
+      "Migrated 28+ backend files with zero downtime, eliminating circular dependencies.",
+      "Engineered a full Payroll / Payslip system with REST APIs and MongoDB aggregation pipelines.",
+      "Rebuilt the PayslipDirectory interface using React + Redux Toolkit for server-side filtering.",
+    ],
+    link: "https://brinavv.com/",
+  },
+  {
+    title: "LFX Mentorship - Magma Core",
+    org: "The Linux Foundation",
+    type: "Mentorship",
+    period: "Jan 2026 — Present",
+    description:
+      "Exploring the Magma Core codebase, understanding the architecture of C++ packet-core services, and improving stability of distributed microservices.",
+    tech: ["C++", "Docker", "Ubuntu", "CI/CD", "Linux"],
+    achievements: [
+      "Investigating C++ memory management issues in distributed microservices.",
+      "Supporting Docker container migration workflows for Ubuntu 24.04.",
+      "Ensuring reproducible builds and reliable CI/CD environments across distributed systems.",
+    ],
+    link: "https://lfx.linuxfoundation.org/",
+  },
+
+  {
+    title: "Full Stack Developer",
+    org: "Welfare Justice for Challenging People",
+    type: "Freelance",
+    period: "Dec 2026 - Jan 2026",
     description:
       "Architecting a homeopathic healthcare platform for Ayurvedic doctors.",
     tech: ["Next.js", "PostgreSQL", "Prisma", "Tailwind"],
     achievements: [
       "Designed scalable schema for patient records and doctor availability.",
       "Implemented real-time appointment booking system.",
-      "This website is thier older one, I am working on a new yet to be  deployed.",
     ],
-    link: "https://indiapaathy.in/",
+    link: "https://wellfare-justice.vercel.app/",
   },
-  {
-    title: "Software Development Intern",
-    org: "Brinavv Technologies",
-    type: "Internship",
-    period: "Jan 2026 — Present",
-    description:
-      "Enhancing the ERP HR module by debugging backend workflows and implementing robust validations.",
-    tech: ["MERN Stack", "React", "Node.js", "Express", "MongoDB"],
-    achievements: [
-      "Identified and debugged 21 backend and workflow-related bugs in the ERP HR module, improving overall system usability.",
-      "Implemented robust error handling and validation across 12+ user input fields, reducing user-facing failures.",
-      "Improved reliability of HR workflows by fixing edge cases in form handling and API responses.",
-      "Collaborated with team members to test and verify fixes using real usage scenarios.",
-    ],
-    link: "",
-  },
+
   {
     title: "Offensive Security Lead",
     org: "XPLOIT Club",

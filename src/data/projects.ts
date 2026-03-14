@@ -1,5 +1,24 @@
 export const projects = [
   {
+    name: "Automated Test Infrastructure for Microservices",
+    description:
+      "Designed a containerized microservice backend separating auth, user, and task services. Built comprehensive unit and integration test suites using Jest/Supertest achieving ~92% branch coverage, backed by GitHub Actions CI pipelines inside multi-stage Docker environments.",
+    date: "2026",
+    tags: [
+      "Node.js",
+      "Express",
+      "Jest",
+      "Supertest",
+      "Docker",
+      "GitHub Actions",
+      "Microservices",
+    ],
+    slug: "microservices-test-infrastructure",
+    links: {
+      source: "https://github.com/prakharDvedi/Automated-Test-Infrastructure",
+    },
+  },
+  {
     name: "Pandit AI",
     description:
       "Generates personalized Vedic horoscope readings by calculating precise planetary positions using Swiss Ephemeris, applying classical Vedic astrology rules from a knowledge graph, and synthesizing insights using AI (Groq/Ollama).",
