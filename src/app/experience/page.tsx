@@ -52,7 +52,7 @@ const careerTimeline = [
       "Designed scalable schema for patient records and doctor availability.",
       "Implemented real-time appointment booking system.",
     ],
-    link: "https://wellfare-justice.vercel.app/",
+    link: "https://wjfcp555.online/",
   },
 
   {
