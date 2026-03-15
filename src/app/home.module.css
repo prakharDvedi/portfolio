@@ -376,124 +376,47 @@
 
 /* buttons */
 .contactBtn {
-  position: relative;
   padding: 1rem 2rem;
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
-  color: white;
+  color: var(--text-primary);
   background: transparent;
-  overflow: hidden;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  z-index: 1;
-  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.contactBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 8px;
-  padding: 2px;
-  background: linear-gradient(45deg, var(--accent-primary), #60a5fa, #06b6d4);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-
-.contactBtn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, var(--accent-primary), #60a5fa, #06b6d4);
-  opacity: 0.1;
-  z-index: -2;
-  transition: all 0.3s ease;
-}
-
 .contactBtn:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
-}
-
-.contactBtn:hover::after {
-  opacity: 0.2;
-}
-
-.contactBtn:hover::before {
-  padding: 3px;
+  color: white;
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  transform: translateY(-2px);
 }
 
 .smallContactBtn {
-  position: relative;
   padding: 0.5rem 1rem;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.85rem;
-  color: white;
+  color: var(--text-primary);
   background: transparent;
-  overflow: hidden;
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
-  z-index: 1;
-  border: none;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
 }
 
-.smallContactBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-radius: 6px;
-  padding: 1px;
-  background: linear-gradient(45deg, var(--accent-primary), #60a5fa, #06b6d4);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  z-index: -1;
-  transition: all 0.3s ease;
-}
-
-.smallContactBtn::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(45deg, var(--accent-primary), #60a5fa, #06b6d4);
-  opacity: 0.1;
-  z-index: -2;
-  transition: all 0.3s ease;
-}
-
 .smallContactBtn:hover {
+  color: white;
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
   transform: translateY(-2px);
-  box-shadow: 0 0 15px rgba(59, 130, 246, 0.3);
-}
-
-.smallContactBtn:hover::after {
-  opacity: 0.2;
 }
 
 @media (max-width: 768px) {
