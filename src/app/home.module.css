@@ -233,6 +233,22 @@
   display: block;
 }
 
+.techSectionTitle {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 3rem;
+  margin-top: -2rem; /* Pulls it up further */
+  color: var(--text-primary);
+  background: linear-gradient(
+    135deg,
+    var(--text-primary) 0%,
+    var(--accent-primary) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Tech Stack Categorical Pill Layout */
 .techSectionGrid {
   display: grid;

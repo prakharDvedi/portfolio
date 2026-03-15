@@ -1,7 +1,7 @@
 export const techStackData = [
   {
     category: "Languages",
-    items: ["TypeScript", "Python", "C++", "GoLang", "Java"],
+    items: ["TypeScript", "Python", "C++", "Go", "Java"],
   },
   {
     category: "Frameworks",

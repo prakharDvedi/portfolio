@@ -20,7 +20,7 @@ import { currentWorkData } from "@/data/currentWork";
 export default function Home() {
   const [time, setTime] = useState<string>("");
   const words = useMemo(
-    () => ["Next.js • FastAPI • Golang • React • Docker"],
+    () => ["Next.js • FastAPI • Express • React • Docker"],
     [],
   );
 
@@ -80,7 +80,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Backend-focused web developer working with <br />
+            Full-stack web developer working with <br />
             <span className={styles.techRotator}>
               <AnimatePresence mode="wait">
                 <motion.span
@@ -230,9 +230,9 @@ export default function Home() {
         viewport={{ once: true }}
         transition={{ duration: 0.8 }}
       >
-        <span className={styles.sectionLabel} style={{ textAlign: "center" }}>
+        <h2 className={styles.techSectionTitle} style={{ textAlign: "center" }}>
           Technology Stack
-        </span>
+        </h2>
 
         <div className={styles.techSectionGrid}>
           {techStackData.map((categoryObj, idx) => (
