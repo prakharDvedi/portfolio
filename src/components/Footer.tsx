@@ -16,7 +16,7 @@ const Footer = () => {
           <SiGithub />
         </Link>
         <Link
-          href="https://linkedin.com/in/prakhar-dwivedi"
+          href="https://www.linkedin.com/in/prakhar-dwivedi-a05611292/"
           target="_blank"
           className={styles.iconLink}
           aria-label="LinkedIn"
@@ -24,7 +24,7 @@ const Footer = () => {
           <SiLinkedin />
         </Link>
       </div>
-      <p className={styles.copyright}>© 2025 Prakhar Dwivedi</p>
+      <p className={styles.copyright}>© 2026 Prakhar Dwivedi</p>
     </footer>
   );
 };

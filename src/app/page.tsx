@@ -231,48 +231,25 @@ export default function Home() {
         transition={{ duration: 0.8 }}
       >
         <span className={styles.sectionLabel} style={{ textAlign: "center" }}>
-          Core Technical DNA
+          Technology Stack
         </span>
 
-        {/* Primary Grid */}
-        <div className={styles.coreGrid}>
-          {techStackData.core.map((tech) => (
-            <Link key={tech.name} href="/projects" className={styles.coreCard}>
-              <div className={styles.coreHeader}>
-                <img
-                  src={tech.iconUrl}
-                  alt={tech.name}
-                  className={`${styles.coreIcon} ${tech.className || ""}`}
-                />
-                <span className={styles.coreName}>{tech.name}</span>
-              </div>
-              <p className={styles.coreDesc}>{tech.description}</p>
-            </Link>
-          ))}
-        </div>
-
-        {/* Ecosystem List
-        <div className={styles.ecosystemGrid}>
-          {techStackData.ecosystem.map((category) => (
-            <div key={category.category} className={styles.ecoCategory}>
-              <h4 className={styles.ecoTitle}>{category.category}</h4>
-              <div className={styles.ecoList}>
-                {category.items.map((item) => (
-                  <div key={item.name} className={styles.ecoItem}>
-                    {item.icon && (
-                      <img
-                        src={item.icon}
-                        alt={item.name}
-                        className={styles.ecoIcon}
-                      />
-                    )}
-                    <span className={styles.ecoName}>{item.name}</span>
-                  </div>
+        <div className={styles.techSectionGrid}>
+          {techStackData.map((categoryObj, idx) => (
+            <div key={idx} className={styles.techCategoryBlock}>
+              <h3 className={styles.techCategoryTitle}>
+                {categoryObj.category}
+              </h3>
+              <div className={styles.techPillContainer}>
+                {categoryObj.items.map((skill, i) => (
+                  <Link href="/projects" key={i} className={styles.techPill}>
+                    {skill}
+                  </Link>
                 ))}
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </motion.div>
 
       <motion.div
