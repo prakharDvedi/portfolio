@@ -88,13 +88,7 @@ const careerTimeline = [
 export default function Experience() {
   return (
     <div className={styles.container}>
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        className={styles.heading}
-      >
-        Experience
-      </motion.h1>
+      <h1 className={styles.heading}>Experience</h1>
 
       <div className={styles.ledger}>
         {careerTimeline.map((item, index) => (

@@ -4,9 +4,13 @@
 
 .header {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 0.5rem;
-  color: var(--text-primary);
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
 }
 
 .subHeader {
@@ -24,9 +28,9 @@
 }
 
 .card {
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
-  border-radius: 12px;
+  border-radius: 8px;
   padding: 1.5rem;
   transition: all 0.3s ease;
   display: flex;
@@ -38,28 +42,29 @@
 .card:hover {
   transform: translateY(-5px);
   border-color: var(--accent-primary);
-  background: rgba(255, 255, 255, 0.05);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.04);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .cardDate {
   font-size: 0.85rem;
   color: var(--text-secondary);
   margin-bottom: 0.5rem;
-  font-family: monospace;
+  font-family: var(--font-body);
 }
 
 .cardTitle {
   font-size: 1.5rem;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
   color: var(--text-primary);
   text-decoration: none;
   display: block;
+  font-family: var(--font-heading);
 }
 
 .card:hover .cardTitle {
-  color: var(--accent-primary);
+  color: var(--accent-hover);
 }
 
 .stretchedLink {
@@ -76,7 +81,7 @@
   color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1.5rem;
-  flex-grow: 1; /* layout */
+  flex-grow: 1;
 }
 
 .cardFooter {
@@ -94,19 +99,22 @@
 .linkBtn {
   font-size: 0.85rem;
   padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  background: rgba(59, 130, 246, 0.1);
-  color: var(--accent-primary);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
   position: relative;
   z-index: 2;
+  font-family: var(--font-heading);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
 .linkBtn:hover {
-  background: var(--accent-primary);
-  color: #fff;
+  background: var(--text-primary);
+  color: var(--background);
 }
 
 .tags {
@@ -119,7 +127,8 @@
 .tag {
   font-size: 0.75rem;
   color: var(--text-secondary);
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   padding: 0.2rem 0.6rem;
-  border-radius: 20px;
+  border-radius: 99px;
+  border: 1px solid var(--border-color);
 }

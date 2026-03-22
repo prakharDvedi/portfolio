@@ -14,7 +14,7 @@
   justify-content: center;
   width: 100%;
   gap: 4rem;
-  margin-bottom: 0rem;
+  margin-bottom: 0;
 }
 
 .heroContent {
@@ -46,24 +46,23 @@
   justify-content: center;
   padding: 0.5rem;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.03);
+  background: transparent;
   border: 1px solid var(--border-color);
 }
 
 .socialLink:hover {
-  color: var(--accent-primary);
-  background: rgba(59, 130, 246, 0.1);
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
   transform: translateY(-3px);
-  border-color: var(--accent-primary);
+  border-color: var(--text-secondary);
 }
 
 .currentWorkSection {
   width: 100%;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   border: 1px solid var(--border-color);
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 1.5rem;
-  backdrop-filter: blur(10px);
   position: relative;
   overflow: hidden;
 }
@@ -74,19 +73,20 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 4px;
-  background: linear-gradient(90deg, var(--accent-primary), #06b6d4);
+  height: 3px;
+  background: var(--accent-primary);
 }
 
 .workLabel {
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   color: var(--text-secondary);
   margin-bottom: 1rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
+  font-family: var(--font-heading);
 }
 
 .pulsingDot {
@@ -124,21 +124,19 @@
   font-size: 0.95rem;
   color: var(--text-primary);
   text-decoration: none;
-  transition: opacity 0.2s ease;
+  transition: color 0.2s ease;
 }
 
 .workItemLink:hover {
-  opacity: 0.8;
-  color: var(--accent-primary);
+  color: var(--accent-hover);
 }
 
 .workIcon {
   color: var(--accent-primary);
   font-size: 0.8rem;
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
-/* mobile */
 @media (max-width: 1024px) {
   .mainSection {
     flex-direction: column;
@@ -153,61 +151,62 @@
 }
 
 .eyebrow {
-  color: var(--accent-primary);
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin-bottom: 1.5rem;
-  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1rem;
+  letter-spacing: 0.02em;
+  text-shadow: 1px 1px black;
 }
 
 .heading {
-  font-size: 2.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  color: var(--text-primary);
+  font-size: 5rem;
+  font-weight: 500;
+  line-height: 0.9;
+  color: var(--accent-primary);
   margin-bottom: 2rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
 }
 
 .name {
-  background: linear-gradient(
-    135deg,
-    var(--text-primary) 0%,
-    var(--accent-primary) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--accent-primary);
+  -webkit-text-fill-color: unset;
 }
 
 .techRotator {
   display: inline-flex;
   justify-content: flex-start;
   min-width: 350px;
-  color: #60a5fa;
+  color: var(--text-primary);
   font-weight: 600;
   vertical-align: bottom;
   text-align: left;
 }
 
 .subtitle {
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   color: var(--text-secondary);
   max-width: 600px;
-  line-height: 1.6;
+  line-height: 1.7;
   margin-bottom: 1.5rem;
+  font-weight: 300;
 }
 
 .location {
-  font-size: 1rem;
+  font-size: 0.9rem;
   color: var(--text-secondary);
-  font-family: monospace;
+  font-family: var(--font-body);
   margin-bottom: 3rem;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.03);
+  background: rgba(255, 255, 255, 0.02);
   padding: 0.5rem 1rem;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid var(--border-color);
 }
 
@@ -217,39 +216,36 @@
   margin-bottom: 4rem;
 }
 
-/* Tech Section Redesign */
 .techSection {
   margin-top: 4rem;
   width: 100%;
   margin-bottom: 4rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
 }
 
 .sectionLabel {
   font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--text-secondary);
+  color: var(--text-muted);
   margin-bottom: 2rem;
   display: block;
+  font-family: var(--font-heading);
 }
 
 .techSectionTitle {
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 3rem;
-  margin-top: -2rem; /* Pulls it up further */
-  color: var(--text-primary);
-  background: linear-gradient(
-    135deg,
-    var(--text-primary) 0%,
-    var(--accent-primary) 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-top: 0;
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
 }
 
-/* Tech Stack Categorical Pill Layout */
 .techSectionGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -267,11 +263,13 @@
 }
 
 .techCategoryTitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
   margin-bottom: 0.5rem;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-family: var(--font-heading);
 }
 
 .techPillContainer {
@@ -282,17 +280,12 @@
 
 .techPill {
   padding: 0.5rem 1.25rem;
-  border-radius: 99px; /* Pill shape */
+  border-radius: 99px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 400;
   color: var(--text-secondary);
-  background: rgba(
-    255,
-    255,
-    255,
-    0.03
-  ); /* Faint highlight matching image map */
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
   transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none;
@@ -302,11 +295,10 @@
 .techPill:hover {
   background: rgba(255, 255, 255, 0.08);
   color: var(--text-primary);
-  border-color: rgba(255, 255, 255, 0.15);
+  border-color: var(--text-secondary);
   transform: translateY(-2px);
 }
 
-/* Mobile Adaptation */
 @media (max-width: 1024px) {
   .techSectionGrid {
     grid-template-columns: repeat(2, 1fr);
@@ -319,17 +311,30 @@
     grid-template-columns: 1fr;
     gap: 2rem;
   }
+
+  .techSectionTitle {
+    font-size: 2rem;
+    margin-top: 0;
+  }
+
+  .techPill {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+  }
 }
 
 .primaryBtn {
   background: var(--accent-primary);
-  color: white;
+  color: var(--background);
   padding: 1rem 2rem;
-  border-radius: 8px;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
   transition: all 0.3s ease;
   border: 1px solid var(--accent-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .primaryBtn:hover {
@@ -338,12 +343,11 @@
   transform: translateY(-2px);
 }
 
-/* buttons */
 .contactBtn {
-  padding: 1rem 2rem;
-  border-radius: 8px;
+  padding: 0.85rem 1.75rem;
+  border-radius: 4px;
   text-decoration: none;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--text-primary);
   background: transparent;
   border: 1px solid var(--border-color);
@@ -351,21 +355,25 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
 }
 
 .contactBtn:hover {
-  color: white;
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  color: var(--background);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
   transform: translateY(-2px);
 }
 
 .smallContactBtn {
   padding: 0.5rem 1rem;
-  border-radius: 6px;
+  border-radius: 4px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--text-primary);
   background: transparent;
   border: 1px solid var(--border-color);
@@ -374,12 +382,15 @@
   align-items: center;
   justify-content: center;
   margin-top: 1.5rem;
+  font-family: var(--font-heading);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
 .smallContactBtn:hover {
-  color: white;
-  background: var(--accent-primary);
-  border-color: var(--accent-primary);
+  color: var(--background);
+  background: var(--text-primary);
+  border-color: var(--text-primary);
   transform: translateY(-2px);
 }
 
@@ -389,7 +400,7 @@
   }
 
   .subtitle {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .ctaGroup {
@@ -409,7 +420,7 @@
   object-fit: contain;
   transition: all 0.3s ease;
   filter: grayscale(100%) invert(1);
-  opacity: 0.8;
+  opacity: 0.6;
 }
 
 .socialLink:hover .socialIconImg {

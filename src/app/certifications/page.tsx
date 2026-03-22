@@ -27,14 +27,7 @@ const Certifications = () => {
 
   return (
     <div className={styles.container}>
-      <motion.h1
-        className={styles.heading}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        Certifications
-      </motion.h1>
+      <h1 className={styles.heading}>Certifications</h1>
 
       <div className={styles.grid}>
         {certifications.map((cert, index) => (

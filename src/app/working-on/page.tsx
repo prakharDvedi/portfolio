@@ -117,7 +117,7 @@ export default function WorkingOn() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>Working ON</h1>
+      <h1 className={styles.title}>WORKING ON</h1>
 
       <div className={styles.list}>
         {items.map((item, index) => (

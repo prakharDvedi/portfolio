@@ -1,19 +1,19 @@
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 2rem;
   min-height: 100vh;
 }
 
 .heading {
   font-size: 2.5rem;
-  font-weight: 700;
+  font-weight: 800;
   margin-bottom: 2rem;
-  background: linear-gradient(to right, #fff, #9ca3af);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  width: fit-content;
+  color: var(--accent-primary);
+  font-family: var(--font-heading);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  text-shadow: 1px 1px black;
+  text-align: center;
 }
 
 .grid {

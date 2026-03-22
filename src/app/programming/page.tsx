@@ -44,7 +44,7 @@ const Programming = () => {
       // Fetch Codeforces Stats
       try {
         const cfResponse = await fetch(
-          "https://codeforces.com/api/user.info?handles=prakhar_d_vedi"
+          "https://codeforces.com/api/user.info?handles=prakhar_d_vedi",
         );
         const cfData = await cfResponse.json();
         if (cfData.status === "OK" && cfData.result.length > 0) {
@@ -66,7 +66,7 @@ const Programming = () => {
         const [userRes, contributionsRes] = await Promise.all([
           fetch("https://api.github.com/users/prakharDvedi"),
           fetch(
-            "https://github-contributions-api.jogruber.de/v4/prakharDvedi?y=last"
+            "https://github-contributions-api.jogruber.de/v4/prakharDvedi?y=last",
           ),
         ]);
 
@@ -100,10 +100,10 @@ const Programming = () => {
       try {
         const [profileRes, contestRes] = await Promise.all([
           fetch(
-            "https://alfa-leetcode-api.onrender.com/userProfile/prakhar_the_vedi"
+            "https://alfa-leetcode-api.onrender.com/userProfile/prakhar_the_vedi",
           ),
           fetch(
-            "https://alfa-leetcode-api.onrender.com/userContestRankingInfo/prakhar_the_vedi"
+            "https://alfa-leetcode-api.onrender.com/userContestRankingInfo/prakhar_the_vedi",
           ),
         ]);
 
@@ -125,7 +125,7 @@ const Programming = () => {
           const totalSolved = profileData.totalSolved || 0;
           const ranking = profileData.ranking || 0;
           const contestRating = Math.round(
-            contestData.userContestRanking?.rating || 0
+            contestData.userContestRanking?.rating || 0,
           );
 
           setLcStats({
@@ -218,14 +218,7 @@ const Programming = () => {
 
   return (
     <div className={styles.container}>
-      <motion.h1
-        className={styles.heading}
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-      >
-        Programming & Competitive Coding
-      </motion.h1>
+      <h1 className={styles.heading}>Programming &amp; Competitive Coding</h1>
 
       <div className={styles.section}>
         <h2 className={styles.sectionTitle}>Platform Statistics</h2>

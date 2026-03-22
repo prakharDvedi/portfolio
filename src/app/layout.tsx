@@ -1,11 +1,9 @@
 import type { Metadata } from "next";
-// Removed Inter font import
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Footer from "@/components/Footer";
 import styles from "./layout.module.css";
 
-// Font imported via head tag
 export const metadata: Metadata = {
   title: "Prakhar Portfolio",
   description: "Personal portfolio website",
@@ -29,7 +27,7 @@ export default function RootLayout({
           crossOrigin="anonymous"
         />
         <link
-          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=League+Spartan:wght@300;400;500;700;800;900&display=swap"
           rel="stylesheet"
         />
       </head>
