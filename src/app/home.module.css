@@ -155,7 +155,7 @@
   font-size: 1.1rem;
   font-weight: 300;
   font-style: italic;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   letter-spacing: 0.02em;
   text-shadow: 1px 1px black;
 }
@@ -192,7 +192,7 @@
   color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.7;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75 rem;
   font-weight: 300;
 }
 
