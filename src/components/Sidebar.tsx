@@ -50,15 +50,22 @@ const Sidebar = () => {
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           prakhar.dwivedi
         </Link>
-        <Image
-          src="/807b5c4b02e765bb4930b7c66662ef4b.gif"
-          alt="Animated accent"
-          width={136}
-          height={136}
-          className={styles.logoGif}
-          unoptimized
-          priority
-        />
+        <Link
+          href="https://www.instagram.com/bheega.billaaa/"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Instagram profile"
+        >
+          <Image
+            src="/807b5c4b02e765bb4930b7c66662ef4b.gif"
+            alt="Animated accent"
+            width={136}
+            height={136}
+            className={styles.logoGif}
+            unoptimized
+            priority
+          />
+        </Link>
       </div>
 
       {/* Hamburger Button for Mobile */}
