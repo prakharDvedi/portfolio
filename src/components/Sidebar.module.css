@@ -116,13 +116,13 @@
 }
 
 .navLink:hover {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(94, 122, 196, 0.16);
   color: var(--text-primary);
   transform: translateX(5px);
 }
 
 .active {
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(56, 82, 180, 0.2);
   color: var(--text-primary);
   border-left: 3px solid var(--accent-primary);
 }

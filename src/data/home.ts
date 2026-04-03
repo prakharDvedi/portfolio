@@ -11,7 +11,7 @@ export type HomeCallToAction = {
 };
 
 export const homeHero = {
-  eyebrow: "Hi, I go by",
+  eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
   intro:
     "I build full-stack web applications that hold up using Next.js, Node.js, FastAPI, Redis, and Docker",
