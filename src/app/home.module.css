@@ -192,7 +192,7 @@
   color: var(--text-secondary);
   max-width: 600px;
   line-height: 1.7;
-  margin-bottom: 0.75 rem;
+  margin-bottom: 0.75rem;
   font-weight: 300;
 }
 
@@ -244,6 +244,10 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   text-shadow: 1px 1px black;
+}
+
+.techSectionTitleCentered {
+  text-align: center;
 }
 
 .techSectionGrid {
@@ -323,26 +327,6 @@
   }
 }
 
-.primaryBtn {
-  background: var(--accent-primary);
-  color: var(--background);
-  padding: 1rem 2rem;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid var(--accent-primary);
-  font-family: var(--font-heading);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.primaryBtn:hover {
-  background: transparent;
-  color: var(--accent-primary);
-  transform: translateY(-2px);
-}
-
 .contactBtn {
   padding: 0.85rem 1.75rem;
   border-radius: 4px;
@@ -394,6 +378,12 @@
   transform: translateY(-2px);
 }
 
+.heatmapSection {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 3rem;
+}
+
 @media (max-width: 768px) {
   .heading {
     font-size: 3rem;
@@ -408,23 +398,8 @@
     width: 100%;
   }
 
-  .primaryBtn,
-  .secondaryBtn {
+  .contactBtn,
+  .smallContactBtn {
     text-align: center;
   }
-}
-
-.socialIconImg {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
-  transition: all 0.3s ease;
-  filter: grayscale(100%) invert(1);
-  opacity: 0.6;
-}
-
-.socialLink:hover .socialIconImg {
-  filter: none;
-  transform: scale(1.1);
-  opacity: 1;
 }

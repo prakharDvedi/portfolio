@@ -1,268 +1,122 @@
 .container {
-  max-width: 900px;
-  margin: 0 auto;
   min-height: 100vh;
   color: var(--text-primary);
 }
 
 .heading {
-  font-size: 2.5rem;
-  font-weight: 800;
   margin-bottom: 2rem;
-  color: var(--accent-primary);
-  font-family: var(--font-heading);
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  text-shadow: 1px 1px black;
 }
 
-.ledger {
-  display: flex;
-  flex-direction: column;
-  gap: 6rem;
-  position: relative;
-}
-
-/* Row Layout */
-.ledgerRow {
+.list {
   display: grid;
-  grid-template-columns: 120px 1fr;
-  gap: 2rem;
-  position: relative;
-}
-
-/* Left Column: Periodic Stamp */
-.stampColumn {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stampWrapper {
-  position: sticky;
-  top: 40vh; /* Centered visually in viewport when scrolling */
-  z-index: 10;
-  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.stamp {
-  display: inline-block;
-  padding: 0.35rem 0.85rem;
-  background: #18181b;
-  border: 1px solid #27272a;
-  border-radius: 9999px;
-
-  font-family: monospace;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #71717a; /* Muted text */
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  white-space: nowrap;
-
-  box-shadow:
-    0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-
-  transition: all 0.3s ease;
-}
-
-.ledgerRow:hover .stamp {
-  border-color: var(--accent-primary);
-  color: var(--text-primary);
-  background: rgba(255, 255, 255, 0.08);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-}
-
-/* Connective Thread (Visual Only) */
-.thread {
-  position: absolute;
-  top: 40vh;
-  left: 50%;
-  width: 2rem; /* Stretch to card */
-  height: 1px;
-  background: linear-gradient(
-    90deg,
-    var(--accent-primary) 0%,
-    transparent 100%
-  );
-  transform: translate(100%, 0); /* Check visual alignment */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  pointer-events: none;
-}
-
-.ledgerRow:hover .thread {
-  opacity: 0.6;
-}
-
-/* Right Column: Editorial Card */
-.cardColumn {
-  position: relative;
+  gap: 1.5rem;
 }
 
 .card {
-  /* Dark matte canvas */
-  background: rgba(24, 24, 27, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 0.75rem; /* Slightly boxier than standard rounded-xl */
-  padding: 2rem;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  backdrop-filter: blur(0px); /* Hardware acceleration prep */
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* Hover State for Card */
-.card:hover {
-  background: rgba(39, 39, 42, 0.8); /* Slightly lighter matte */
-  border-color: rgba(255, 255, 255, 0.15);
-  box-shadow:
-    0 20px 25px -5px rgba(0, 0, 0, 0.2),
-    0 10px 10px -5px rgba(0, 0, 0, 0.1);
-  transform: translateY(-4px);
-  backdrop-filter: blur(4px); /* Soft glass effect */
-}
-
-/* Card Typography Beats */
-.cardHeader {
-  margin-bottom: 1rem;
-}
-
-.role {
-  font-size: 1.125rem; /* 18px */
-  font-weight: 700;
-  color: #f4f4f5;
-  margin-bottom: 0.25rem;
-}
-
-.metaRow {
+.topRow {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
   flex-wrap: wrap;
-  gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #a1a1aa;
 }
 
-.org {
-  color: var(--text-primary);
-  font-weight: 500;
-}
-
-.separator {
-  color: #3f3f46;
+.period {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.04);
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  font-family: monospace;
 }
 
 .type {
-  font-style: italic;
-  font-family: serif; /* Editorial touch */
-  color: #71717a;
+  font-size: 0.85rem;
+  color: var(--accent-primary);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.role {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.org {
+  color: var(--text-secondary);
+  font-size: 1rem;
 }
 
 .summary {
   font-size: 0.95rem;
   line-height: 1.6;
-  color: #d4d4d8;
-  margin-bottom: 0; /* Will grow if needed */
-  max-width: 65ch;
-}
-
-/* Reveal Panel */
-.revealPanel {
-  max-height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  margin-top: 0;
-}
-
-.card:hover .revealPanel {
-  max-height: 500px; /* Arbitrary large height for text */
-  opacity: 1;
-  margin-top: 1.5rem;
-  padding-top: 1.5rem;
-  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
 }
 
 .techStack {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 1rem;
 }
 
 .techChip {
   font-size: 0.75rem;
   padding: 0.25rem 0.6rem;
   background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  border-radius: 0.25rem;
-  color: #a1a1aa;
-  font-family: monospace;
+  border: 1px solid var(--border-color);
+  border-radius: 999px;
+  color: var(--text-secondary);
 }
 
 .achievementList {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 1.5rem 0;
-  display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding-left: 1.2rem;
+  display: grid;
   gap: 0.5rem;
+  color: var(--text-secondary);
 }
 
 .achievementList li {
-  position: relative;
-  padding-left: 1rem;
-  font-size: 0.9rem;
-  color: #d4d4d8;
   line-height: 1.5;
-}
-
-.achievementList li::before {
-  content: "▹";
-  position: absolute;
-  left: 0;
-  color: var(--accent-primary);
-  font-size: 0.75rem;
-  top: 0.2rem;
 }
 
 .cardLink {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  color: #f4f4f5;
-  text-decoration: none;
-  border-bottom: 1px solid #3f3f46;
+  color: var(--text-primary);
+  width: fit-content;
+  border-bottom: 1px solid var(--border-color);
   padding-bottom: 0.1rem;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s ease;
 }
 
 .cardLink:hover {
   border-color: var(--text-primary);
 }
 
-/* Mobile Adaptation */
 @media (max-width: 768px) {
-  .ledgerRow {
-    grid-template-columns: 1fr; /* Stack */
-    gap: 1rem;
+  .card {
+    padding: 1.25rem;
   }
 
-  .stampColumn {
-    align-items: flex-start;
-    padding-left: 1rem;
-  }
-
-  .stampWrapper {
-    position: relative;
-    top: 0;
-    transform: rotate(0deg) !important; /* Reset rotation */
-  }
-
-  .thread {
-    display: none;
+  .role {
+    font-size: 1.1rem;
   }
 }

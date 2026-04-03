@@ -28,10 +28,26 @@
 
 .iconWrapper {
   font-size: 2rem;
-  color: #fff;
+  color: var(--text-primary);
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.githubIcon {
+  color: #ffffff;
+}
+
+.codeforcesIcon {
+  color: #1f8acb;
+}
+
+.leetcodeIcon {
+  color: #ffa116;
+}
+
+.codechefIcon {
+  color: #5b4638;
 }
 
 .platformLink {

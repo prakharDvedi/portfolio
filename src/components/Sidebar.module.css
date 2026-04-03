@@ -1,6 +1,6 @@
 .sidebar {
-  width: 20%;
-  height: 100vh;
+  width: var(--sidebar-width);
+  min-height: 100svh;
   position: fixed;
   top: 0;
   left: 0;
@@ -13,6 +13,7 @@
   padding: 2rem;
   color: var(--text-primary);
   z-index: 100;
+  overflow-y: auto;
 }
 
 .header {
@@ -113,7 +114,8 @@
 @media (max-width: 1000px) {
   .sidebar {
     width: 100%;
-    height: auto;
+    min-height: auto;
+    position: sticky;
     background: var(--background);
     flex-direction: row;
     align-items: center;

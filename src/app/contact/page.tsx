@@ -27,6 +27,14 @@ export default function Contact() {
   const [errorMessage, setErrorMessage] = useState("");
   const [copied, setCopied] = useState(false);
 
+  const getErrorMessage = (error: unknown) => {
+    if (error instanceof Error) {
+      return error.message;
+    }
+
+    return "Failed to send message";
+  };
+
   const handleCopy = (e: React.MouseEvent) => {
     e.preventDefault();
     navigator.clipboard.writeText("prakhar.dwivedi.3782@gmail.com");
@@ -55,9 +63,9 @@ export default function Contact() {
         const data = await response.json();
         throw new Error(data.error || "Failed to send message");
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       setStatus("error");
-      setErrorMessage(error.message);
+      setErrorMessage(getErrorMessage(error));
       setTimeout(() => setStatus("idle"), 5000);
     }
   };
@@ -69,14 +77,16 @@ export default function Contact() {
   };
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>Get In Touch</h1>
+    <div className={`page-shell-wide ${styles.container}`}>
+      <h1 className={`page-title page-title-centered ${styles.header}`}>
+        Get In Touch
+      </h1>
 
       <div className={styles.content}>
         <div className={styles.infoSection}>
-          <h2 className={styles.subtitle}>Let's Chat!</h2>
+          <h2 className={styles.subtitle}>Let&apos;s Chat!</h2>
           <p className={styles.text}>
-            If you’re interested in collaborating, discussing an idea, or just
+            If you are interested in collaborating, discussing an idea, or just
             having a thoughtful conversation, feel free to reach out.
           </p>
 
@@ -101,8 +111,7 @@ export default function Contact() {
             <Link
               href="https://wa.me/919354894089"
               target="_blank"
-              className={styles.linkItem}
-              style={{ opacity: 1, fontSize: "0.95em" }}
+              className={`${styles.linkItem} ${styles.linkItemCompact}`}
             >
               <FiMessageCircle className={styles.icon} />
               <span>WhatsApp (+91 9354894089)</span>
@@ -180,7 +189,7 @@ export default function Contact() {
                 name="message"
                 required
                 className={styles.textarea}
-                placeholder="What's on your mind?"
+                placeholder="What&apos;s on your mind?"
                 value={formData.message}
                 onChange={handleChange}
                 disabled={status === "loading"}
@@ -189,12 +198,10 @@ export default function Contact() {
 
             <button
               type="submit"
-              className={styles.submitBtn}
+              className={`${styles.submitBtn} ${
+                status === "loading" ? styles.submitBtnLoading : ""
+              }`}
               disabled={status === "loading" || status === "success"}
-              style={{
-                opacity: status === "loading" ? 0.7 : 1,
-                cursor: status === "loading" ? "not-allowed" : "pointer",
-              }}
             >
               {status === "loading" ? (
                 "Sending..."
@@ -209,30 +216,12 @@ export default function Contact() {
               )}
             </button>
             {status === "error" && (
-              <p
-                style={{
-                  color: "#ef4444",
-                  marginTop: "0.5rem",
-                  fontSize: "0.9rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                }}
-              >
+              <p className={`${styles.statusMessage} ${styles.statusError}`}>
                 <FiAlertCircle /> {errorMessage}
               </p>
             )}
             {status === "success" && (
-              <p
-                style={{
-                  color: "#22c55e",
-                  marginTop: "0.5rem",
-                  fontSize: "0.9rem",
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.5rem",
-                }}
-              >
+              <p className={`${styles.statusMessage} ${styles.statusSuccess}`}>
                 <FiCheck /> Message sent successfully!
               </p>
             )}

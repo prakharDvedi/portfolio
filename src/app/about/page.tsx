@@ -1,18 +1,21 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./About.module.css";
 
 export default function About() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>About Me</h1>
+    <div className={`page-shell-narrow ${styles.container}`}>
+      <h1 className={`page-title page-title-centered ${styles.header}`}>
+        About Me
+      </h1>
 
       <div className={styles.content}>
         <div className={styles.textSection}>
           <p className={styles.paragraph}>
-            Hey there! I'm{" "}
-            <a href="/" className={styles.highlight}>
+            Hey there! I am{" "}
+            <Link href="/" className={styles.highlight}>
               Prakhar
-            </a>
+            </Link>
             , a third-year ECE student at{" "}
             <a
               href="https://iiitbhopal.ac.in"
@@ -40,21 +43,30 @@ export default function About() {
             numbers game, but as a way to think clearly about performance, edge
             cases, and trade-offs. I aim for code that is readable,
             maintainable, and easy to reason about later.
-            <br></br>Outside of code, I enjoy hacking and taking tests on
-            TryHackMe and VulnHub to understand how systems fails. I am a tech
-            enthusiast so I also like to tinker with gadgets, softwares and
+            <br />
+            Outside of code, I enjoy hacking and working through labs on
+            TryHackMe and VulnHub to understand how systems fail. I am a tech
+            enthusiast, so I also like to tinker with gadgets, software, and
             build projects.
           </p>
         </div>
 
         <div className={styles.imageSection}>
           <div className={styles.imageContainer}>
-            <img
+            <Image
               src="/portfolioPixel.png"
               alt="Prakhar Pixelated"
               className={styles.pixelImage}
+              fill
+              sizes="(max-width: 1030px) 0px, 250px"
             />
-            <img src="/me.jpeg" alt="Prakhar" className={styles.realImage} />
+            <Image
+              src="/me.jpeg"
+              alt="Prakhar"
+              className={styles.realImage}
+              fill
+              sizes="(max-width: 1030px) 0px, 250px"
+            />
           </div>
 
           <div className={styles.socialLinks}>
@@ -88,10 +100,12 @@ export default function About() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
+                <Image
                   src={social.imgSrc}
                   alt={social.platform}
                   className={styles.socialIcon}
+                  width={22}
+                  height={22}
                 />
               </a>
             ))}

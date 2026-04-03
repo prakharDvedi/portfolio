@@ -24,7 +24,7 @@ const Footer = () => {
           <SiLinkedin />
         </Link>
       </div>
-      <p className={styles.copyright}>© 2026 Prakhar Dwivedi</p>
+      <p className={styles.copyright}>(c) 2026 Prakhar Dwivedi</p>
     </footer>
   );
 };

@@ -1,29 +1,25 @@
-"use client";
-
-import React, { ReactNode } from "react";
 import Link from "next/link";
 import styles from "./StatCard.module.css";
+import type { PlatformStat } from "@/types/frontend";
+import type { ReactNode } from "react";
 
-interface Stat {
-  label: string;
-  value: string;
-}
-
-interface StatCardProps {
+type StatCardProps = {
   platform: string;
   icon: ReactNode;
-  stats: Stat[];
+  iconClassName?: "githubIcon" | "codeforcesIcon" | "leetcodeIcon" | "codechefIcon";
+  stats: PlatformStat[];
   link: string;
   description?: string;
-}
+};
 
-const StatCard: React.FC<StatCardProps> = ({
+const StatCard = ({
   platform,
   icon,
+  iconClassName,
   stats,
   link,
   description,
-}) => {
+}: StatCardProps) => {
   const isInternal = link.startsWith("#");
 
   return (
@@ -33,7 +29,13 @@ const StatCard: React.FC<StatCardProps> = ({
       className={styles.card}
     >
       <div className={styles.header}>
-        <div className={styles.iconWrapper}>{icon}</div>
+        <div
+          className={`${styles.iconWrapper} ${
+            iconClassName ? styles[iconClassName] : ""
+          }`.trim()}
+        >
+          {icon}
+        </div>
         <h3 className={styles.platformName}>{platform}</h3>
       </div>
 

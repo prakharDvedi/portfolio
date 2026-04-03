@@ -1,9 +1,16 @@
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+type ContactRequestBody = {
+  name?: string;
+  email?: string;
+  message?: string;
+};
+
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, message } =
+      (await req.json()) as ContactRequestBody;
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -57,10 +64,12 @@ ${message}
       { message: "Email sent successfully" },
       { status: 200 }
     );
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Email send error:", error);
     return NextResponse.json(
-      { error: error.message || "Failed to send email" },
+      {
+        error: error instanceof Error ? error.message : "Failed to send email",
+      },
       { status: 500 }
     );
   }

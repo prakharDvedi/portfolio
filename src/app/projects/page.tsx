@@ -4,10 +4,13 @@ import styles from "./Projects.module.css";
 
 export default function Projects() {
   return (
-    <div className={styles.container}>
-      <h1 className={styles.header}>Projects</h1>
+    <div className={`page-shell-wide ${styles.container}`}>
+      <h1 className={`page-title page-title-centered ${styles.header}`}>
+        Projects
+      </h1>
       <p className={styles.subHeader}>
-        Open-source projects I've made over the years, including web apps, APIs,
+        Open-source projects I have made over the years, including web apps,
+        APIs,
         and tools.
       </p>
 
