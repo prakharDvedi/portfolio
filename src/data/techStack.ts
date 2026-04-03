@@ -1,26 +1,26 @@
 export const techStackData = [
   {
     category: "Languages",
-    items: ["TypeScript", "Python", "C++", "Go", "Java"],
+    items: ["TypeScript", "JavaScript", "Python", "C++", "SQL"],
   },
   {
     category: "Frameworks",
-    items: ["React", "Next.js", "Node.js", "Express.js", "FastAPI"],
+    items: ["React", "Next.js", "Node.js", "Express.js", "FastAPI", "Fastify"],
+  },
+  {
+    category: "Databases",
+    items: ["PostgreSQL", "MongoDB", "MySQL", "SQLite", "Redis", "Prisma"],
   },
   {
     category: "DevOps & Cloud",
-    items: ["Docker", "CI/CD", "AWS", "Kafka", "Kubernetes"],
+    items: ["Docker", "GitHub Actions", "AWS", "Azure"],
   },
   {
-    category: "Data Science & AI",
-    items: ["OpenAI API", "LangChain", "LangGraph", "RAG"],
+    category: "Systems & APIs",
+    items: ["Socket.IO", "REST APIs", "Authentication", "Microservices"],
   },
   {
-    category: "Databases & State",
-    items: ["PostgreSQL", "MongoDB", "Prisma", "Redis", "Zustand"],
-  },
-  {
-    category: "UI & Styling",
-    items: ["Tailwind CSS", "ShadCN UI", "Framer Motion", "Figma"],
+    category: "AI & Tooling",
+    items: ["OpenAI API", "Neo4j", "LangChain", "Pydantic", "TypeScript Types"],
   },
 ];

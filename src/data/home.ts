@@ -12,11 +12,12 @@ export type HomeCallToAction = {
 
 export const homeHero = {
   eyebrow: "Hi, I go by",
-  name: "Prakhar Dwivedi.",
-  intro: "Full-stack web developer working with",
-  stackLine: "Next.js | FastAPI | Express | React | Docker",
-  summary:
-    "Built production-grade systems, real-time services, and AI-assisted applications.",
+  name: "Prakhar Dwivedi",
+  intro:
+    "I build full-stack web applications that hold up using Next.js, Node.js, FastAPI, Redis, and Docker",
+  stackLine:
+    "A backend leaning full stack engineer building web products, APIs, real-time systems, and AI-assisted applications. My work spans backend architecture, frontend delivery, deployment, debugging, and long-term maintainability",
+  summary: "",
   locationLabel: "Based in India",
 };
 
@@ -27,7 +28,7 @@ export const homeCallToActions: HomeCallToAction[] = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1BDMeYISwAJZaO495fAoL1BsyHtdjAIo_/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1T43stcrf7CnwFVcVp1Kb9lTDv8kj1Y8E/view?usp=sharing",
     external: true,
   },
   {

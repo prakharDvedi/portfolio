@@ -50,9 +50,15 @@ export default function HomeHero({
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, delay: 0.2 }}
       >
-        {intro} <br />
-        <span className={styles.techRotator}>{stackLine}</span> <br />
-        {summary}
+        <span className={styles.heroIntro}>{intro}</span>
+        <br />
+        <span className={styles.heroSupport}>{stackLine}</span>
+        {summary ? (
+          <>
+            <br />
+            {summary}
+          </>
+        ) : null}
       </motion.p>
 
       <motion.div

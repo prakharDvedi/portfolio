@@ -1,13 +1,12 @@
 import styles from "./home.module.css";
-import { currentWorkData } from "@/data/currentWork";
 import {
   homeCallToActions,
   homeHero,
   homeSocialLinks,
 } from "@/data/home";
-import HomeCurrentWork from "@/components/home/HomeCurrentWork";
 import HomeHeatmap from "@/components/home/HomeHeatmap";
 import HomeHero from "@/components/home/HomeHero";
+import HomePortrait from "@/components/home/HomePortrait";
 import HomeSocialLinks from "@/components/home/HomeSocialLinks";
 import HomeTechStack from "@/components/home/HomeTechStack";
 
@@ -19,7 +18,7 @@ export default function Home() {
 
         <div className={styles.rightColumn}>
           <HomeSocialLinks links={homeSocialLinks} />
-          <HomeCurrentWork items={currentWorkData} />
+          <HomePortrait />
         </div>
       </div>
 

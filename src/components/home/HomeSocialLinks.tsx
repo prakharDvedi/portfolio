@@ -29,26 +29,28 @@ type HomeSocialLinksProps = {
 export default function HomeSocialLinks({ links }: HomeSocialLinksProps) {
   return (
     <motion.div
-      className={styles.socialLinks}
+      className={styles.socialPanel}
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ duration: 0.5, delay: 0.35 }}
+      transition={{ duration: 0.5, delay: 0.4 }}
     >
-      {links.map((link) => {
-        const Icon = iconMap[link.icon];
+      <div className={styles.socialLinks}>
+        {links.map((link) => {
+          const Icon = iconMap[link.icon];
 
-        return (
-          <Link
-            key={link.label}
-            href={link.href}
-            target="_blank"
-            className={styles.socialLink}
-            aria-label={link.label}
-          >
-            <Icon />
-          </Link>
-        );
-      })}
+          return (
+            <Link
+              key={link.label}
+              href={link.href}
+              target="_blank"
+              className={styles.socialLink}
+              aria-label={link.label}
+            >
+              <Icon />
+            </Link>
+          );
+        })}
+      </div>
     </motion.div>
   );
 }
