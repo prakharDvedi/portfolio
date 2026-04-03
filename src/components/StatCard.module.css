@@ -1,6 +1,6 @@
 .card {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(165, 56, 96, 0.12);
+  border: 1px solid var(--border-color);
   border-radius: 16px;
   padding: 1.5rem;
   display: flex;
@@ -15,8 +15,8 @@
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
-  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px -10px rgba(13, 2, 7, 0.55);
+  border-color: var(--accent-primary);
 }
 
 .header {
@@ -57,7 +57,7 @@
 .platformName {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #fff;
+  color: var(--text-primary);
   transition: all 0.3s ease;
 }
 
@@ -82,11 +82,11 @@
 }
 
 .statLabel {
-  color: #a1a1aa;
+  color: var(--text-secondary);
 }
 
 .statValue {
-  color: #fff;
+  color: var(--text-primary);
   font-weight: 600;
   font-family: monospace;
 }
@@ -94,8 +94,8 @@
 .description {
   margin-top: 1rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: #a1a1aa;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-secondary);
   font-size: 0.9rem;
   line-height: 1.5;
 }

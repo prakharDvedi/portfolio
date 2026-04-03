@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
@@ -36,7 +37,7 @@ const Sidebar = () => {
       icon: <FiCode />,
     },
     {
-      name: "Education & Achievements",
+      name: "Education",
       path: "/education",
       icon: <FiBookOpen />,
     },
@@ -49,6 +50,15 @@ const Sidebar = () => {
         <Link href="/" className={styles.logo} onClick={() => setIsOpen(false)}>
           prakhar.dwivedi
         </Link>
+        <Image
+          src="/807b5c4b02e765bb4930b7c66662ef4b.gif"
+          alt="Animated accent"
+          width={136}
+          height={136}
+          className={styles.logoGif}
+          unoptimized
+          priority
+        />
       </div>
 
       {/* Hamburger Button for Mobile */}
