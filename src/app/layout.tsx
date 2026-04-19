@@ -5,7 +5,7 @@ import Footer from "@/components/Footer";
 import styles from "./layout.module.css";
 
 export const metadata: Metadata = {
-  title: "Prakhar Portfolio",
+  title: "Prakhar Dwivedi",
   description: "Personal portfolio website",
   icons: {
     icon: "/icon.png",
