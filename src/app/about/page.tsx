@@ -86,11 +86,6 @@ export default function About() {
                 href: "https://github.com/prakharDvedi",
                 imgSrc: "/git.png",
               },
-              {
-                platform: "Instagram",
-                href: "https://www.instagram.com/bheega.billaaa/",
-                imgSrc: "/insta.png",
-              },
             ].map((social) => (
               <a
                 key={social.platform}

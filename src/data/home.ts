@@ -53,11 +53,7 @@ export const homeSocialLinks: HomeSocialLink[] = [
     href: "https://codolio.com/profile/prakhardvedi",
     icon: "codolio",
   },
-  {
-    label: "Instagram",
-    href: "https://www.instagram.com/bheega.billaaa/",
-    icon: "instagram",
-  },
+
   {
     label: "LeetCode",
     href: "https://leetcode.com/u/prakhar_the_vedi/",

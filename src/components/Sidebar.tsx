@@ -51,10 +51,10 @@ const Sidebar = () => {
           prakhar.dwivedi
         </Link>
         <Link
-          href="https://www.instagram.com/bheega.billaaa/"
+          href="https://github.com/prakharDvedi"
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Open Instagram profile"
+          aria-label="Open GitHub profile"
         >
           <Image
             src="/807b5c4b02e765bb4930b7c66662ef4b.gif"
