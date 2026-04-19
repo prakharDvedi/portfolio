@@ -14,7 +14,7 @@ export const homeHero = {
   eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
   intro:
-    "I build full-stack web applications with AI integration that hold up under real-world usage.",
+    "I build full-stack web applications with AI integration using Next.js, Node.js, FastAPI, PostgreSQL, and Docker ",
   stackLine:
     "My work spans backend architecture, frontend delivery, deployment, debugging, and long-term maintainability.",
   summary: "",
