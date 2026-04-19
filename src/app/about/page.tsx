@@ -61,7 +61,7 @@ export default function About() {
               sizes="(max-width: 1030px) 0px, 250px"
             />
             <Image
-              src="/me.jpeg"
+              src="/portfolio.webp"
               alt="Prakhar"
               className={styles.realImage}
               fill
