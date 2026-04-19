@@ -14,9 +14,9 @@ export const homeHero = {
   eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
   intro:
-    "I build full-stack web applications that hold up using Next.js, Node.js, FastAPI, Redis, and Docker",
+    "I build full-stack web applications with AI integration that hold up under real-world usage.",
   stackLine:
-    "A backend leaning full stack engineer building web products, APIs, real-time systems, and AI-assisted applications. My work spans backend architecture, frontend delivery, deployment, debugging, and long-term maintainability",
+    "My work spans backend architecture, frontend delivery, deployment, debugging, and long-term maintainability.",
   summary: "",
   locationLabel: "Based in India",
 };
