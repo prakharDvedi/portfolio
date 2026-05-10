@@ -7,16 +7,20 @@ export const experienceData: ExperienceItem[] = [
     type: "Internship",
     period: "Jan 2026 - April 2026",
     description:
-      "Engineering HR workflows, rebuilding payslip directory architectures, and stabilizing backend microservices.",
+      "Engineered new payroll logic, rebuilding payslip directory architectures, and stabilizing backend microservices.",
     tech: ["MERN Stack", "React", "Redux Toolkit", "Node.js", "MongoDB"],
-    achievements: [
-      "Diagnosed and resolved 21 critical production bugs (500 errors, module import failures).",
-      "Re-architected backend to a Controller-Service-Repository (CSR) pattern, improving code reuse by ~40%.",
-      "Migrated 28+ backend files with zero downtime, eliminating circular dependencies.",
-      "Engineered a full Payroll / Payslip system with REST APIs and MongoDB aggregation pipelines.",
-      "Rebuilt the PayslipDirectory interface using React + Redux Toolkit for server-side filtering.",
-    ],
+    achievements: [],
     link: "https://brinavv.com/",
+  },
+  {
+    title: "Full Stack AI Intern",
+    org: "Dwarf AI Remote",
+    type: "Internship",
+    period: "Nov 2025 - Dec 2025",
+    description:
+      "Developed secure backend services for Clinify AI with FastAPI, JWT authentication, and REST APIs for multi-user AI sessions and medical document uploads.",
+    tech: ["FastAPI", "JWT", "LangChain", "ChromaDB", "Python"],
+    achievements: [],
   },
   {
     title: "LFX Mentorship - Magma Core",
@@ -26,11 +30,7 @@ export const experienceData: ExperienceItem[] = [
     description:
       "Exploring the Magma Core codebase, understanding the architecture of C++ packet-core services, and improving stability of distributed microservices.",
     tech: ["C++", "Docker", "Ubuntu", "CI/CD", "Linux"],
-    achievements: [
-      "Investigating C++ memory management issues in distributed microservices.",
-      "Supporting Docker container migration workflows for Ubuntu 24.04.",
-      "Ensuring reproducible builds and reliable CI/CD environments across distributed systems.",
-    ],
+    achievements: [],
     link: "https://lfx.linuxfoundation.org/",
   },
   {
@@ -39,27 +39,10 @@ export const experienceData: ExperienceItem[] = [
     type: "Freelance",
     period: "Dec 2025 - Jan 2026",
     description:
-      "Architecting a homeopathic healthcare platform for Ayurvedic doctors.",
+      "Architected a homeopathic healthcare platform for Ayurvedic doctors.",
     tech: ["Next.js", "PostgreSQL", "Prisma", "Tailwind"],
-    achievements: [
-      "Designed scalable schema for patient records and doctor availability.",
-      "Implemented real-time appointment booking system.",
-    ],
+    achievements: [],
     link: "https://wjfcp555.online/",
-  },
-  {
-    title: "Full Stack AI Intern",
-    org: "Dwarf AI Remote",
-    type: "Internship",
-    period: "Nov 2025 - Dec 2025",
-    description:
-      "Developing secure backend services for Clinify AI with FastAPI, JWT authentication, and REST APIs for multi-user AI sessions and medical document uploads.",
-    tech: ["FastAPI", "JWT", "LangChain", "ChromaDB", "Python"],
-    achievements: [
-      "Designed a LangChain–ChromaDB RAG pipeline, improving LLM answer relevance by 25% across 40+ evaluated queries.",
-      "Implemented LLM-powered session summarization adopted by 20+ internal users, reducing manual review time by 30%.",
-      "Developed secure backend services with JWT authentication for multi-user AI sessions and medical document uploads.",
-    ],
   },
   {
     title: "Offensive Security Lead",
@@ -67,12 +50,9 @@ export const experienceData: ExperienceItem[] = [
     type: "Leadership",
     period: "Sep 2025 - Present",
     description:
-      "Learning Offensive Security and fostering a culture of ethical hacking.",
+      "Learning Offensive Security and fostering a culture of ethical hacking in IIIT Bhopal.",
     tech: ["Kali Linux", "TryHackMe", "Linux"],
-    achievements: [
-      "Organized campus-wide CTF with 100+ participants.",
-      "Conducting weekly workshops on web exploitation and cryptography.",
-    ],
+    achievements: [],
   },
   {
     title: "Teaching Assistant",
@@ -82,9 +62,6 @@ export const experienceData: ExperienceItem[] = [
     description:
       "Mentored students in Digital Logic Design and ensuring core concept clarity.",
     tech: ["Verilog", "MATLAB", "Digital Logic", "Teaching"],
-    achievements: [
-      "Graded assignments and project submissions for a batch of 60.",
-      "Held remedial sessions for struggling students.",
-    ],
+    achievements: [],
   },
 ];
