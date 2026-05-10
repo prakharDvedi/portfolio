@@ -28,7 +28,7 @@ export const homeCallToActions: HomeCallToAction[] = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1jbGDrXnjq4_S6A5Wqs3d80jJkPFdK8sn/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1XWYI3uEUXffm4xj6qNQD5gznr9KqbbZ7/view?usp=sharing",
     external: true,
   },
   {

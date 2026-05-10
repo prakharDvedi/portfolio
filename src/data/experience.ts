@@ -48,6 +48,20 @@ export const experienceData: ExperienceItem[] = [
     link: "https://wjfcp555.online/",
   },
   {
+    title: "Full Stack AI Intern",
+    org: "Dwarf AI Remote",
+    type: "Internship",
+    period: "Nov 2025 - Dec 2025",
+    description:
+      "Developing secure backend services for Clinify AI with FastAPI, JWT authentication, and REST APIs for multi-user AI sessions and medical document uploads.",
+    tech: ["FastAPI", "JWT", "LangChain", "ChromaDB", "Python"],
+    achievements: [
+      "Designed a LangChain–ChromaDB RAG pipeline, improving LLM answer relevance by 25% across 40+ evaluated queries.",
+      "Implemented LLM-powered session summarization adopted by 20+ internal users, reducing manual review time by 30%.",
+      "Developed secure backend services with JWT authentication for multi-user AI sessions and medical document uploads.",
+    ],
+  },
+  {
     title: "Offensive Security Lead",
     org: "XPLOIT Club",
     type: "Leadership",
