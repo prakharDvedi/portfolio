@@ -34,12 +34,12 @@ export const experienceData: ExperienceItem[] = [
     link: "https://lfx.linuxfoundation.org/",
   },
   {
-    title: "Full Stack Developer",
+    title: "Freelance Developer",
     org: "Welfare Justice for Challenging People",
     type: "Freelance",
     period: "Dec 2025 - Jan 2026",
     description:
-      "Architected a homeopathic healthcare platform for Ayurvedic doctors.",
+      "Architected a website for a NGO that helps the community for underprivileged individuals.",
     tech: ["Next.js", "PostgreSQL", "Prisma", "Tailwind"],
     achievements: [],
     link: "https://wjfcp555.online/",
