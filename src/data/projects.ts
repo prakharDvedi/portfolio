@@ -41,6 +41,45 @@ export const projects = [
     },
   },
   {
+    name: "CynoShield",
+    description:
+      "Local prompt-firewall demo for Ollama-backed chat apps: a browser chat UI + Python inspection proxy that runs regex policy checks, optionally classifies prompts with a firewall model, then either blocks or streams tokens from the chat model back to the UI via SSE.",
+    date: "2026",
+    tags: [
+      "Python",
+      "Ollama",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "SSE",
+      "Prompt Security",
+    ],
+    slug: "cynoshield",
+    links: {
+      source: "https://github.com/prakharDvedi/LLM_Firewall-main",
+    },
+  },
+  {
+    name: "CodeReviewer",
+    description:
+      "Agentic GitHub repo reviewer: fetches and filters repository contents, routes analysis based on structure, runs parallel LangGraph agents (security/quality/testing/structure), then synthesizes a scored, prioritized report with evidence-backed findings.",
+    date: "2026",
+    tags: [
+      "Next.js",
+      "FastAPI",
+      "LangGraph",
+      "PyGithub",
+      "Tailwind CSS",
+      "SQLite",
+      "JWT",
+      "WebSocket",
+    ],
+    slug: "codereviewer",
+    links: {
+      source: "https://github.com/prakharDvedi/git-analyse",
+    },
+  },
+  {
     name: "eVakeel",
     description:
       "A legal tech platform powered by Generative AI to assist with legal queries and documentation. Features a modern React frontend and scalable Fastify backend.",
