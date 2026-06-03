@@ -2,6 +2,25 @@ import type { ExperienceItem } from "@/types/frontend";
 
 export const experienceData: ExperienceItem[] = [
   {
+    title: "Software Engineering Intern",
+    org: "Zecruit AI",
+    type: "Internship",
+    period: "May 2026 - Present",
+    description:
+      "Working on Google OAuth integration and improving voice agent workflows, transcription quality, and live interview reliability for a recruiter platform built across frontend, backend, and AI services.",
+    tech: [
+      "Google OAuth",
+      "Supabase",
+      "FastAPI",
+      "Daily",
+      "LiveKit",
+      "Redis",
+      "ARQ",
+      "Celery",
+    ],
+    achievements: [],
+  },
+  {
     title: "Software Development Intern",
     org: "Brinavv Technologies",
     type: "Internship",
