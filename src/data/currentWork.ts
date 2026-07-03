@@ -6,8 +6,7 @@ export interface WorkItem {
 
 export const currentWorkData: WorkItem[] = [
   {
-    text: "SDE Intern @ Brinavv Technologies",
-    link: "https://www.brinavv.com/",
+    text: "AI & Web3 Engineering Intern @ Pear Protocol",
     highlight: true,
   },
   {

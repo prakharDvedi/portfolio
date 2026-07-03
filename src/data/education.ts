@@ -3,12 +3,12 @@ import type { AchievementItem, EducationItem } from "@/types/frontend";
 export const educationData: EducationItem[] = [
   {
     school: "Indian Institute of Information Technology, Bhopal",
-    date: "November 2023 - June 2027",
+    date: "September 2023 - June 2027",
     degree:
       "Bachelor of Technology in Electronics and Communication Engineering (ECE)",
     grade: "GPA: 8.55",
     coursework:
-      "Data Structures & Algorithms, DBMS, Computer Networks, Operating Systems",
+      "Data Structures & Algorithms, Object-Oriented Programming, DBMS, Operating Systems, Computer Networks",
     link: "https://iiitbhopal.ac.in/#/website/home",
   },
   {
@@ -39,7 +39,7 @@ export const achievementData: AchievementItem[] = [
     icon: "trophy",
   },
   {
-    text: "Codeforces: 1314 (Pupil) | CodeChef: 1614 | LeetCode: 1799. Solved 400+ DSA problems across platforms.",
+    text: "CodeChef: 1635 (3-star), Global Rank 826 in Starters 192 | LeetCode: 1799 | Codeforces: 1314. Solved 400+ DSA problems across platforms.",
     icon: "chart",
   },
   {

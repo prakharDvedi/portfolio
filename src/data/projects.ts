@@ -2,7 +2,7 @@ export const projects = [
   {
     name: "Automated Test Infrastructure for Microservices",
     description:
-      "Designed a containerized microservice backend separating auth, user, and task services. Built comprehensive unit and integration test suites using Jest/Supertest achieving ~92% branch coverage, backed by GitHub Actions CI pipelines inside multi-stage Docker environments.",
+      "Architected a containerized microservices backend with independent auth, user, and task services, each running in isolated runtime environments built via multi-stage Docker. Built Jest and Supertest integration suites achieving 92% branch coverage, with GitHub Actions quality gates enforcing linting, testing, and Docker image builds on every commit.",
     date: "2026",
     tags: [
       "Node.js",
@@ -62,17 +62,16 @@ export const projects = [
   {
     name: "CodeReviewer",
     description:
-      "Agentic GitHub repo reviewer: fetches and filters repository contents, routes analysis based on structure, runs parallel LangGraph agents (security/quality/testing/structure), then synthesizes a scored, prioritized report with evidence-backed findings.",
+      "Multi-agent code analysis system built on a five-node LangGraph orchestration layer with specialized analysis agents and Pydantic-enforced typed contracts for structured, deterministic outputs. Backed by async PostgreSQL persistence with end-to-end WebSocket report streaming, HuggingFace Inference API for LLM-powered synthesis, and fully containerized with Docker.",
     date: "2026",
     tags: [
-      "Next.js",
       "FastAPI",
       "LangGraph",
-      "PyGithub",
-      "Tailwind CSS",
-      "SQLite",
-      "JWT",
-      "WebSocket",
+      "PostgreSQL",
+      "Docker",
+      "WebSockets",
+      "HuggingFace",
+      "Pydantic",
     ],
     slug: "codereviewer",
     links: {

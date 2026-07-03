@@ -16,7 +16,7 @@ export default function About() {
             <Link href="/" className={styles.highlight}>
               Prakhar
             </Link>
-            , a third-year ECE student at{" "}
+            , a software engineer and ECE student at{" "}
             <a
               href="https://iiitbhopal.ac.in"
               target="_blank"
@@ -25,29 +25,29 @@ export default function About() {
             >
               <strong>IIIT Bhopal</strong>
             </a>{" "}
-            who focuses on building web systems that are practical, reliable,
-            and built to last.
+            focused on backend systems, production debugging, distributed
+            workflows, and AI infrastructure.
           </p>
 
           <p className={styles.paragraph}>
-            I work primarily with JavaScript and build full-stack applications
-            end to end. These days, I prefer Next.js as my core framework, using
-            it across frontend and backend, backed by databases like PostgreSQL
-            and MongoDB. Currently, I am also learning about CI/CD pipelines,
-            Docker, and Jenkins to streamline my development and deployment
-            processes.
+            I work primarily in TypeScript and Python, building microservices,
+            REST APIs, and AI-agent orchestration backed by PostgreSQL, MongoDB,
+            and Redis. Most of my work involves investigating failures across
+            complex execution paths, using distributed tracing and runtime
+            instrumentation to find the root cause rather than the fastest
+            explanation, and shipping product features end to end with Docker
+            and GitHub Actions.
           </p>
 
           <p className={styles.paragraph}>
-            I also take data structures and algorithms seriously, not as a
-            numbers game, but as a way to think clearly about performance, edge
-            cases, and trade-offs. I aim for code that is readable,
-            maintainable, and easy to reason about later.
+            I take data structures and algorithms seriously, not as a numbers
+            game, but as a way to reason clearly about performance, edge cases,
+            and trade-offs. I aim for code that is readable, maintainable, and
+            easy to reason about later.
             <br />
-            Outside of code, I enjoy hacking and working through labs on
-            TryHackMe and VulnHub to understand how systems fail. I am a tech
-            enthusiast, so I also like to tinker with gadgets, software, and
-            build projects.
+            Outside of core work, I explore offensive security through labs on
+            TryHackMe and VulnHub to understand how systems fail, which sharpens
+            how I debug and harden the systems I build.
           </p>
         </div>
 

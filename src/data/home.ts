@@ -14,9 +14,9 @@ export const homeHero = {
   eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
   intro:
-    "I build web applications and agentic AI systems with Next.js, FastAPI, LangGraph, PostgreSQL, and Docker.",
+    "Software engineer focused on backend systems, production debugging, distributed workflows, and AI infrastructure.",
   stackLine:
-    "My work spans backend architecture, frontend delivery, deployment, debugging, and long-term maintainability.",
+    "I work across microservices, external integrations, and AI-agent orchestration, tracing failures through complex execution paths to root cause.",
   summary: "",
   locationLabel: "Based in India",
 };
@@ -28,7 +28,7 @@ export const homeCallToActions: HomeCallToAction[] = [
   },
   {
     label: "Resume",
-    href: "https://drive.google.com/file/d/1XWYI3uEUXffm4xj6qNQD5gznr9KqbbZ7/view?usp=sharing",
+    href: "https://drive.google.com/file/d/1LxRM-WO8vthWw8PfKLDlOw0t_H54tIz2/view?usp=sharing",
     external: true,
   },
   {

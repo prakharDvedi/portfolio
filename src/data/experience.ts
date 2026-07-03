@@ -2,23 +2,49 @@ import type { ExperienceItem } from "@/types/frontend";
 
 export const experienceData: ExperienceItem[] = [
   {
+    title: "AI & Web3 Engineering Intern",
+    org: "Pear Protocol Trading",
+    type: "Internship",
+    period: "June 2026 - Present",
+    description:
+      "Debugging production AI-agent workflows and external integrations across LLM and crypto analytics pipelines using distributed tracing, observability, and root-cause analysis.",
+    tech: [
+      "Langfuse",
+      "Distributed Tracing",
+      "Python",
+      "TypeScript",
+      "LLM Tool Calling",
+      "Web3",
+      "Postman",
+      "REST APIs",
+    ],
+    achievements: [
+      "Investigated 20+ production AI-agent failures across LLM workflows and crypto analytics pipelines using distributed tracing and runtime instrumentation.",
+      "Analyzed two distinct asset-resolution architectures and validated 300+ crypto asset mappings across Coinglass, CoinGecko, Hyperliquid, and Quant services to identify symbol-resolution inconsistencies.",
+      "Resolved 5+ production integration issues spanning AI tool calling, external APIs, and Web3 data providers by correlating Langfuse traces, Postman validation, and backend execution paths alongside senior engineers.",
+    ],
+  },
+  {
     title: "Software Engineering Intern",
     org: "Zecruit AI",
     type: "Internship",
-    period: "May 2026 - Present",
+    period: "May 2026 - June 2026",
     description:
-      "Working on Google OAuth integration and improving voice agent workflows, transcription quality, and live interview reliability for a recruiter platform built across frontend, backend, and AI services.",
+      "Owned end-to-end product features across a recruiter platform, from Google OAuth and access control to bulk data ingestion and RAG-backed AI services.",
     tech: [
       "Google OAuth",
-      "Supabase",
       "FastAPI",
-      "Daily",
-      "LiveKit",
-      "Redis",
-      "ARQ",
-      "Celery",
+      "Python",
+      "LangChain",
+      "ChromaDB",
+      "PostgreSQL",
     ],
-    achievements: [],
+    achievements: [
+      "Implemented end-to-end Google OAuth including token exchange, FastAPI session verification, and access-control enforcement.",
+      "Shipped a CSV ingestion pipeline processing 300+ structured candidate records for bulk hiring workflows.",
+      "Built a RAG pipeline over uploaded documents using LangChain and ChromaDB to power multi-user AI sessions.",
+      "Merged 10+ pull requests resolving pagination issues, broken UI states, and layout inconsistencies across the recruiter-facing dashboard.",
+    ],
   },
   {
     title: "Software Development Intern",
@@ -32,24 +58,17 @@ export const experienceData: ExperienceItem[] = [
     link: "https://brinavv.com/",
   },
   {
-    title: "Full Stack AI Intern",
-    org: "Dwarf AI Remote",
-    type: "Internship",
-    period: "Nov 2025 - Dec 2025",
-    description:
-      "Developed secure backend services for Clinify AI with FastAPI, JWT authentication, and REST APIs for multi-user AI sessions and medical document uploads.",
-    tech: ["FastAPI", "JWT", "LangChain", "ChromaDB", "Python"],
-    achievements: [],
-  },
-  {
-    title: "LFX Mentorship - Magma Core",
-    org: "The Linux Foundation",
+    title: "Open Source Contributor - Magma Core",
+    org: "The Linux Foundation - LFX Mentorship",
     type: "Mentorship",
-    period: "Jan 2026",
+    period: "January 2026 - March 2026",
     description:
-      "Exploring the Magma Core codebase, understanding the architecture of C++ packet-core services, and improving stability of distributed microservices.",
+      "Contributed to Magma Core's distributed C++ packet-core as one of 137 mentees selected globally.",
     tech: ["C++", "Docker", "Ubuntu", "CI/CD", "Linux"],
-    achievements: [],
+    achievements: [
+      "Selected as one of 137 mentees globally.",
+      "Contributed Ubuntu 22.04 migration updates to Magma Core's distributed C++ packet-core, unblocking the project's CI/CD pipeline.",
+    ],
     link: "https://lfx.linuxfoundation.org/",
   },
   {

@@ -2,6 +2,34 @@ import type { WorkingOnItem } from "@/types/frontend";
 
 export const workingOnData: WorkingOnItem[] = [
   {
+    title: "CodeReviewer",
+    subtitle: "Multi-Agent Code Analysis System",
+    intro:
+      "An AI orchestration system that reviews code through specialized analysis agents and streams structured, evidence-backed reports.",
+    sections: [
+      {
+        title: "How it works",
+        items: [
+          "Five-node LangGraph orchestration layer with specialized analysis agents",
+          "Pydantic-enforced typed contracts for structured, deterministic agent outputs",
+          "Async PostgreSQL persistence with end-to-end WebSocket report streaming",
+          "HuggingFace Inference API for LLM-powered synthesis",
+        ],
+      },
+      {
+        title: "Tech Stack",
+        items: [
+          "Backend: FastAPI, LangGraph, PostgreSQL",
+          "Streaming: WebSockets",
+          "AI: HuggingFace Inference API",
+          "Infra: Docker",
+        ],
+      },
+    ],
+    link: "https://github.com/prakharDvedi/git-analyse",
+    linkIcon: "github",
+  },
+  {
     title: "Pandit AI",
     subtitle: "Neuro-Symbolic Vedic Astrology Application",
     intro:
