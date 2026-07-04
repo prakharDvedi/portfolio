@@ -6,24 +6,21 @@ import {
 } from "@/data/home";
 import HomeHeatmap from "@/components/home/HomeHeatmap";
 import HomeHero from "@/components/home/HomeHero";
-import HomePortrait from "@/components/home/HomePortrait";
-import HomeSocialLinks from "@/components/home/HomeSocialLinks";
 import HomeTechStack from "@/components/home/HomeTechStack";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <div className={styles.mainSection}>
-        <HomeHero {...homeHero} actions={homeCallToActions} />
+    <>
+      <HomeHero
+        {...homeHero}
+        actions={homeCallToActions}
+        socialLinks={homeSocialLinks}
+      />
 
-        <div className={styles.rightColumn}>
-          <HomeSocialLinks links={homeSocialLinks} />
-          <HomePortrait />
-        </div>
+      <div className={styles.container}>
+        <HomeHeatmap />
+        <HomeTechStack />
       </div>
-
-      <HomeHeatmap />
-      <HomeTechStack />
-    </div>
+    </>
   );
 }

@@ -13,8 +13,9 @@ export type HomeCallToAction = {
 export const homeHero = {
   eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
-  intro: "Software engineer. I build backend systems and web applications.",
-  stackLine: "I work with APIs, databases, and distributed services.",
+  intro:
+    "AI & backend engineer. I build RAG pipelines, LLM agents, and the systems that run them.",
+  stackLine: "Building with LangChain, LangGraph, and Langfuse.",
   summary: "",
   locationLabel: "Based in India",
 };

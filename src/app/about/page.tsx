@@ -25,18 +25,20 @@ export default function About() {
             >
               <strong>IIIT Bhopal</strong>
             </a>{" "}
-            focused on backend systems, production debugging, distributed
-            workflows, and AI infrastructure.
+            focused on AI engineering, backend systems, and production
+            debugging.
           </p>
 
           <p className={styles.paragraph}>
-            I work primarily in TypeScript and Python, building microservices,
-            REST APIs, and AI-agent orchestration backed by PostgreSQL, MongoDB,
-            and Redis. Most of my work involves investigating failures across
+            I work primarily in Python and TypeScript, building RAG pipelines
+            and LLM agents with LangChain and LangGraph, and instrumenting them
+            with Langfuse to trace and evaluate what they actually do. On the
+            backend, I build microservices and REST APIs backed by PostgreSQL,
+            MongoDB, and Redis. Much of my work is investigating failures across
             complex execution paths, using distributed tracing and runtime
             instrumentation to find the root cause rather than the fastest
-            explanation, and shipping product features end to end with Docker
-            and GitHub Actions.
+            explanation, and shipping features end to end with Docker and GitHub
+            Actions.
           </p>
 
           <p className={styles.paragraph}>
@@ -44,10 +46,6 @@ export default function About() {
             game, but as a way to reason clearly about performance, edge cases,
             and trade-offs. I aim for code that is readable, maintainable, and
             easy to reason about later.
-            <br />
-            Outside of core work, I explore offensive security through labs on
-            TryHackMe and VulnHub to understand how systems fail, which sharpens
-            how I debug and harden the systems I build.
           </p>
         </div>
 

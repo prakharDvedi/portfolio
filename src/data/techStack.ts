@@ -9,12 +9,27 @@ export const techStackData: TechCategory[] = [
     items: ["C/C++", "Python", "TypeScript", "JavaScript"],
   },
   {
-    category: "Backend",
-    items: ["NestJS", "FastAPI", "Node.js", "REST APIs", "WebSockets"],
+    category: "AI Engineering",
+    items: [
+      "LangChain",
+      "LangGraph",
+      "RAG Pipelines",
+      "AI Agents",
+      "LLM Orchestration",
+    ],
   },
   {
-    category: "Systems",
-    items: ["Distributed Systems", "Microservices", "Docker"],
+    category: "Systems & Backend",
+    items: [
+      "Distributed Systems",
+      "Microservices",
+      "REST APIs",
+      "NestJS",
+      "FastAPI",
+      "Node.js",
+      "Docker",
+      "WebSockets",
+    ],
   },
   {
     category: "Databases",

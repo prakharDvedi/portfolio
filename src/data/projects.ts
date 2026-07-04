@@ -1,4 +1,36 @@
 export const projects = [
+  
+    {
+    name: "CodeReviewer",
+    description:
+      "Multi-agent code analysis system built on a five-node LangGraph orchestration layer with specialized analysis agents and Pydantic-enforced typed contracts for structured, deterministic outputs. Backed by async PostgreSQL persistence with end-to-end WebSocket report streaming, HuggingFace Inference API for LLM-powered synthesis, and fully containerized with Docker.",
+    date: "2026",
+    tags: [
+      "FastAPI",
+      "LangGraph",
+      "PostgreSQL",
+      "Docker",
+      "WebSockets",
+      "HuggingFace",
+      "Pydantic",
+    ],
+    slug: "codereviewer",
+    links: {
+      source: "https://github.com/prakharDvedi/git-analyse",
+    },
+  },
+{
+    name: "Authentica – Verifiable Generative AI Framework",
+    description:
+      "Built a blockchain-based system to verify authorship and integrity of AI-generated content using cryptographic hashing, IPFS, and Ethereum smart contracts. Implemented Web3 authentication, tamper detection, and verifiable proof certificates for public authenticity checks.",
+    date: "2025",
+    tags: ["Blockchain", "Generative AI", "Next.js", "Solidity", "IPFS"],
+    slug: "authentica",
+    links: {
+      source: "https://github.com/prakharDvedi/Authentica",
+      demo: "https://authentica-six.vercel.app/",
+    },
+  },
   {
     name: "Automated Test Infrastructure for Microservices",
     description:
@@ -59,25 +91,7 @@ export const projects = [
       source: "https://github.com/prakharDvedi/LLM_Firewall-main",
     },
   },
-  {
-    name: "CodeReviewer",
-    description:
-      "Multi-agent code analysis system built on a five-node LangGraph orchestration layer with specialized analysis agents and Pydantic-enforced typed contracts for structured, deterministic outputs. Backed by async PostgreSQL persistence with end-to-end WebSocket report streaming, HuggingFace Inference API for LLM-powered synthesis, and fully containerized with Docker.",
-    date: "2026",
-    tags: [
-      "FastAPI",
-      "LangGraph",
-      "PostgreSQL",
-      "Docker",
-      "WebSockets",
-      "HuggingFace",
-      "Pydantic",
-    ],
-    slug: "codereviewer",
-    links: {
-      source: "https://github.com/prakharDvedi/git-analyse",
-    },
-  },
+  
   {
     name: "eVakeel",
     description:
@@ -98,18 +112,7 @@ export const projects = [
       demo: "https://e-vakeel-mu-jhack-x.vercel.app/",
     },
   },
-  {
-    name: "Authentica – Verifiable Generative AI Framework",
-    description:
-      "Built a blockchain-based system to verify authorship and integrity of AI-generated content using cryptographic hashing, IPFS, and Ethereum smart contracts. Implemented Web3 authentication, tamper detection, and verifiable proof certificates for public authenticity checks.",
-    date: "2025",
-    tags: ["Blockchain", "Generative AI", "Next.js", "Solidity", "IPFS"],
-    slug: "authentica",
-    links: {
-      source: "https://github.com/prakharDvedi/Authentica",
-      demo: "https://authentica-six.vercel.app/",
-    },
-  },
+  
 
   {
     name: "Chatify",

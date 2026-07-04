@@ -1,12 +1,12 @@
 :root {
-  --background: #14213d;
-  --sidebar-bg: rgba(20, 33, 61, 0.9);
-  --text-primary: #f8f4ef;
-  --text-secondary: #b7c8ea;
-  --text-muted: #6f84b8;
-  --accent-primary: #f3be7a;
-  --accent-hover: #f08d39;
-  --border-color: rgba(94, 122, 196, 0.28);
+  --background: #2c2c2c;
+  --sidebar-bg: rgba(34, 34, 34, 0.95);
+  --text-primary: #f3f4f4;
+  --text-secondary: rgba(243, 244, 244, 0.7);
+  --text-muted: rgba(243, 244, 244, 0.45);
+  --accent-primary: #da4a7c;
+  --accent-hover: #da4a7c;
+  --border-color: rgba(243, 244, 244, 0.14);
   --sidebar-width: clamp(220px, 18vw, 280px);
   --font-heading: "League Spartan", sans-serif;
   --font-body: "IBM Plex Serif", serif;
@@ -79,9 +79,9 @@ a {
   background: var(--background);
 }
 ::-webkit-scrollbar-thumb {
-  background: #3852b4;
+  background: #4a4a4a;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #5e7ac4;
+  background: #666666;
 }
