@@ -205,25 +205,49 @@
 
 .techSectionGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
   margin-top: 2rem;
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
+  align-items: start;
 }
 
-.techCategoryBlock {
+.techCard {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background: rgba(56, 82, 180, 0.14);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 30px rgba(8, 14, 28, 0.25);
+  transition: all 0.3s ease;
+}
+
+.techCard:hover {
+  border-color: var(--accent-primary);
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(8, 14, 28, 0.4);
+}
+
+.techCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.techCardIcon {
+  color: var(--accent-primary);
+  font-size: 1.15rem;
+  flex-shrink: 0;
 }
 
 .techCategoryTitle {
   font-size: 1rem;
   font-weight: 700;
   color: var(--text-primary);
-  margin-bottom: 0.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   font-family: var(--font-heading);
@@ -259,14 +283,19 @@
 @media (max-width: 1024px) {
   .techSectionGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 2.5rem;
+    gap: 1.5rem;
+  }
+
+  /* Override the inline per-card span so cards fit the 2-column grid. */
+  .techCard {
+    grid-column: auto !important;
   }
 }
 
 @media (max-width: 768px) {
   .techSectionGrid {
     grid-template-columns: 1fr;
-    gap: 2rem;
+    gap: 1.25rem;
   }
 
   .techSectionTitle {
