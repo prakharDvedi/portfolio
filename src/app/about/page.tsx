@@ -52,7 +52,7 @@ export default function About() {
         <div className={styles.imageSection}>
           <div className={styles.imageContainer}>
             <Image
-              src="/portfolioPixel.png"
+              src="/portfolio.webp"
               alt="Prakhar Pixelated"
               className={styles.pixelImage}
               fill
