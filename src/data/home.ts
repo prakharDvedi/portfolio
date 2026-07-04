@@ -13,10 +13,8 @@ export type HomeCallToAction = {
 export const homeHero = {
   eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
-  intro:
-    "Software engineer focused on backend systems, production debugging, distributed workflows, and AI infrastructure.",
-  stackLine:
-    "I work across microservices, external integrations, and AI-agent orchestration, tracing failures through complex execution paths to root cause.",
+  intro: "Software engineer. I build backend systems and web applications.",
+  stackLine: "I work with APIs, databases, and distributed services.",
   summary: "",
   locationLabel: "Based in India",
 };

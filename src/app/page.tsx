@@ -22,8 +22,8 @@ export default function Home() {
         </div>
       </div>
 
-      <HomeTechStack />
       <HomeHeatmap />
+      <HomeTechStack />
     </div>
   );
 }
