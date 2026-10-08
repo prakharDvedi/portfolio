@@ -1,7 +1,7 @@
 export type HomeSocialLink = {
   label: string;
   href: string;
-  icon: "github" | "linkedin" | "codolio" | "instagram" | "leetcode" | "gfg";
+  icon: "github" | "linkedin" | "codolio" | "instagram" | "leetcode" | "twitter";
 };
 
 export type HomeCallToAction = {
@@ -59,8 +59,8 @@ export const homeSocialLinks: HomeSocialLink[] = [
     icon: "leetcode",
   },
   {
-    label: "GeeksforGeeks",
-    href: "https://www.geeksforgeeks.org/profile/prakhardwivedi12",
-    icon: "gfg",
+    label: "Twitter",
+    href: "https://x.com/PrakharDwi64417",
+    icon: "twitter",
   },
 ];

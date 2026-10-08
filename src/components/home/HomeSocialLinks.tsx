@@ -8,7 +8,7 @@ import {
   SiInstagram,
   SiLeetcode,
   SiCodeforces,
-  SiGeeksforgeeks,
+  SiX,
 } from "react-icons/si";
 import type { HomeSocialLink } from "@/data/home";
 import styles from "@/app/home.module.css";
@@ -19,7 +19,7 @@ const iconMap = {
   codolio: SiCodeforces,
   instagram: SiInstagram,
   leetcode: SiLeetcode,
-  gfg: SiGeeksforgeeks,
+  twitter: SiX,
 } as const;
 
 type HomeSocialLinksProps = {

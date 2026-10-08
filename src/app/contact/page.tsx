@@ -134,7 +134,7 @@ export default function Contact() {
               <span>GitHub</span>
             </Link>
             <Link
-              href="https://twitter.com/PrakharDwi64417"
+              href="https://x.com/PrakharDwi64417"
               target="_blank"
               className={styles.linkItem}
             >
