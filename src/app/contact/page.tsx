@@ -11,7 +11,6 @@ import {
   FiCheck,
   FiAlertCircle,
   FiCopy,
-  FiMessageCircle,
 } from "react-icons/fi";
 import Link from "next/link";
 
@@ -107,15 +106,6 @@ export default function Contact() {
                 {copied ? <FiCheck /> : <FiCopy />}
               </button>
             </div>
-
-            <Link
-              href="https://wa.me/919354894089"
-              target="_blank"
-              className={`${styles.linkItem} ${styles.linkItemCompact}`}
-            >
-              <FiMessageCircle className={styles.icon} />
-              <span>WhatsApp (+91 9354894089)</span>
-            </Link>
 
             <Link
               href="https://www.linkedin.com/in/prakhar-dwivedi-a05611292/"
