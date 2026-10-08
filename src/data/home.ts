@@ -14,7 +14,7 @@ export const homeHero = {
   eyebrow: "Hi, I'm",
   name: "Prakhar Dwivedi",
   intro:
-    "AI & backend engineer. I build RAG pipelines, LLM agents, and the systems that run them.",
+    "AI & backend engineer. I build LLM agents, trading systems, and the backends that run them, currently in web3 and crypto derivatives.",
   stackLine: "Building with LangChain, LangGraph, and Langfuse.",
   summary: "",
   locationLabel: "Based in India",

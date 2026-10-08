@@ -30,22 +30,28 @@ export default function About() {
           </p>
 
           <p className={styles.paragraph}>
-            I work primarily in Python and TypeScript, building RAG pipelines
-            and LLM agents with LangChain and LangGraph, and instrumenting them
-            with Langfuse to trace and evaluate what they actually do. On the
-            backend, I build microservices and REST APIs backed by PostgreSQL,
-            MongoDB, and Redis. Much of my work is investigating failures across
-            complex execution paths, using distributed tracing and runtime
-            instrumentation to find the root cause rather than the fastest
-            explanation, and shipping features end to end with Docker and GitHub
-            Actions.
+            Right now I work on crypto assets and an autonomous agentic trading
+            agent called Agent Pear. It trades crypto derivatives markets, and
+            my time goes into optimising costs, enhancing algorithms, improving
+            returns on PnL, and making sure trading works correctly on the
+            platform.
           </p>
 
           <p className={styles.paragraph}>
-            I take data structures and algorithms seriously, not as a numbers
-            game, but as a way to reason clearly about performance, edge cases,
-            and trade-offs. I aim for code that is readable, maintainable, and
-            easy to reason about later.
+            I work mostly in Python and TypeScript, building LLM agents and
+            the backends behind them. I like finding the root cause instead of
+            the fastest explanation.
+          </p>
+
+          <p className={styles.paragraph}>
+            If you find me away from my desk, I am either in another state, on
+            the ground playing football, or on a stage beatboxing.
+          </p>
+
+          <p className={styles.paragraph}>
+            On the side, I am building MedBud, a healthcare transparency app.
+            It is still a work in progress, currently backed by the Ground
+            Truth Fellowship.
           </p>
         </div>
 

@@ -7,7 +7,7 @@ export const experienceData: ExperienceItem[] = [
     type: "Internship",
     period: "June 2026 - Present",
     description:
-      "Building and hardening Agent Pear, an AI trading agent for crypto derivatives across Hyperliquid and Lighter, reachable via Telegram and web chat — shipping multi-venue execution, basket-trading, and bot features alongside production debugging via distributed tracing and root-cause analysis.",
+      "Building Agent Pear, an AI trading agent for crypto derivatives across Hyperliquid and Lighter, reachable via Telegram and web chat. Working on better trading suggestions, cost optimisation, and higher PnL returns, alongside multi-venue execution, basket trading, and production debugging.",
     tech: [
       "TypeScript",
       "NestJS",
@@ -27,6 +27,7 @@ export const experienceData: ExperienceItem[] = [
       "Measured 21 rejected rebalance requests with drift up to 15% across live traces, then replaced the hard rejection in the execution package with proportional rescaling, landing every case within 1e-15 of the target sum.",
       "Fixed a leverage-clamp bug that silently doubled a user's stated margin from $1,000 to $1,999.95 on execution, by requiring the margin change be disclosed before trade confirmation.",
     ],
+    link: "https://app.pear.garden/",
   },
   {
     title: "Software Engineering Intern",
