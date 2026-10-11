@@ -18,15 +18,17 @@ export const experienceData: ExperienceItem[] = [
       "Zod",
       "LLM Tool Calling",
     ],
-    achievements: [
-      "Integrated Lighter as a second execution venue for Agent Pear, wiring venue-aware pricing, account binding, and trigger enforcement, work behind over $63 million in trading volume in the month since launch.",
-      "Built the live leaderboard feature end to end: a cached read tool with deterministic pre-fetch, plus a Telegram /leaderboard command with per-venue and ROI-based ranking.",
-      "Owned the basket generation tag taxonomy, enabling long-only and short-only baskets where the pipeline previously forced every basket to carry both a long and a short side.",
-      "Migrated basket generation onto a Hetzner VPS as part of an ongoing worker migration, with the new architecture producing baskets that score 1.14% better on average than the prior one.",
-      "Designed a fail-closed margin gate that checks live available balance with a 100 basis point buffer before any leverage or order write, exempting reduce-only trades since they release margin instead of consuming it.",
-      "Measured 21 rejected rebalance requests with drift up to 15% across live traces, then replaced the hard rejection in the execution package with proportional rescaling, landing every case within 1e-15 of the target sum.",
-      "Fixed a leverage-clamp bug that silently doubled a user's stated margin from $1,000 to $1,999.95 on execution, by requiring the margin change be disclosed before trade confirmation.",
-    ],
+    // Hidden (confidential), may showcase later:
+    // achievements: [
+    //   "Integrated Lighter as a second execution venue for Agent Pear, wiring venue-aware pricing, account binding, and trigger enforcement, work behind over $63 million in trading volume in the month since launch.",
+    //   "Built the live leaderboard feature end to end: a cached read tool with deterministic pre-fetch, plus a Telegram /leaderboard command with per-venue and ROI-based ranking.",
+    //   "Owned the basket generation tag taxonomy, enabling long-only and short-only baskets where the pipeline previously forced every basket to carry both a long and a short side.",
+    //   "Migrated basket generation onto a Hetzner VPS as part of an ongoing worker migration, with the new architecture producing baskets that score 1.14% better on average than the prior one.",
+    //   "Designed a fail-closed margin gate that checks live available balance with a 100 basis point buffer before any leverage or order write, exempting reduce-only trades since they release margin instead of consuming it.",
+    //   "Measured 21 rejected rebalance requests with drift up to 15% across live traces, then replaced the hard rejection in the execution package with proportional rescaling, landing every case within 1e-15 of the target sum.",
+    //   "Fixed a leverage-clamp bug that silently doubled a user's stated margin from $1,000 to $1,999.95 on execution, by requiring the margin change be disclosed before trade confirmation.",
+    // ],
+    achievements: [],
     link: "https://app.pear.garden/",
   },
   {
