@@ -6,46 +6,19 @@ export interface TechCategory {
 export const techStackData: TechCategory[] = [
   {
     category: "Languages",
-    items: ["C/C++", "Python", "TypeScript", "JavaScript"],
+    items: ["C/C++", "Python", "TypeScript"],
   },
   {
     category: "AI Engineering",
-    items: [
-      "LangChain",
-      "LangGraph",
-      "RAG Pipelines",
-      "AI Agents",
-      "LLM Orchestration",
-      "LLM Tool Calling",
-      "Structured Outputs (Zod)",
-      "Prompt Injection Guards",
-      "LLM Ops",
-    ],
+    items: ["AI Agents", "RAG Pipelines", "LLM Ops"],
   },
   {
     category: "Systems & Backend",
-    items: [
-      "Distributed Systems",
-      "Microservices",
-      "REST APIs",
-      "NestJS",
-      "FastAPI",
-      "Node.js",
-      "Docker",
-      "WebSockets",
-      "Webhook Security (HMAC)",
-    ],
+    items: ["Distributed Systems", "Microservices", "NestJS", "FastAPI"],
   },
   {
     category: "Web3 & Trading",
-    items: [
-      "Crypto Derivatives",
-      "Hyperliquid",
-      "Lighter",
-      "Execution Safety",
-      "Margin & Leverage",
-      "Basket / Pair Trading",
-    ],
+    items: ["Crypto Derivatives", "Execution Safety", "Hyperliquid & Lighter"],
   },
   {
     category: "Databases",
@@ -53,16 +26,10 @@ export const techStackData: TechCategory[] = [
   },
   {
     category: "Observability",
-    items: [
-      "Langfuse",
-      "Distributed Tracing",
-      "Runtime Instrumentation",
-      "LLM Evals",
-      "Incident Triage",
-    ],
+    items: ["Langfuse", "Distributed Tracing", "LLM Evals"],
   },
   {
     category: "Tools",
-    items: ["Git", "GitHub Actions", "AWS", "Linux", "Postman"],
+    items: ["Git", "Docker", "AWS", "Linux"],
   },
 ];
