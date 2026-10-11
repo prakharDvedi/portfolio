@@ -11,12 +11,9 @@ export const experienceData: ExperienceItem[] = [
     tech: [
       "TypeScript",
       "NestJS",
-      "grammY (Telegram Bot API)",
-      "Langfuse",
-      "Redis",
-      "Hyperliquid & Lighter SDKs",
-      "Zod",
       "LLM Tool Calling",
+      "Langfuse",
+      "Hyperliquid & Lighter",
     ],
     // Hidden (confidential), may showcase later:
     // achievements: [

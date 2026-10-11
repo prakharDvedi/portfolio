@@ -16,6 +16,10 @@ export const techStackData: TechCategory[] = [
       "RAG Pipelines",
       "AI Agents",
       "LLM Orchestration",
+      "LLM Tool Calling",
+      "Structured Outputs (Zod)",
+      "Prompt Injection Guards",
+      "LLM Ops",
     ],
   },
   {
@@ -29,6 +33,18 @@ export const techStackData: TechCategory[] = [
       "Node.js",
       "Docker",
       "WebSockets",
+      "Webhook Security (HMAC)",
+    ],
+  },
+  {
+    category: "Web3 & Trading",
+    items: [
+      "Crypto Derivatives",
+      "Hyperliquid",
+      "Lighter",
+      "Execution Safety",
+      "Margin & Leverage",
+      "Basket / Pair Trading",
     ],
   },
   {
@@ -37,7 +53,13 @@ export const techStackData: TechCategory[] = [
   },
   {
     category: "Observability",
-    items: ["Langfuse", "Distributed Tracing", "Runtime Instrumentation"],
+    items: [
+      "Langfuse",
+      "Distributed Tracing",
+      "Runtime Instrumentation",
+      "LLM Evals",
+      "Incident Triage",
+    ],
   },
   {
     category: "Tools",
