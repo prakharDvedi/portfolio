@@ -6,7 +6,7 @@ export interface TechCategory {
 export const techStackData: TechCategory[] = [
   {
     category: "Languages",
-    items: ["C/C++", "Python", "TypeScript"],
+    items: ["C/C++", "Python", "TypeScript", "Rust"],
   },
   {
     category: "AI Engineering",
