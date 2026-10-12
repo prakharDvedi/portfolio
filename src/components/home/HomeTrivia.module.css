@@ -1,0 +1,191 @@
+/* Pinned sticky note: lilac paper, handwritten title, chunky answer cards. */
+.note {
+  --paper: #cdb6e6;
+  --ink: #1f1726;
+  --ink-soft: rgba(31, 23, 38, 0.72);
+  --card: #f1ece6;
+
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  padding: 2rem 1.5rem 1.5rem;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.18), transparent 30%),
+    var(--paper);
+  color: var(--ink);
+  font-family: var(--font-heading);
+  box-shadow:
+    0 2px 0 rgba(0, 0, 0, 0.08),
+    0 22px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+/* Curled bottom-right corner. */
+.note::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, var(--paper) 50%, rgba(0, 0, 0, 0.18) 50%);
+}
+
+.note:hover {
+  transform: rotate(-1deg) translateY(-4px) !important;
+}
+
+.pin {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #ff9cc2, var(--accent-primary) 45%, #7a1f42);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.45);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-family: "Caveat", cursive;
+  font-size: 1.9rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.tally {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 1.1rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+}
+
+.topic {
+  padding: 0.15rem 0.55rem;
+  border: 1.5px solid var(--ink);
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+
+.question {
+  font-size: 1.15rem;
+  line-height: 1.35;
+  font-weight: 500;
+  min-height: 3.1em;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.option {
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: var(--card);
+  border: none;
+  box-shadow: 2px 3px 0 rgba(31, 23, 38, 0.22);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.2s ease, opacity 0.2s ease;
+}
+
+.option:nth-child(odd) {
+  transform: rotate(-0.6deg);
+}
+
+.option:nth-child(even) {
+  transform: rotate(0.5deg);
+}
+
+.option:not(:disabled):hover {
+  transform: translateY(-2px) rotate(0deg);
+  background: #fff;
+}
+
+.option:focus-visible,
+.next:focus-visible {
+  outline: 2px solid var(--ink);
+  outline-offset: 2px;
+}
+
+.option:disabled {
+  cursor: default;
+}
+
+.correct {
+  background: #9fd9a8;
+}
+
+.wrong {
+  background: #f2a3b3;
+  text-decoration: line-through;
+}
+
+.faded {
+  opacity: 0.45;
+}
+
+.reveal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.85rem;
+  border-top: 1.5px dashed rgba(31, 23, 38, 0.35);
+  overflow: hidden;
+}
+
+.scribble {
+  font-family: "Caveat", cursive;
+  font-size: 1.35rem;
+  line-height: 1.2;
+}
+
+.next {
+  align-self: flex-end;
+  padding: 0.5rem 1.1rem;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-primary);
+  background: var(--ink);
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.next:hover {
+  background: var(--accent-primary);
+}

@@ -51,15 +51,56 @@
   }
 }
 
-.heroInner {
+/* Intro on the left, trivia note on the right; stacks and centers on narrow screens. */
+.heroGrid {
   position: relative;
   z-index: 1;
+  display: grid;
+  grid-template-columns: minmax(0, 680px) auto;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 6rem);
+  width: 100%;
+  max-width: 1200px;
+}
+
+.heroInner {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  text-align: center;
+  align-items: flex-start;
+  text-align: left;
   gap: 1.25rem;
   max-width: 720px;
+}
+
+.heroInner .socialLinks,
+.heroInner .heroCtaGroup {
+  justify-content: flex-start;
+}
+
+.heroInner .socialPanel {
+  align-items: flex-start;
+}
+
+@media (max-width: 1100px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .heroInner {
+    align-items: center;
+    text-align: center;
+  }
+
+  .heroInner .socialLinks,
+  .heroInner .heroCtaGroup {
+    justify-content: center;
+  }
+
+  .heroInner .socialPanel {
+    align-items: center;
+  }
 }
 
 .heroAvatar {
